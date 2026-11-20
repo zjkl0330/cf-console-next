@@ -6,6 +6,9 @@ on:
     paths-ignore: ["README.md"]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   apk:
     name: assembleDebug
@@ -35,14 +38,30 @@ jobs:
       - name: Stamp version
         run: |
           V=$(node -p "require('./package.json').version")
+          echo "VER=$V" >> "$GITHUB_ENV"
           sed -i "s/versionCode 1/versionCode ${V//./0}/; s/versionName \"1.0\"/versionName \"$V\"/" android/app/build.gradle
 
       - name: Build debug APK
         working-directory: android
         run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon
 
+      - name: Rename APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk "cf-console-next-v${VER}-debug.apk"
+
       - uses: actions/upload-artifact@v4
         with:
           name: cf-console-next-debug-apk
-          path: android/app/build/outputs/apk/debug/app-debug.apk
+          path: "cf-console-next-v${{ env.VER }}-debug.apk"
           if-no-files-found: error
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VER }}
+          name: "边缘控制台 Next v${{ env.VER }}（Android debug APK）"
+          body: |
+            自动构建产物：debug 签名 APK，可直接安装（需允许"安装未知来源应用"）。
+            界面为单文件 Web App（Capacitor 封装），液态玻璃导航栏 + 全功能控制台。
+          files: "cf-console-next-v${{ env.VER }}-debug.apk"
+          make_latest: "true"
+          overwrite_files: true
