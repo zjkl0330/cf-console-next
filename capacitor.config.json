@@ -1,6 +1,6 @@
 {
   "appId": "dev.zjkl.cfconsole",
-  "appName": "边缘控制台 Next",
+  "appName": "CF-next",
   "webDir": "www",
   "bundledWebRuntime": false,
   "android": {

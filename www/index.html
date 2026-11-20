@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#060a15"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<title>CF 控制台 · 手机版</title>
+<title>CF-next · 边缘控制台</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%23f6821f'/%3E%3Cpath d='M7 17a3.4 3.4 0 1 1 .3-6.8 4.6 4.6 0 0 1 8.9 1.2A3 3 0 0 1 16 17z' fill='%23fff'/%3E%3C/svg%3E"/>
 <style>
 /* ============================================================
@@ -727,6 +727,28 @@ body{overscroll-behavior-y:none}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
 }
+/* ---- 顶栏 logo：Cloudflare 官方云朵白底标 ---- */
+.logo-mark{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.25);display:grid;place-items:center}
+.logo-mark svg{display:block}
+
+/* ---- 演示登录门 ---- */
+.lg-root{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:24px;
+  background:color-mix(in srgb,var(--bg0) 62%,transparent);backdrop-filter:blur(18px) saturate(1.3);
+  transition:opacity .35s,visibility .35s}
+.lg-root.gone{opacity:0;visibility:hidden}
+.lg-card{width:min(340px,100%);border-radius:var(--r-lg);border:1px solid var(--line2);
+  background:color-mix(in srgb,var(--panel-solid,#101a33) 88%,transparent);backdrop-filter:blur(14px);
+  box-shadow:var(--shadow);padding:26px 22px;text-align:center}
+.lg-card.shake{animation:lgShake .4s}
+@keyframes lgShake{0%,100%{transform:none}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
+.lg-logo{display:inline-grid;place-items:center;width:88px;height:88px;border-radius:24px;background:#fff;
+  box-shadow:0 6px 24px rgba(246,130,31,.35);margin-bottom:14px}
+.lg-card h1{font-size:22px;margin:0 0 4px;letter-spacing:.02em}
+.lg-sub{font-size:11.5px;color:var(--mut);margin:0 0 18px;display:flex;align-items:center;justify-content:center}
+.lg-card .field{text-align:left}
+.lg-note{font-size:10.5px;line-height:1.7;color:var(--mut);margin:16px 0 0;text-align:left}
+.lg-note b{color:var(--ink2)}
+
 </style>
 </head>
 <body>
@@ -757,7 +779,7 @@ const FLAG=c=>String.fromCodePoint(...[...c.toUpperCase()].map(ch=>0x1F1A5+ch.ch
 const COUNTRY_TABLE=`AD安道尔 AE阿联酋 AF阿富汗 AG安提瓜和巴布达 AI安圭拉 AL阿尔巴尼亚 AM亚美尼亚 AO安哥拉 AQ南极洲 AR阿根廷 AS美属萨摩亚 AT奥地利 AU澳大利亚 AW阿鲁巴 AX奥兰群岛 AZ阿塞拜疆 BA波黑 BB巴巴多斯 BD孟加拉国 BE比利时 BF布基纳法索 BG保加利亚 BH巴林 BI布隆迪 BJ贝宁 BL圣巴泰勒米 BM百慕大 BN文莱 BO玻利维亚 BQ荷兰加勒比区 BR巴西 BS巴哈马 BT不丹 BV布韦岛 BW博茨瓦纳 BY白俄罗斯 BZ伯利兹 CA加拿大 CC科科斯群岛 CD刚果（金） CF中非 CG刚果（布） CH瑞士 CI科特迪瓦 CK库克群岛 CL智利 CM喀麦隆 CN中国 CO哥伦比亚 CR哥斯达黎加 CU古巴 CV佛得角 CW库拉索 CX圣诞岛 CY塞浦路斯 CZ捷克 DE德国 DJ吉布提 DK丹麦 DM多米尼克 DO多米尼加 DZ阿尔及利亚 EC厄瓜多尔 EE爱沙尼亚 EG埃及 EH西撒哈拉 ER厄立特里亚 ES西班牙 ET埃塞俄比亚 FI芬兰 FJ斐济 FK福克兰群岛 FM密克罗尼西亚 FO法罗群岛 FR法国 GA加蓬 GB英国 GD格林纳达 GE格鲁吉亚 GF法属圭亚那 GG根西岛 GH加纳 GI直布罗陀 GL格陵兰 GM冈比亚 GN几内亚 GP瓜德罗普 GQ赤道几内亚 GR希腊 GS南乔治亚岛 GT危地马拉 GU关岛 GW几内亚比绍 GY圭亚那 HK中国香港 HM赫德岛 HN洪都拉斯 HR克罗地亚 HT海地 HU匈牙利 ID印度尼西亚 IE爱尔兰 IL以色列 IM马恩岛 IN印度 IO英属印度洋领地 IQ伊拉克 IR伊朗 IS冰岛 IT意大利 JE泽西岛 JM牙买加 JO约旦 JP日本 KE肯尼亚 KG吉尔吉斯斯坦 KH柬埔寨 KI基里巴斯 KM科摩罗 KN圣基茨和尼维斯 KP朝鲜 KR韩国 KW科威特 KY开曼群岛 KZ哈萨克斯坦 LA老挝 LB黎巴嫩 LC圣卢西亚 LI列支敦士登 LK斯里兰卡 LR利比里亚 LS莱索托 LT立陶宛 LU卢森堡 LV拉脱维亚 LY利比亚 MA摩洛哥 MC摩纳哥 MD摩尔多瓦 ME黑山 MF法属圣马丁 MG马达加斯加 MH马绍尔群岛 MK北马其顿 ML马里 MM缅甸 MN蒙古 MO中国澳门 MP北马里亚纳群岛 MQ马提尼克 MR毛里塔尼亚 MS蒙特塞拉特 MT马耳他 MU毛里求斯 MV马尔代夫 MW马拉维 MX墨西哥 MY马来西亚 MZ莫桑比克 NA纳米比亚 NC新喀里多尼亚 NE尼日尔 NF诺福克岛 NG尼日利亚 NI尼加拉瓜 NL荷兰 NO挪威 NP尼泊尔 NR瑙鲁 NU纽埃 NZ新西兰 OM阿曼 PA巴拿马 PE秘鲁 PF法属波利尼西亚 PG巴布亚新几内亚 PH菲律宾 PK巴基斯坦 PL波兰 PM圣皮埃尔和密克隆 PN皮特凯恩群岛 PR波多黎各 PS巴勒斯坦 PT葡萄牙 PW帕劳 PY巴拉圭 QA卡塔尔 RE留尼汪 RO罗马尼亚 RS塞尔维亚 RU俄罗斯 RW卢旺达 SA沙特阿拉伯 SB所罗门群岛 SC塞舌尔 SD苏丹 SE瑞典 SG新加坡 SH圣赫勒拿岛 SI斯洛文尼亚 SJ斯瓦尔巴 SK斯洛伐克 SL塞拉利昂 SM圣马力诺 SN塞内加尔 SO索马里 SR苏里南 SS南苏丹 ST圣多美和普林西比 SV萨尔瓦多 SX荷属圣马丁 SY叙利亚 SZ斯威士兰 TC特克斯和凯科斯群岛 TD乍得 TF法属南部领地 TG多哥 TH泰国 TJ塔吉克斯坦 TK托克劳 TL东帝汶 TM土库曼斯坦 TN突尼斯 TO汤加 TR土耳其 TT特立尼达和多巴哥 TV图瓦卢 TW中国台湾 TZ坦桑尼亚 UA乌克兰 UG乌干达 UM美国本土外小岛屿 US美国 UY乌拉圭 UZ乌兹别克斯坦 VA梵蒂冈 VC圣文森特和格林纳丁斯 VE委内瑞拉 VG英属维尔京群岛 VI美属维尔京群岛 VN越南 VU瓦努阿图 WF瓦利斯和富图纳 WS萨摩亚 YE也门 YT马约特 ZA南非 ZM赞比亚 ZW津巴布韦`;
 const CNAMES={};COUNTRY_TABLE.split(" ").forEach(t=>{CNAMES[t.slice(0,2)]=t.slice(2);});
 const countryName=c=>{const s=String(c??"").trim().toUpperCase();return s?(CNAMES[s]||s):"未知";};
-const APP_VER="1.1.0";
+const APP_VER="1.2.0";
 
 /* ---------- 账号 ---------- */
 const accounts=[
@@ -1176,6 +1198,7 @@ const IC={
   filter:'<path d="M3 5h18l-7 8.5V19l-4 2v-7.5z"/>',
   sort:'<path d="M7 4v13M7 17l-3-3M7 17l3-3M17 20V7M17 7l-3 3M17 7l3 3"/>',
   undo:'<path d="M4 9h10a6 6 0 0 1 0 12h-3M4 9l4-4M4 9l4 4"/>',
+  exit:'<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>',
   play:'<path d="M7 4.5v15l12-7.5z"/>',
   terminal:'<rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="m6.5 9 3.5 3-3.5 3M12.5 15.5H17"/>',
   eye:'<path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/>',
@@ -1595,6 +1618,12 @@ const TITLES={overview:["边缘总览","Observability"],domains:["域名与 DNS"
   data:["数据存储","D1 · KV · R2"],security:["Zero Trust","Access"],search:["搜索","Search"],
   deep:["深度分析","Drill-down"],tokens:["API 令牌","Tokens"]};
 
+/* Cloudflare 官方云朵 mark（取自原仓库 public/icon.svg 的路径） */
+function cfMark(size){return `<svg viewBox="54.4 3.2 49.2 22.6" width="${size}" height="${size*22.6/49.2}" aria-hidden="true">
+  <path fill="#ffffff" d="M98.6 14.2L93 12.9l-1-.4-25.7.2v12.4l32.3.1z"/>
+  <path fill="#f48120" d="M88.1 24c.3-1 .2-2-.3-2.6-.5-.6-1.2-1-2.1-1.1l-17.4-.2c-.1 0-.2-.1-.3-.1-.1-.1-.1-.2 0-.3.1-.2.2-.3.4-.3l17.5-.2c2.1-.1 4.3-1.8 5.1-3.8l1-2.6c0-.1.1-.2 0-.3-1.1-5.1-5.7-8.9-11.1-8.9-5 0-9.3 3.2-10.8 7.7-1-.7-2.2-1.1-3.6-1-2.4.2-4.3 2.2-4.6 4.6-.1.6 0 1.2.1 1.8-3.9.1-7.1 3.3-7.1 7.3 0 .4 0 .7.1 1.1 0 .2.2.3.3.3h32.1c.2 0 .4-.1.4-.3l.3-1.1z"/>
+  <path fill="#faad3f" d="M93.6 12.8h-.5c-.1 0-.2.1-.3.2l-.7 2.4c-.3 1-.2 2 .3 2.6.5.6 1.2 1 2.1 1.1l3.7.2c.1 0 .2.1.3.1.1.1.1.2 0 .3-.1.2-.2.3-.4.3l-3.8.2c-2.1.1-4.3 1.8-5.1 3.8l-.2.9c-.1.1 0 .3.2.3h13.2c.2 0 .3-.1.3-.3.2-.8.4-1.7.4-2.6 0-5.2-4.3-9.5-9.5-9.5"/></svg>`;}
+
 function renderShell(){
   const acc=curAccount();
   const r=parseHash();
@@ -1603,7 +1632,7 @@ function renderShell(){
     r.key==="worker"?(DB.workers.find(w=>w.id===r.param)?.name||"Worker"):
     r.key==="pages"?(DB.pagesProjects.find(p=>p.name===r.param)?.name||"Pages"):TITLES[r.key]?.[0]||"总览";
   $("#appbar").innerHTML=`
-    ${depth>0?`<button class="ab-back" id="ab-back" aria-label="返回">${icon("chevL")}</button>`:`<span class="logo-mark" style="width:30px;height:30px;border-radius:9px">${icon("cloud",17)}</span>`}
+    ${depth>0?`<button class="ab-back" id="ab-back" aria-label="返回">${icon("chevL")}</button>`:`<span class="logo-mark">${cfMark(22)}</span>`}
     <div class="ab-title"><b>${esc(title)}</b><small>${TITLES[r.key]?.[1]||""}${state.aggregate?" · 合并视图":""}</small></div>
     <button class="icon-btn" id="ab-search" aria-label="搜索">${icon("search")}</button>
     <button class="ab-gate ${state.writeGate?"open":"locked"}" id="ab-gate" aria-label="写闸门">${icon(state.writeGate?"unlock":"lock")}</button>
@@ -3685,11 +3714,18 @@ function openSettingsSheet(){
       ${accounts.length>1?`<button class="icon-act danger" data-delacc="${a.id}" title="移除账号">${icon("trash")}</button>`:'<span class="chip">唯一账号</span>'}
     </div>`).join("")}
     <div class="eyebrow mb mt-l">关于</div>
-    <div class="set-row"><span class="sr-ico">${icon("cloud")}</span><div class="sr-main"><b>CF 控制台 · Console Next</b><span>手机版 v${APP_VER} · 功能对齐原 App 的完整实现</span></div>
+    <div class="set-row"><span class="sr-ico">${icon("cloud")}</span><div class="sr-main"><b>CF-next</b><span>手机版 v${APP_VER} · 功能对齐原 App 的完整实现</span></div>
       <button class="btn sm ghost" id="st-update">${icon("refresh",12)} 检查更新</button></div>
+    <div class="set-row"><span class="sr-ico">${icon("lock")}</span><div class="sr-main"><b>演示登录门</b><span>当前会话 ${prefs.get("login",null)?("已通过 · "+String(prefs.get("login","")).slice(0,16)):"未登录"}</span></div>
+      <button class="btn sm ghost" id="st-logout">${icon("exit",12)} 退出</button></div>
     <div class="set-row"><span class="sr-ico">${icon("db")}</span><div class="sr-main"><b>数据模式</b><span>内置演示数据（形状对齐 CF API，可整体替换为直连层）</span></div></div>
     <div class="set-row"><span class="sr-ico">${icon("key")}</span><div class="sr-main"><b>本机存储</b><span>偏好落 localStorage · 凭证备份走 AES-256-GCM 保险箱</span></div></div>`);
   const reopen=()=>{close();render();openSettingsSheet();};
+  el.querySelector("#st-logout").onclick=()=>{
+    confirmWrite({title:"退出演示登录门",method:"POST",path:"/logout",body:{cookie:"clear"},okLabel:"退出",onOk:()=>{
+      prefs.set("login",null);close();location.reload();
+    }});
+  };
   el.querySelectorAll("#st-theme button").forEach(b=>b.onclick=()=>{state.theme=b.dataset.v;prefs.set("theme",state.theme);applyTheme();reopen();});
   el.querySelectorAll("#st-accent button").forEach(b=>b.onclick=()=>{state.accent=b.dataset.v;prefs.set("accent",state.accent);applyTheme();reopen();});
   el.querySelectorAll("#st-count button").forEach(b=>b.onclick=()=>{
@@ -3737,8 +3773,7 @@ function openSettingsSheet(){
   };
   el.querySelector("#st-gitclear").onclick=()=>{prefs.set("gitTokens",{github:"",gitlab:""});toast("Git 令牌已清空","info");reopen();};
   el.querySelector("#st-vault").onclick=()=>{close();vaultExportSheet();};
-  el.querySelector("#st-update").onclick=()=>{
-    const btn=el.querySelector("#st-update");btn.disabled=true;btn.innerHTML=`${icon("refresh",12)} 检查中…`;btn.querySelector("svg").style.animation="rot .8s linear infinite";
+  el.querySelector("#st-update").onclick=()=>{    const btn=el.querySelector("#st-update");btn.disabled=true;btn.innerHTML=`${icon("refresh",12)} 检查中…`;btn.querySelector("svg").style.animation="rot .8s linear infinite";
     setTimeout(()=>{
       if(el.isConnected){btn.disabled=false;btn.innerHTML=`${icon("refresh",12)} 检查更新`;}
       toast("已是最新 v"+APP_VER+"（演示模式不联网，按本地版本号比对）","info");
@@ -3785,17 +3820,51 @@ function vaultExportSheet(){
 }
 function applyTheme(){document.documentElement.dataset.theme=state.theme;document.documentElement.dataset.accent=state.accent;}
 
+/* ================= 演示登录门（docs/14 §9：网关报 demo:true 才出现） ================= */
+const DEMO_PASS="cf-demo";
+function loginGate(){
+  const root=document.createElement("div");
+  root.className="lg-root";root.id="lg-root";
+  root.innerHTML=`<div class="lg-card">
+    <div class="lg-logo">${cfMark(56)}</div>
+    <h1>CF-next</h1>
+    <p class="lg-sub">演示部署 · 免配置出数<span class="chip ok" style="margin-left:8px">demo: true</span></p>
+    <div class="field mb"><label>访问口令（DEMO_PASS）</label>
+      <input class="inp mono" id="lg-pw" type="password" placeholder="演示密码" autocomplete="off" spellcheck="false"/>
+      <div class="err" id="lg-err" style="display:none"></div></div>
+    <button class="btn primary block" id="lg-ok">${icon("unlock",14)} 进入控制台</button>
+    <button class="btn ghost block mt" id="lg-hint">忘了密码？点我填演示密码</button>
+    <p class="lg-note">通过后发 HttpOnly cookie（SHA-256 摘要，不落明文密码）。数据出口是网关兜底 <b>CF_API_TOKEN</b>，访客无需自带令牌。</p></div>`;
+  document.body.appendChild(root);
+  const err=root.querySelector("#lg-err");
+  const fail=m=>{err.textContent=m;err.style.display="block";root.querySelector(".lg-card").classList.remove("shake");void 0;root.querySelector(".lg-card").classList.add("shake");};
+  const enter=()=>{
+    const v=root.querySelector("#lg-pw").value;
+    if(v!==DEMO_PASS)return fail("口令不对（演示密码见下方按钮）");
+    const stamp=new Date().toISOString();
+    prefs.set("login",stamp);
+    root.classList.add("gone");
+    setTimeout(()=>root.remove(),380);
+    toast("登录门已通过 · cookie 已下发（模拟）","ok");
+  };
+  root.querySelector("#lg-ok").onclick=enter;
+  root.querySelector("#lg-pw").onkeydown=e=>{if(e.key==="Enter")enter();};
+  root.querySelector("#lg-hint").onclick=()=>{root.querySelector("#lg-pw").value=DEMO_PASS;root.querySelector("#lg-pw").focus();};
+}
+
 /* ================= 启动 ================= */
 applyTheme();
 document.body.insertAdjacentHTML("afterbegin",`<div class="ambient"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>`);
 $("#m-shell").innerHTML=`<header class="appbar" id="appbar"></header><main class="screen" id="screen"></main>
   <nav class="m-tabbar" aria-label="主导航">${TABS.map(t=>`<button class="m-tab" data-key="${t.key}">${icon(t.icon,21)}<span>${t.label}</span></button>`).join("")}</nav>`;
-document.querySelectorAll(".m-tab").forEach(b=>b.onclick=()=>{
+document.querySelectorAll(".m-tab").forEach(b=>{
+  b.onclick=()=>{if(!prefs.get("login")){loginGate();return;}
   const target="#/"+b.dataset.key;
-  if(location.hash===target)render();else location.hash=target;
+  if(location.hash===target)render();else location.hash=target;};
 });
 if(!location.hash)location.hash="#/overview";
 render();
+if(!prefs.get("login"))loginGate();
 </script>
 </body>
 </html>

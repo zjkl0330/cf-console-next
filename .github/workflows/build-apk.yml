@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   apk:
-    name: assembleDebug
+    name: assembleRelease
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -35,33 +35,45 @@ jobs:
       - name: Sync web assets
         run: npx cap sync android
 
+      - name: Generate app icons (Cloudflare mark)
+        run: npx capacitor-assets generate --android
+
       - name: Stamp version
         run: |
           V=$(node -p "require('./package.json').version")
           echo "VER=$V" >> "$GITHUB_ENV"
           sed -i "s/versionCode 1/versionCode ${V//./0}/; s/versionName \"1.0\"/versionName \"$V\"/" android/app/build.gradle
 
-      - name: Build debug APK
+      - name: Decode keystore
+        run: echo "${{ secrets.CFNEXT_KEYSTORE }}" | base64 -d > "$RUNNER_TEMP/release.p12"
+
+      - name: Build release APK (signed)
         working-directory: android
-        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon \
+            -Pandroid.injected.signing.store.file=$RUNNER_TEMP/release.p12 \
+            -Pandroid.injected.signing.store.password=${{ secrets.CFNEXT_KEYSTORE_PASSWORD }} \
+            -Pandroid.injected.signing.key.alias=${{ secrets.CFNEXT_KEY_ALIAS }} \
+            -Pandroid.injected.signing.key.password=${{ secrets.CFNEXT_KEYSTORE_PASSWORD }}
 
       - name: Rename APK
-        run: cp android/app/build/outputs/apk/debug/app-debug.apk "cf-console-next-v${VER}-debug.apk"
+        run: cp android/app/build/outputs/apk/release/app-release.apk "cf-next-v${VER}-release.apk"
 
       - uses: actions/upload-artifact@v4
         with:
-          name: cf-console-next-debug-apk
-          path: "cf-console-next-v${{ env.VER }}-debug.apk"
+          name: cf-next-release-apk
+          path: "cf-next-v${{ env.VER }}-release.apk"
           if-no-files-found: error
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ env.VER }}
-          name: "边缘控制台 Next v${{ env.VER }}（Android debug APK）"
+          name: "CF-next v${{ env.VER }}（生产签名 APK）"
           body: |
-            自动构建产物：debug 签名 APK，可直接安装（需允许"安装未知来源应用"）。
-            界面为单文件 Web App（Capacitor 封装），液态玻璃导航栏 + 全功能控制台。
-          files: "cf-console-next-v${{ env.VER }}-debug.apk"
+            自动构建的生产版 APK（release 签名，keystore 存于 Actions Secrets）。
+            应用名 CF-next，图标为 Cloudflare 官方云朵 mark，内置演示登录门（口令见登录页提示）。
+          files: "cf-next-v${{ env.VER }}-release.apk"
           make_latest: "true"
           overwrite_files: true

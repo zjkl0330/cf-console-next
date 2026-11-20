@@ -1,10 +1,12 @@
-# cf-console-next
+# CF-next（cf-console-next）
 
 Cloudflare 边缘控制台「Next」界面 —— 单文件移动端 UI（零依赖 vanilla JS），外加 Capacitor Android 封装。
 
 - `www/index.html`：完整应用（自包含，可直接浏览器打开体验）
-- `capacitor.config.json`：Android 封装配置（appId `dev.zjkl.cfconsole`）
-- `.github/workflows/build-apk.yml`：push / 手动触发即构建 debug APK，产物在 Actions 运行页的 Artifacts 中下载
+- `capacitor.config.json`：Android 封装配置（应用名 **CF-next**，appId `dev.zjkl.cfconsole`，图标为 Cloudflare 官方云朵 mark）
+- `assets/icon.png`：1024×1024 源图标（CI 里由 capacitor-assets 生成各密度 mipmap）
+- 演示登录门：口令 `cf-demo`（登录页有一键填入提示）
+- `.github/workflows/build-apk.yml`：push / 手动触发即构建**生产签名 APK**，自动发布 GitHub Release 并挂产物
 
 ## 本地出包
 
@@ -13,7 +15,7 @@ npm ci
 npx cap add android
 npx cap sync android
 cd android && ./gradlew assembleDebug
-# 产物：android/app/build/outputs/apk/debug/app-debug.apk
+# 生产签名需先注入 keystore（见 workflow 中 secrets 用法），本地调试可用 assembleDebug
 ```
 
 ## 功能覆盖
