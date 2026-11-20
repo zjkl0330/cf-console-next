@@ -1,0 +1,4 @@
+node_modules/
+android/
+www/*.bak
+.DS_Store

@@ -1,0 +1,10 @@
+{
+  "appId": "dev.zjkl.cfconsole",
+  "appName": "边缘控制台 Next",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#060a15"
+  }
+}
