@@ -765,7 +765,7 @@ const FLAG=c=>String.fromCodePoint(...[...c.toUpperCase()].map(ch=>0x1F1A5+ch.ch
 const COUNTRY_TABLE=`AD安道尔 AE阿联酋 AF阿富汗 AG安提瓜和巴布达 AI安圭拉 AL阿尔巴尼亚 AM亚美尼亚 AO安哥拉 AQ南极洲 AR阿根廷 AS美属萨摩亚 AT奥地利 AU澳大利亚 AW阿鲁巴 AX奥兰群岛 AZ阿塞拜疆 BA波黑 BB巴巴多斯 BD孟加拉国 BE比利时 BF布基纳法索 BG保加利亚 BH巴林 BI布隆迪 BJ贝宁 BL圣巴泰勒米 BM百慕大 BN文莱 BO玻利维亚 BQ荷兰加勒比区 BR巴西 BS巴哈马 BT不丹 BV布韦岛 BW博茨瓦纳 BY白俄罗斯 BZ伯利兹 CA加拿大 CC科科斯群岛 CD刚果（金） CF中非 CG刚果（布） CH瑞士 CI科特迪瓦 CK库克群岛 CL智利 CM喀麦隆 CN中国 CO哥伦比亚 CR哥斯达黎加 CU古巴 CV佛得角 CW库拉索 CX圣诞岛 CY塞浦路斯 CZ捷克 DE德国 DJ吉布提 DK丹麦 DM多米尼克 DO多米尼加 DZ阿尔及利亚 EC厄瓜多尔 EE爱沙尼亚 EG埃及 EH西撒哈拉 ER厄立特里亚 ES西班牙 ET埃塞俄比亚 FI芬兰 FJ斐济 FK福克兰群岛 FM密克罗尼西亚 FO法罗群岛 FR法国 GA加蓬 GB英国 GD格林纳达 GE格鲁吉亚 GF法属圭亚那 GG根西岛 GH加纳 GI直布罗陀 GL格陵兰 GM冈比亚 GN几内亚 GP瓜德罗普 GQ赤道几内亚 GR希腊 GS南乔治亚岛 GT危地马拉 GU关岛 GW几内亚比绍 GY圭亚那 HK中国香港 HM赫德岛 HN洪都拉斯 HR克罗地亚 HT海地 HU匈牙利 ID印度尼西亚 IE爱尔兰 IL以色列 IM马恩岛 IN印度 IO英属印度洋领地 IQ伊拉克 IR伊朗 IS冰岛 IT意大利 JE泽西岛 JM牙买加 JO约旦 JP日本 KE肯尼亚 KG吉尔吉斯斯坦 KH柬埔寨 KI基里巴斯 KM科摩罗 KN圣基茨和尼维斯 KP朝鲜 KR韩国 KW科威特 KY开曼群岛 KZ哈萨克斯坦 LA老挝 LB黎巴嫩 LC圣卢西亚 LI列支敦士登 LK斯里兰卡 LR利比里亚 LS莱索托 LT立陶宛 LU卢森堡 LV拉脱维亚 LY利比亚 MA摩洛哥 MC摩纳哥 MD摩尔多瓦 ME黑山 MF法属圣马丁 MG马达加斯加 MH马绍尔群岛 MK北马其顿 ML马里 MM缅甸 MN蒙古 MO中国澳门 MP北马里亚纳群岛 MQ马提尼克 MR毛里塔尼亚 MS蒙特塞拉特 MT马耳他 MU毛里求斯 MV马尔代夫 MW马拉维 MX墨西哥 MY马来西亚 MZ莫桑比克 NA纳米比亚 NC新喀里多尼亚 NE尼日尔 NF诺福克岛 NG尼日利亚 NI尼加拉瓜 NL荷兰 NO挪威 NP尼泊尔 NR瑙鲁 NU纽埃 NZ新西兰 OM阿曼 PA巴拿马 PE秘鲁 PF法属波利尼西亚 PG巴布亚新几内亚 PH菲律宾 PK巴基斯坦 PL波兰 PM圣皮埃尔和密克隆 PN皮特凯恩群岛 PR波多黎各 PS巴勒斯坦 PT葡萄牙 PW帕劳 PY巴拉圭 QA卡塔尔 RE留尼汪 RO罗马尼亚 RS塞尔维亚 RU俄罗斯 RW卢旺达 SA沙特阿拉伯 SB所罗门群岛 SC塞舌尔 SD苏丹 SE瑞典 SG新加坡 SH圣赫勒拿岛 SI斯洛文尼亚 SJ斯瓦尔巴 SK斯洛伐克 SL塞拉利昂 SM圣马力诺 SN塞内加尔 SO索马里 SR苏里南 SS南苏丹 ST圣多美和普林西比 SV萨尔瓦多 SX荷属圣马丁 SY叙利亚 SZ斯威士兰 TC特克斯和凯科斯群岛 TD乍得 TF法属南部领地 TG多哥 TH泰国 TJ塔吉克斯坦 TK托克劳 TL东帝汶 TM土库曼斯坦 TN突尼斯 TO汤加 TR土耳其 TT特立尼达和多巴哥 TV图瓦卢 TW中国台湾 TZ坦桑尼亚 UA乌克兰 UG乌干达 UM美国本土外小岛屿 US美国 UY乌拉圭 UZ乌兹别克斯坦 VA梵蒂冈 VC圣文森特和格林纳丁斯 VE委内瑞拉 VG英属维尔京群岛 VI美属维尔京群岛 VN越南 VU瓦努阿图 WF瓦利斯和富图纳 WS萨摩亚 YE也门 YT马约特 ZA南非 ZM赞比亚 ZW津巴布韦`;
 const CNAMES={};COUNTRY_TABLE.split(" ").forEach(t=>{CNAMES[t.slice(0,2)]=t.slice(2);});
 const countryName=c=>{const s=String(c??"").trim().toUpperCase();return s?(CNAMES[s]||s):"未知";};
-const APP_VER="1.2.1";
+const APP_VER="1.2.2";
 
 /* ---------- 账号 ---------- */
 const accounts=[
@@ -1510,7 +1510,7 @@ const h=html=>{const t=document.createElement("template");t.innerHTML=html.trim(
 
 /* ---------------- Toast ---------------- */
 function toast(msg,tone="ok",action=null){
-  const t=h(`<div class="toast ${tone}">${icon(tone==="ok"?"check":tone==="bad"?"alert":tone==="warn"?"lock":"info")}<span>${esc(msg)}</span>${action?`<button class="undo">${esc(action.label)}</button>`:""}</div>`);
+  const t=h(`<div class="toast ${tone}">${icon(tone==="ok"?"check":tone==="bad"?"alert":tone==="warn"?"lock":"info")}<span>${esc(msg)}</span>${action?`<button class="undo">${esc(action.label==="撤销"&&isLive()?"本机回退":action.label)}</button>`:""}</div>`);
   $("#toasts").appendChild(t);
   const kill=()=>{t.classList.add("out");setTimeout(()=>t.remove(),260);};
   if(action)t.querySelector(".undo").onclick=()=>{action.fn();kill();};
@@ -1550,7 +1550,7 @@ function gateGuard(){
   toast("写保护开启中：变更未发出","warn",{label:"去开启",fn:()=>{state.writeGate=true;prefs.set("writeGate",true);renderShell();render();toast("写闸门已放行","warn");}});
   return false;
 }
-function confirmWrite({title,method,path,body,danger=false,typed=null,okLabel="确认执行",onOk}){
+function confirmWrite({title,method,path,body,danger=false,typed=null,okLabel="确认执行",local=false,noLive=false,onOk}){
   if(!gateGuard())return;
   const needTyped=!!typed&&prefs.get("typedDelete",false);
   const echo=`<span class="m">${method}</span> <span class="p">${esc(path)}</span>`+(body?`\n${esc(JSON.stringify(body,null,2))}`:"");
@@ -1572,7 +1572,21 @@ function confirmWrite({title,method,path,body,danger=false,typed=null,okLabel="�
     inp.addEventListener("input",()=>{okBtn.disabled=inp.value.trim()!==typed;});
     setTimeout(()=>inp.focus(),350);
   }
-  okBtn.onclick=()=>{
+  okBtn.onclick=async()=>{
+    if(isLive()&&!local){
+      if(noLive){close();toast("直连模式不开放该操作：REST 层没有对应接口（如 R2 对象走 S3 兼容通道）","warn");return;}
+      okBtn.disabled=true;const oldHTML=okBtn.innerHTML;okBtn.innerHTML="发送中…";
+      let res=null;
+      try{res=await cfCall(method,path,body);}
+      catch(e){okBtn.disabled=false;okBtn.innerHTML=oldHTML;
+        toast((e.kind==="auth"?"鉴权失败（令牌问题）：":e.kind==="rate"?"触发限流：":e.kind==="upstream"?"上游故障：":"上游拒绝：")+e.message,"bad");return;}
+      const day=new Date().toISOString().slice(0,10);
+      const led=prefs.get("ledger",{day,n:0});
+      prefs.set("ledger",{day,n:(led.day===day?led.n:0)+1});
+      close();onOk(res&&typeof res==="object"?res:null);
+      toast("直连已执行 · "+method+" 上游确认","ok");
+      return;
+    }
     close();
     const day=new Date().toISOString().slice(0,10);
     const led=prefs.get("ledger",{day,n:0});
@@ -1620,7 +1634,7 @@ function renderShell(){
     r.key==="pages"?(DB.pagesProjects.find(p=>p.name===r.param)?.name||"Pages"):TITLES[r.key]?.[0]||"总览";
   $("#appbar").innerHTML=`
     ${depth>0?`<button class="ab-back" id="ab-back" aria-label="返回">${icon("chevL")}</button>`:`<span class="logo-mark">${cfMark(22)}</span>`}
-    <div class="ab-title"><b>${esc(title)}</b><small>${TITLES[r.key]?.[1]||""}${state.aggregate?" · 合并视图":""}</small></div>
+    <div class="ab-title"><b>${esc(title)}</b><small>${TITLES[r.key]?.[1]||""}${state.aggregate?" · 合并视图":""}${isLive()?' · <span style="color:var(--brand-ink);font-weight:600">直连 LIVE</span>':""}</small></div>
     <button class="icon-btn" id="ab-search" aria-label="搜索">${icon("search")}</button>
     <button class="ab-gate ${state.writeGate?"open":"locked"}" id="ab-gate" aria-label="写闸门">${icon(state.writeGate?"unlock":"lock")}</button>
     <button class="ab-avatar" id="ab-acct" aria-label="账号">${esc((acc.alias||acc.name).slice(0,1))}</button>`;
@@ -1636,6 +1650,7 @@ function renderShell(){
   document.querySelectorAll(".m-tab").forEach(b=>b.classList.toggle("on",b.dataset.key===rootTab));
 }
 function render(){
+  if(isLive()&&(live.busy||!accounts.length)){liveHold(live.busy?"直连同步中…":"直连未就绪",live.busy?"正在读取真实数据，请稍候":(live.error||"尚未同步到任何账号（检查令牌与网关）"),live.busy?"refresh":"alert");return;}
   const r=parseHash();
   const depth=DEPTH[r.key]??0;
   const scr=$("#screen");
@@ -1651,21 +1666,25 @@ function render(){
 window.addEventListener("hashchange",render);
 
 /* ---------------- 分析 ---------------- */
+function anFor(accId,range){return isLive()?liveAnalytics(accId,range):DB.analytics(accId,range);}
 function mAnalytics(){
   if(state.aggregate){
-    const a=DB.analytics(accounts[0].id,state.range),b=DB.analytics(accounts[1].id,state.range);
-    const pts=a.points.map((p,i)=>{const q=b.points[i];return{label:p.label,requests:p.requests+q.requests,cached:p.cached+q.cached,uncached:p.uncached+q.uncached,bytes:p.bytes+q.bytes,threats:p.threats+q.threats,visitors:p.visitors+q.visitors};});
-    const merge=(x,y,k)=>{const m=new Map();[...x,...y].forEach(it=>{const c=m.get(it[k])||{...it,count:0};c.count+=it.count;m.set(it[k],c);});return[...m.values()].sort((p,q)=>q.count-p.count);};
-    const total=a.total+b.total,cached=a.cached+b.cached,errCount=a.errCount+b.errCount;
-    return{points:pts,total,cached,cacheRate:cached/total*100,bytes:a.bytes+b.bytes,threats:a.threats+b.threats,visitors:a.visitors+b.visitors,
-      status:merge(a.status,b.status,"code"),countries:merge(a.countries,b.countries,"code"),hosts:merge(a.hosts,b.hosts,"host").slice(0,8),
-      types:merge(a.types,b.types,"type"),errCount,errRate:errCount/total*100,
-      drill:Object.fromEntries(Object.keys(a.drill).map(k=>[k,merge(a.drill[k],b.drill[k],"k")])),
-      origin:{count:a.origin.count+b.origin.count,avgMs:Math.round((a.origin.avgMs+b.origin.avgMs)/2)},
-      httpsRate:(a.httpsRate+b.httpsRate)/2,
-      deltas:Object.fromEntries(Object.keys(a.deltas).map(k=>[k,+((a.deltas[k]+b.deltas[k])/2).toFixed(1)])),peak:Math.max(...pts.map(p=>p.requests))};
+    const parts=accounts.map(a=>anFor(a.id,state.range));
+    const total=parts.reduce((s,a)=>s+a.total,0),cached=parts.reduce((s,a)=>s+a.cached,0),errCount=parts.reduce((s,a)=>s+a.errCount,0);
+    const n=parts[0].points.length;
+    const pts=Array.from({length:n},(_,i)=>parts.reduce((acc,p)=>{const q=p.points[i]||{requests:0,cached:0,uncached:0,bytes:0,threats:0,visitors:0,label:""};
+      return{label:q.label||acc.label,requests:acc.requests+q.requests,cached:acc.cached+q.cached,uncached:acc.uncached+q.uncached,bytes:acc.bytes+q.bytes,threats:acc.threats+q.threats,visitors:acc.visitors+q.visitors};},{label:"",requests:0,cached:0,uncached:0,bytes:0,threats:0,visitors:0}));
+    const merge=(lists,k)=>{const m=new Map();lists.forEach(L=>(L||[]).forEach(it=>{const c=m.get(it[k])||{...it,count:0};c.count+=it.count;m.set(it[k],c);}));return[...m.values()].sort((p,q)=>q.count-p.count);};
+    const avg=(f)=>parts.length?Math.round(parts.reduce((s,a)=>s+(a[f]||0),0)/parts.length):0;
+    return{points:pts,total,cached,cacheRate:total?cached/total*100:0,bytes:parts.reduce((s,a)=>s+a.bytes,0),threats:parts.reduce((s,a)=>s+a.threats,0),visitors:parts.reduce((s,a)=>s+a.visitors,0),
+      status:merge(parts.map(a=>a.status),"code"),countries:merge(parts.map(a=>a.countries),"code"),hosts:merge(parts.map(a=>a.hosts),"host").slice(0,8),
+      types:merge(parts.map(a=>a.types),"type"),errCount,errRate:total?errCount/total*100:0,
+      drill:Object.fromEntries(Object.keys(parts[0].drill||{}).map(k=>[k,merge(parts.map(a=>a.drill&&a.drill[k]),"k")])),
+      origin:{count:parts.reduce((s,a)=>s+a.origin.count,0),avgMs:(()=>{const c=parts.reduce((s,a)=>s+a.origin.count,0);return c?Math.round(parts.reduce((s,a)=>s+a.origin.avgMs*a.origin.count,0)/c):0;})()},
+      httpsRate:avg("httpsRate"),
+      deltas:Object.fromEntries(Object.keys(parts[0].deltas||{}).map(k=>[k,+((parts.reduce((s,a)=>s+(a.deltas[k]||0),0)/parts.length)).toFixed(1)])),peak:Math.max(0,...pts.map(p=>p.requests))};
   }
-  return DB.analytics(state.account,state.range);
+  return anFor(state.account,state.range);
 }
 const RANGE_LABEL={"24h":"过去 24 小时","7d":"过去 7 天","30d":"过去 30 天"};
 function deltaHTML(v,inverse=false){
@@ -1755,12 +1774,12 @@ function vOverview(){
     <div class="panel">
       ${zs.map(z=>`<div class="ver-row" data-zone="${z.id}" style="cursor:pointer">
         <span class="dot ${z.status==="active"?"ok":"warn"}"></span>
-        <div class="ver-main"><div class="m">${esc(z.name)}</div><div class="s">${z.records.length} DNS · ${z.waf.filter(w=>w.on).length} WAF · ${esc(z.ssl)}</div></div>
+        <div class="ver-main"><div class="m">${esc(z.name)}</div><div class="s">${(isLive()&&!z._recsLoaded)?"DNS 未读":z.records.length+" DNS"} · ${z.waf?z.waf.filter(w=>w.on).length+" WAF":"WAF 未读"} · ${esc(z.ssl)}</div></div>
         <span class="chip ${z.status==="active"?"ok":"warn"}">${z.status==="active"?"运行中":"待生效"}</span>${icon("chevR",12,"muted")}</div>`).join("")}
-      ${ws.map(w=>`<div class="ver-row" data-worker="${w.id}" style="cursor:pointer">
+      ${ws.map(w=>{const ver=w.versions&&w.versions.length?("v"+w.versions[0].number):(isLive()?"版本读取中":"v—");const use=(isLive()&&!w._loaded)?"用量未读":fmtN(w.usage.requests)+" req/24h";return `<div class="ver-row" data-worker="${w.id}" style="cursor:pointer">
         <span style="color:var(--brand-ink)">${icon("bolt",14)}</span>
-        <div class="ver-main"><div class="m">${esc(w.name)}</div><div class="s">${fmtN(w.usage.requests)} req/24h · v${w.versions[0].number}</div></div>
-        ${w.split?`<span class="chip info">灰度 ${w.split.pct}%</span>`:`<span class="chip ${w.usage.errors>100?"bad":"ok"}">${w.usage.errors>100?w.usage.errors+" 错误":"正常"}</span>`}${icon("chevR",12,"muted")}</div>`).join("")}
+        <div class="ver-main"><div class="m">${esc(w.name)}</div><div class="s">${use} · ${ver}</div></div>
+        ${w.split?`<span class="chip info">灰度 ${w.split.pct}%</span>`:`<span class="chip ${w.usage.errors>100?"bad":"ok"}">${w.usage.errors>100?w.usage.errors+" 错误":"正常"}</span>`}${icon("chevR",12,"muted")}</div>`}).join("")}
       ${zs.length===0&&ws.length===0?emptyBlock("layers","无资产","当前视图下没有站点或 Worker"):""}
     </div>
     <div class="sec-h"><b>最近动态</b></div>
@@ -1883,7 +1902,7 @@ function vDomains(){
     zs.map(z=>`<div class="panel res-card mb" data-zone="${z.id}">
       <span class="res-ico" style="color:${z.status==="active"?"var(--green)":"var(--amber)"};background:color-mix(in srgb,${z.status==="active"?"var(--green)":"var(--amber)"} 9%,transparent)">${icon("globe",19)}</span>
       <div class="res-main"><div class="t">${esc(z.name)} <span class="chip">${z.plan}</span></div>
-        <div class="s">${z.records.length} 条 DNS · ${z.waf.filter(w=>w.on).length} 条 WAF 生效 · SSL ${esc(z.ssl)}</div>
+        <div class="s">${z.records.length} 条 DNS · ${z.waf?z.waf.filter(w=>w.on).length+" 条 WAF 生效":"WAF 未读"} · SSL ${esc(z.ssl)}</div>
         ${z.status==="pending"?`<div class="s" style="color:var(--amber)">NS 未切换 · 点开看向导</div>`:""}</div>
       <span class="chip ${z.status==="active"?"ok":"warn"}"><span class="dot ${z.status==="active"?"ok":"warn"}"></span>${z.status==="active"?"运行中":"待生效"}</span>
       ${icon("chevR",14,"go")}</div>`).join("")}
@@ -1903,9 +1922,9 @@ function addZoneSheet(){
     if(!/^[a-z0-9-]+(\.[a-z0-9-]+)+$/.test(name)){toast("域名格式不对（例：example.com）","bad");return;}
     if(DB.zones.some(z=>z.name===name)){toast("该域名已在列表里","warn");return;}
     const plan=el.querySelector("#az-plan").value;
-    confirmWrite({title:"添加站点 "+name,method:"POST",path:"/zones",body:{name,account:{id:state.account},type:"full"},okLabel:"添加",onOk:()=>{
-      const z={id:hex(32),account:state.account,name,status:"pending",plan,paused:false,created:new Date().toISOString().slice(0,10),
-        ns:[pick(["aria","dana","elle","ivy","kirk"])+"."+ "ns.cloudflare.com",pick(["noah","rick","todd"])+"."+"ns.cloudflare.com"],
+    confirmWrite({title:"添加站点 "+name,method:"POST",path:"/zones",body:{name,account:{id:state.account},type:"full"},okLabel:"添加",onOk:(res)=>{
+      const z={id:(res&&res.id)||hex(32),account:state.account,name,status:(res&&res.status)||"pending",plan:(res&&res.plan&&res.plan.name)||plan,paused:false,created:new Date().toISOString().slice(0,10),
+        ns:(res&&res.nameservers)||[pick(["aria","dana","elle","ivy","kirk"])+"."+ "ns.cloudflare.com",pick(["noah","rick","todd"])+"."+"ns.cloudflare.com"],
         ssl:"Full",security:"medium",devMode:false,tls13:"on",http3:"on",brotli:"on",records:[],
         waf:[{id:hex(16),name:"托管规则 · Cloudflare Managed",action:"managed",expr:"true",on:true}]};
       DB.zones.push(z);logActivity("dns","添加站点 "+name,"info");close();
@@ -1918,6 +1937,7 @@ function addZoneSheet(){
 function vZone(id){
   const z=DB.zones.find(x=>x.id===id);
   if(!z){$("#screen").innerHTML=emptyBlock("alert","站点不存在","可能已被删除");return;}
+  liveLazy(Promise.all([ensureZoneRecords(z),liveLoadWaf(z)]).then(a=>a.some(Boolean)),"zone");
   const tabs=[["dns","DNS 记录"],["routes","路由"],["waf","WAF"],["purge","缓存清理"],["info","概览"]];
   $("#screen").innerHTML=`
     <div class="row wrap mb">
@@ -1969,7 +1989,7 @@ function zoneDns(z){
     const r=z.records.find(x=>x.id===btn.dataset.proxy);
     if(!["A","AAAA","CNAME"].includes(r.type))return;
     const to=!r.proxied;
-    confirmWrite({title:(to?"开启代理 ":"关闭代理 ")+r.name,method:"PATCH",path:`/zones/${z.id}/dns_records/${r.id}`,
+    confirmWrite({title:(to?"开启代理 ":"关闭代理 ")+r.name,method:isLive()?"PUT":"PATCH",path:`/zones/${z.id}/dns_records/${r.id}`,
       body:{type:r.type,name:r.name,content:r.content,ttl:r.ttl,proxied:to},okLabel:to?"开橙云":"改仅 DNS",onOk:()=>{
         r.proxied=to;r.modified=new Date().toISOString();
         logActivity("dns",`${z.name} ${r.type} ${r.name} → ${to?"已代理":"仅 DNS"}`);
@@ -2028,10 +2048,10 @@ function recordSheet(z,r,prefill=null){
     if(t==="MX")body.priority=+el.querySelector("#rf-prio").value||10;
     const comment=el.querySelector("#rf-comment").value.trim();
     if(comment)body.comment=comment;
-    confirmWrite({title:(isNew?"添加":"修改")+" "+t+" 记录",method:isNew?"POST":"PATCH",
-      path:`/zones/${z.id}/dns_records${isNew?"":"/"+r.id}`,body,okLabel:isNew?"添加":"保存",onOk:()=>{
+    confirmWrite({title:(isNew?"添加":"修改")+" "+t+" 记录",method:isNew?"POST":(isLive()?"PUT":"PATCH"),
+      path:`/zones/${z.id}/dns_records${isNew?"":"/"+r.id}`,body,okLabel:isNew?"添加":"保存",onOk:(res)=>{
         if(isNew){
-          const rec={id:hex(32),...body,comment:comment||"",created:new Date().toISOString(),modified:new Date().toISOString()};
+          const rec={id:(res&&res.id)||hex(32),...body,comment:comment||"",created:new Date().toISOString(),modified:new Date().toISOString()};
           z.records.push(rec);logActivity("dns",`${z.name} 新增 ${t} ${nameRaw}`);
           toast("记录已添加","ok",{label:"撤销",fn:()=>{z.records=z.records.filter(x=>x.id!==rec.id);render();toast("已撤销新增","info");}});
         }else{
@@ -2113,18 +2133,19 @@ function routeSheet(z,w,idx){
   });
 }
 function zoneWaf(z){
+  if(z.waf==null){$("#z-body").innerHTML=`<div class="panel">${emptyBlock("shield",isLive()?"WAF 规则读取中…":"没有 WAF 规则",isLive()?"rulesets entrypoint 按需拉取，稍候自动刷新":"这个站点还没有托管规则")}</div>`;return;}
   $("#z-body").innerHTML=`
     <div class="note info mb">${icon("info")}<span>规则来自 rulesets entrypoint（只读同步）。免费档无命中明细，这里只管启停。</span></div>
-    <div class="panel">${z.waf.map(w=>`<div class="set-row" style="padding:13px 14px">
+    <div class="panel">${z.waf.length?z.waf.map(w=>`<div class="set-row" style="padding:13px 14px">
       <div class="sr-main"><b>${esc(w.name)}</b>
         <span class="mono" style="font-size:10.5px;display:block;margin-top:3px;overflow-wrap:anywhere">${esc(w.expr)}</span>
         ${w.desc?`<span>${esc(w.desc)}</span>`:""}</div>
       <span class="chip ${w.action==="block"?"bad":w.action==="challenge"?"warn":"vio"}">${{block:"拦截",challenge:"质询",managed:"托管"}[w.action]||w.action}</span>
       <div class="switch ${w.on?"on":""}" data-waf="${w.id}" role="switch" aria-checked="${w.on}"></div>
-    </div>`).join("")}</div>`;
+    </div>`).join(""):'<div class="panel panel-pad"><span class="muted" style="font-size:12px">该入口没有启用的规则集（账号可能未开通托管规则集）。</span></div>'}</div>`;
   document.querySelectorAll("[data-waf]").forEach(sw=>sw.onclick=()=>{
     const w=z.waf.find(x=>x.id===sw.dataset.waf);const to=!w.on;
-    confirmWrite({title:(to?"启用":"停用")+"规则",method:"PATCH",path:`/zones/${z.id}/rulesets/rules/${w.id}`,
+    confirmWrite({title:(to?"启用":"停用")+"规则",method:"PATCH",path:`/zones/${z.id}/rulesets/rules/${w.id}`,noLive:true,
       body:{enabled:to,action:w.action,expression:w.expr},okLabel:to?"启用":"停用",onOk:()=>{
         w.on=to;logActivity("waf",`${z.name} ${to?"启用":"停用"}「${w.name}」`,to?"ok":"warn");
         zoneWaf(z);toast(to?"规则已启用":"规则已停用","ok",{label:"撤销",fn:()=>{w.on=!to;zoneWaf(z);toast("已撤销","info");}});
@@ -2242,9 +2263,9 @@ function vCompute(){
       ${ws.length?ws.map(w=>{const active=w.versions.find(v=>v.id===w.activeVersionId);return `
         <div class="panel res-card mb" data-worker="${w.id}">
           <span class="res-ico" style="color:var(--brand-ink);background:color-mix(in srgb,var(--brand) 10%,transparent)">${icon("bolt",19)}</span>
-          <div class="res-main"><div class="t">${esc(w.name)} <span class="chip brand">v${active.number}</span>
+          <div class="res-main"><div class="t">${esc(w.name)} <span class="chip brand">${active?"v"+active.number:(isLive()&&!w._loaded?"读取中":"v—")}</span>
             ${w.split?`<span class="chip info">灰度 ${w.split.pct}%</span>`:""}</div>
-            <div class="s">${w.size} KB · 兼容 ${w.compat} · ${fmtAgo(w.modified)}更新</div>
+            <div class="s">${w.size==null?"体积未返回":w.size+" KB"} · 兼容 ${w.compat} · ${fmtAgo(w.modified)}更新</div>
             <div style="height:26px;margin-top:6px">${sparkline(wSpark(w),{color:w.usage.errors>100?"var(--red)":"var(--brand)",id:"w"+w.id})}</div></div>
           <div class="res-side"><div class="v">${fmtN(w.usage.requests)}</div><div class="l">req/24h</div>
             <span class="chip ${w.usage.errors>100?"bad":"ok"}" style="margin-top:5px">${w.usage.errors>100?w.usage.errors+" 错误":"正常"}</span></div>
@@ -2272,6 +2293,7 @@ function vCompute(){
 function vWorker(id){
   const w=DB.workers.find(x=>x.id===id);
   if(!w){$("#screen").innerHTML=emptyBlock("alert","Worker 不存在","可能已被删除");return;}
+  liveLazy(liveLoadWorker(w),"worker");
   const active=w.versions.find(v=>v.id===w.activeVersionId);
   const tabs=[["versions","版本"],["deployments","部署历史"],["traffic","流量归属"],["config","配置"]];
   $("#screen").innerHTML=`
@@ -2279,10 +2301,10 @@ function vWorker(id){
       <div class="st"><div class="l">请求 · 24h</div><div class="v">${fmtN(w.usage.requests)}</div></div>
       <div class="st"><div class="l">错误</div><div class="v" style="color:${w.usage.errors>100?"var(--red)":"var(--green)"}">${w.usage.errors}</div></div>
       <div class="st"><div class="l">CPU 中位</div><div class="v">${w.usage.cpuMs}ms</div></div>
-      <div class="st"><div class="l">体积</div><div class="v">${w.size}KB</div></div>
+      <div class="st"><div class="l">体积</div><div class="v">${w.size==null?"—":w.size+"KB"}</div></div>
     </div>
     <div class="panel panel-pad mb" id="w-current">
-      ${w.split?(()=>{const nv=w.versions.find(v=>v.id===w.split.newId),ov=w.versions.find(v=>v.id===w.split.oldId);return `
+      ${!w.split&&!active?`<div class="muted" style="font-size:12px">${isLive()&&!w._loaded?"版本读取中…":(isLive()?"该 Worker 没有版本记录":"无活动版本")}</div>`:w.split?(()=>{const nv=w.versions.find(v=>v.id===w.split.newId),ov=w.versions.find(v=>v.id===w.split.oldId);return `
         <div class="row spread mb"><b style="font-size:13px">正在灰度</b><span class="chip info">percentage 策略</span></div>
         <div class="split-viz mb"><div class="a" style="width:${w.split.pct}%">${w.split.pct>=18?`v${nv.number} · ${w.split.pct}%`:""}</div><div class="b">${100-w.split.pct>=18?`v${ov.number} · ${100-w.split.pct}%`:""}</div></div>
         <div class="row" style="gap:8px"><button class="btn primary sm" id="w-finish" style="flex:1">${icon("rocket",13)} 全量 v${nv.number}</button>
@@ -2413,7 +2435,7 @@ function wTraffic(w){
 function settingsBody(w,extraNote){
   const bindings=[
     ...w.vars.map(v=>v.type==="secret"?{type:"secret_text",name:v.name}:{type:"plain_text",name:v.name,value:v.value}),
-    ...w.bindings.map(b=>({type:{"KV Namespace":"kv_namespace","R2 Bucket":"r2_bucket","D1 Database":"d1","Service":"service"}[b.type],name:b.name,target:b.target}))
+    ...w.bindings.map(b=>({type:{"KV Namespace":"kv_namespace","R2 Bucket":"r2_bucket","D1 Database":"d1","Service":"service"}[b.type]||b.type,name:b.name,target:b.target}))
   ];
   return{bindings,...(extraNote?{note:extraNote}:{})};
 }
@@ -2615,7 +2637,7 @@ function wConfig(w){
     w.deployments.forEach(d=>{if(d.versions.some(v=>v.version_id===w.activeVersionId||(w.split&&(v.version_id===w.split.newId||v.version_id===w.split.oldId))))keepIds.add(d.id);});
     const list=w.deployments.filter(d=>!keepIds.has(d.id));
     if(!list.length){toast("没有可清理的旧记录（最近 3 条与运行中的分流会保留）","info");return;}
-    confirmWrite({title:`批量删除 ${list.length} 条旧部署记录`,method:"DELETE",path:`/accounts/${w.account}/workers/scripts/${w.name}/deployments`,
+    confirmWrite({title:`批量删除 ${list.length} 条旧部署记录`,method:"DELETE",path:`/accounts/${w.account}/workers/scripts/${w.name}/deployments`,noLive:true,
       body:{ids:list.map(d=>d.id.slice(0,13)+"…"),keep:"最近 3 条 + 运行中的分流"},danger:true,typed:w.name,okLabel:"清理",onOk:()=>{
         const old=w.deployments;w.deployments=w.deployments.filter(d=>keepIds.has(d.id));
         logActivity("deploy",`${w.name} 清理 ${list.length} 条旧部署记录`,"warn");
@@ -2651,6 +2673,7 @@ function varSheet(w,idx){
 function vPages(name){
   const p=DB.pagesProjects.find(x=>x.name===name);
   if(!p){$("#screen").innerHTML=emptyBlock("alert","项目不存在","可能已被删除");return;}
+  liveLazy(liveLoadPages(p),"pages");
   const curProd=p.deployments.find(d=>d.env==="production"&&d.status==="success");
   const tabs=[["deps","部署"],["domains","域名"],["env","环境变量"],["logs","构建日志"]];
   $("#screen").innerHTML=`
@@ -2886,10 +2909,12 @@ function dataD1(d1){
   if(!d1.length){$("#d-body").innerHTML=`<div class="panel">${emptyBlock("db","没有 D1 数据库","wrangler d1 create 后这里可浏览表与跑只读 SQL。")}</div>`;return;}
   if(!ui.d1Db||!d1.some(x=>x.id===ui.d1Db)){ui.d1Db=d1[0].id;ui.d1Table=null;ui.sqlResult=null;}
   const db=d1.find(x=>x.id===ui.d1Db);
+  liveLazy(liveLoadD1(db),"data");
+  if(!db.tables.length){$("#d-body").innerHTML=`<div class="panel">${emptyBlock("db",isLive()?"表结构读取中…":"这个库没有表",isLive()?"进入时从 sqlite_master 拉表清单，稍候自动刷新":"先用 SQL 控制台建表，或换个库")}</div>`;return;}
   if(!ui.d1Table||!db.tables.some(t=>t.name===ui.d1Table))ui.d1Table=db.tables[0].name;
   const tbl=db.tables.find(t=>t.name===ui.d1Table);
   $("#d-body").innerHTML=`
-    <div class="chipbar" id="d1-dbs">${d1.map(x=>`<button class="fchip ${x.id===ui.d1Db?"on":""}" data-db="${x.id}">${esc(x.name)} · ${x.sizeMB}MB</button>`).join("")}</div>
+    <div class="chipbar" id="d1-dbs">${d1.map(x=>`<button class="fchip ${x.id===ui.d1Db?"on":""}" data-db="${x.id}">${esc(x.name)} · ${x.sizeMB==null?"—":x.sizeMB+"MB"}</button>`).join("")}</div>
     <div class="chipbar" id="d1-tables">${db.tables.map(t=>`<button class="fchip ${t.name===ui.d1Table?"on":""}" data-tb="${t.name}">${esc(t.name)} · ${t.rows.length}</button>`).join("")}</div>
     <div class="panel mb"><div class="tbl-wrap"><table class="tbl">
       <thead><tr>${tbl.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead>
@@ -2910,8 +2935,36 @@ function dataD1(d1){
   $("#d1-tables").querySelectorAll("button").forEach(b=>b.onclick=()=>{ui.d1Table=b.dataset.tb;vData();});
   $("#sql-quick").querySelectorAll("button").forEach(b=>b.onclick=()=>{ui.sql=b.dataset.q;$("#sql-inp").value=ui.sql;});
   $("#sql-clear").onclick=()=>{ui.sql="";ui.sqlResult=null;$("#sql-inp").value="";$("#sql-out").innerHTML="";};
-  $("#sql-run").onclick=()=>{
+  $("#sql-run").onclick=async()=>{
     ui.sql=$("#sql-inp").value;
+    if(isLive()){
+      const s=ui.sql.trim();
+      if(!s)return toast("先写一条 SQL","bad");
+      const show=(rows,meta,ms)=>{
+        const cols=rows.length?Object.keys(rows[0]):[];
+        ui.sqlResult={cols:cols.length?cols:["(无返回行)"],rows:rows.map(x=>cols.map(c=>x[c]==null?"NULL":String(x[c]))),cost:0};
+        const out=$("#sql-out");
+        out.innerHTML=`<div class="sql-meta"><span>${rows.length} 行</span><span>${ms} ms</span><span>真实 D1 · ${(meta&&meta.changed_db)||0} 行改动</span></div>
+          <div class="panel sql-out"><div class="tbl-wrap"><table class="tbl">
+          <thead><tr>${ui.sqlResult.cols.map(c=>`<th>${esc(c)}</th>`).join("")}</tr></thead>
+          <tbody>${rows.length?ui.sqlResult.rows.map(rr=>`<tr style="cursor:default">${rr.map(c=>`<td class="num">${esc(c)}</td>`).join("")}</tr>`).join(""):`<tr><td colspan="${ui.sqlResult.cols.length}" class="muted" style="text-align:center;padding:18px">确实为空（0 行）</td></tr>`}</tbody>
+          </table></div></div>`;
+        toast("D1 查询完成 · "+rows.length+" 行","info");
+      };
+      if(/^select\b/i.test(s)){
+        const t0=performance.now();
+        try{
+          const r=await cfCall("POST",`/accounts/${db.account}/d1/database/${db.id}/query`,{sql:s});
+          const r0=Array.isArray(r)?r[0]:r;
+          show((r0&&r0.results)||[],r0&&r0.meta,Math.round(performance.now()-t0));
+        }catch(e){toast("D1 报错："+e.message,"bad");}
+        return;
+      }
+      confirmWrite({title:"在 "+db.name+" 执行 SQL",method:"POST",path:`/accounts/${db.account}/d1/database/${db.id}/query`,
+        body:{sql:s},danger:/^(insert|update|delete|drop|alter|create|replace)/i.test(s),okLabel:"执行",
+        onOk:(res)=>{const r0=Array.isArray(res)?res[0]:res;show((r0&&r0.results)||[],r0&&r0.meta,0);}});
+      return;
+    }
     const t0=performance.now();
     const res=runSQL(db,ui.sql);
     ui.sqlResult=res;
@@ -2976,6 +3029,7 @@ function dataKV(d1,kv){
   if(!kv.length){$("#d-body").innerHTML=`<div class="panel">${emptyBlock("key","没有 KV 命名空间","wrangler kv namespace create 后可在这里 browse / 增删键。")}</div>`;return;}
   if(!ui.kvNs||!kv.some(x=>x.id===ui.kvNs))ui.kvNs=kv[0].id;
   const ns=kv.find(x=>x.id===ui.kvNs);
+  liveLazy(liveLoadKv(ns),"data");
   const keys=ns.keys.filter(k=>!ui.kvQ||k.name.toLowerCase().includes(ui.kvQ.toLowerCase()));
   const shown=keys.slice(0,ui.kvShown);
   $("#d-body").innerHTML=`
@@ -2985,7 +3039,7 @@ function dataKV(d1,kv){
     <div class="panel">${shown.length?shown.map(k=>`<div class="rec-row" data-kvkey="${esc(k.name)}">
       <span style="color:var(--blue);flex:none">${icon("key",15)}</span>
       <div class="rec-main"><div class="n mono" style="font-size:12px">${esc(k.name)}</div>
-        <div class="c">${esc(k.value.slice(0,44))}${k.value.length>44?"…":""}</div></div>
+        <div class="c">${k.value==null?'<span class="muted">（值未加载 · 点开从 API 取）</span>':esc(k.value.slice(0,44))+(k.value.length>44?"…":"")}</div></div>
       ${k.expiration?`<span class="chip warn">TTL</span>`:""}${icon("chevR",12,"muted")}</div>`).join(""):
       emptyBlock("key",ui.kvQ?"没有匹配的 Key":"确实为空","换个前缀试试，或点右下角 + 新增")}</div>
     ${keys.length>ui.kvShown?`<button class="btn block mt" id="kv-more">加载更多（还有 ${keys.length-ui.kvShown} 个）</button>`:""}
@@ -2993,8 +3047,9 @@ function dataKV(d1,kv){
   $("#kv-nss").querySelectorAll("button").forEach(b=>b.onclick=()=>{ui.kvNs=b.dataset.ns;ui.kvShown=prefs.get("listCount",10);ui.kvQ="";vData();});
   const q=$("#kv-q");q.addEventListener("input",()=>{ui.kvQ=q.value;ui.kvShown=prefs.get("listCount",10);const p=q.selectionStart;dataKV(d1,kv);const n=$("#kv-q");n.focus();n.setSelectionRange(p,p);});
   $("#kv-more")&&($("#kv-more").onclick=()=>{ui.kvShown+=prefs.get("listCount",10);dataKV(d1,kv);});
-  document.querySelectorAll("[data-kvkey]").forEach(row=>row.onclick=()=>{
+  document.querySelectorAll("[data-kvkey]").forEach(row=>row.onclick=async()=>{
     const k=ns.keys.find(x=>x.name===row.dataset.kvkey);
+    if(isLive()&&k.value==null){try{await liveLoadKvValue(ns,k);}catch(e){return toast("读取值失败："+e.message,"bad");}}
     let pretty=k.value;try{pretty=JSON.stringify(JSON.parse(k.value),null,2);}catch(e){}
     const {el,close}=sheet(k.name,`
       <div class="row wrap mb">${k.expiration?`<span class="chip warn">过期 · ${esc(k.expiration)}</span>`:'<span class="chip ok">常驻</span>'}
@@ -3062,6 +3117,7 @@ function dataR2(d1,kv,r2){
   if(!r2.length){$("#d-body").innerHTML=`<div class="panel">${emptyBlock("bucket","没有 R2 桶","wrangler r2 bucket create 后可在这里浏览对象。")}</div>`;return;}
   if(!ui.r2Bucket||!r2.some(x=>x.name===ui.r2Bucket))ui.r2Bucket=r2[0].name;
   const b=r2.find(x=>x.name===ui.r2Bucket);
+  liveLazy(liveLoadR2(b),"data");
   let objs=b.objects.filter(o=>!ui.r2Q||o.key.toLowerCase().includes(ui.r2Q.toLowerCase()));
   objs=[...objs].sort((x,y)=>ui.r2Sort==="size"?y.size-x.size:ui.r2Sort==="modified"?new Date(y.modified)-new Date(x.modified):x.key.localeCompare(y.key));
   const totalSize=b.objects.reduce((s,o)=>s+o.size,0);
@@ -3098,7 +3154,7 @@ function dataR2(d1,kv,r2){
       `<button class="btn" id="ob-copy">${icon("copy",14)} 复制 Key</button><button class="btn danger" id="ob-del">${icon("trash",14)} 删除</button>`);
     el.querySelector("#ob-copy").onclick=()=>copyText(o.key,"Key 已复制");
     el.querySelector("#ob-del").onclick=()=>{
-      confirmWrite({title:"删除对象",method:"DELETE",path:`/accounts/${b.account}/r2/buckets/${b.name}/objects/${encodeURIComponent(o.key)}`,
+      confirmWrite({title:"删除对象",method:"DELETE",path:`/accounts/${b.account}/r2/buckets/${b.name}/objects/${encodeURIComponent(o.key)}`,noLive:true,
         danger:true,typed:o.key,okLabel:"删除",onOk:()=>{
           const idx=b.objects.indexOf(o);b.objects.splice(idx,1);
           logActivity("dns",`R2 ${b.name} 删除 ${o.key}`,"warn");
@@ -3122,7 +3178,7 @@ function dataR2(d1,kv,r2){
       if(size<=0)return toast("大小要大于 0","bad");
       if(b.objects.some(o=>o.key===key))return toast("同名对象已存在","warn");
       const cls=el.querySelector("#no-cls").value;
-      confirmWrite({title:"上传对象",method:"PUT",path:`/accounts/${b.account}/r2/buckets/${b.name}/objects/${encodeURIComponent(key)}`,
+      confirmWrite({title:"上传对象",method:"PUT",path:`/accounts/${b.account}/r2/buckets/${b.name}/objects/${encodeURIComponent(key)}`,noLive:true,
         body:{storage_class:cls,content_length:size},okLabel:"上传",onOk:()=>{
           b.objects.unshift({key,size,modified:new Date().toISOString(),cls});
           logActivity("dns",`R2 ${b.name} 上传 ${key}`);
@@ -3133,8 +3189,8 @@ function dataR2(d1,kv,r2){
 }
 
 /* ================= API 令牌 ================= */
-function tokenValueSheet(t,isNew){
-  const val="cfut_"+hex(40);
+function tokenValueSheet(t,isNew,liveVal){
+  const val=liveVal||"cfut_"+hex(40);
   t.prefix=val.slice(0,8);
   const {el,close}=sheet(isNew?"令牌已创建 · 完整值仅此一次":"令牌已轮换 · 完整值仅此一次",`
     <div class="note warn mb">${icon("alert")}<span>Cloudflare 不存明文：这是唯一一次能看到完整值。离开前复制并存进 CI / 密码管理器，之后只能轮换、不能找回。</span></div>
@@ -3174,10 +3230,10 @@ function vTokens(){
       state.aggregate?"":`<button class="btn" id="tk-rot">${icon("refresh",14)} 轮换</button><button class="btn danger" id="tk-del">${icon("trash",14)} 删除</button>`);
     if(state.aggregate)return;
     el.querySelector("#tk-rot").onclick=()=>{
-      confirmWrite({title:"轮换令牌 "+t.name,method:"PUT",path:`/user/tokens/${t.id}/value`,danger:true,okLabel:"轮换",onOk:()=>{
+      confirmWrite({title:"轮换令牌 "+t.name,method:"POST",path:`/user/tokens/${t.id}/rotate`,danger:true,okLabel:"轮换",onOk:(res)=>{
         t.status="active";t.lastUsed=new Date().toISOString();
         logActivity("dns",`轮换 API 令牌 ${t.name}`,"warn");
-        close();vTokens();tokenValueSheet(t,false);
+        close();vTokens();tokenValueSheet(t,false,res&&res.value);
       }});
     };
     el.querySelector("#tk-del").onclick=()=>{
@@ -3248,12 +3304,12 @@ function tokenWizard(){
     const body={name,policies:[{effect:"allow",
       resources:scope==="account"?{["com.cloudflare.api.account."+acc.id]:"*"}:Object.fromEntries(zs.filter(z=>picked.includes(z.name)).map(z=>["com.cloudflare.api.zone."+z.id,"*"])),
       permission_groups:perms.map(([g,l])=>g+" · "+l)}]};
-    confirmWrite({title:"创建令牌 "+name,method:"POST",path:"/user/tokens",body,okLabel:"创建",onOk:()=>{
-      const t={account:acc.id,id:hex(32),name,prefix:"",status:"active",issued:new Date().toISOString().slice(0,10),expires:null,
+    confirmWrite({title:"创建令牌 "+name,method:"POST",path:"/user/tokens",body,okLabel:"创建",onOk:(res)=>{
+      const t={account:acc.id,id:(res&&res.id)||hex(32),name,prefix:"",status:"active",issued:new Date().toISOString().slice(0,10),expires:null,
         lastUsed:new Date().toISOString(),scope:scopeText,perms};
       DB.apiTokens.unshift(t);
       logActivity("dns",`创建 API 令牌 ${name}（${perms.length} 项权限）`);
-      close();vTokens();tokenValueSheet(t,true);
+      close();vTokens();tokenValueSheet(t,true,res&&res.value);
     }});
   };
 }
@@ -3612,11 +3668,25 @@ function addTokenSheet(){
     <div class="field"><label>本机显示名（可选）</label><input class="inp" id="tk-alias" placeholder="例：备用账号"/></div>`,
     `<button class="btn" id="tk-cancel">取消</button><button class="btn primary" id="tk-ok">${icon("check",14)} 验证并添加</button>`);
   el.querySelector("#tk-cancel").onclick=close;
-  el.querySelector("#tk-ok").onclick=()=>{
+  el.querySelector("#tk-ok").onclick=async()=>{
     const tok=el.querySelector("#tk-inp").value.trim(),alias=el.querySelector("#tk-alias").value.trim();
     const err=el.querySelector("#tk-err");
     if(tok.length<40||!/^[A-Za-z0-9_-]+$/.test(tok)){err.textContent="令牌格式不对：应为 40 位以上的字母数字串（演示模式不联网，按格式校验）";err.style.display="block";return;}
     const btn=el.querySelector("#tk-ok");btn.disabled=true;btn.innerHTML=`${icon("refresh",14)} 验证中…`;btn.querySelector("svg").style.animation="rot .8s linear infinite";
+    if(isLive()){
+      const keep=prefs.get("apiToken","");prefs.set("apiToken",tok);
+      try{
+        await cfCall("GET","/user/tokens/verify");
+        const accs=await cfPaged("/accounts");
+        accs.forEach(a=>{if(!accounts.some(x=>x.id===a.id))accounts.push({id:a.id,name:alias||a.name,alias:"",email:"",plan:"—",type:a.type||"org",created:(a.created_on||"").slice(0,10),tokenHint:"Bearer cfut_…（本机令牌）",perms:["令牌可见范围"]});});
+        if(accs[0]){state.account=accs[0].id;prefs.set("account",state.account);}
+        close();render();toast("真实校验通过 · 可见账号 "+accs.length+" 个","ok");
+      }catch(e){
+        prefs.set("apiToken",keep);btn.disabled=false;btn.innerHTML=`${icon("check",14)} 验证并添加`;
+        err.textContent="上游拒绝："+e.message;err.style.display="block";
+      }
+      return;
+    }
     setTimeout(()=>{
       const id=hex(32);
       accounts.push({id,name:alias||"新账号 "+(accounts.length+1),alias:"",email:"token·"+tok.slice(0,4)+"…"+tok.slice(-3),plan:"Free",type:"personal",created:new Date().toISOString().slice(0,10),tokenHint:"cfut_"+tok.slice(0,3)+"…"+tok.slice(-3),perms:["Account:Read","Zone:Read"]});
@@ -3680,7 +3750,7 @@ function openSettingsSheet(){
       <div class="row" style="gap:8px">
         <input class="inp mono" id="st-gw" value="${esc(prefs.get("gateway","https://api.cloudflare.com/client/v4"))}" spellcheck="false" style="flex:1;font-size:11.5px"/>
         <button class="btn" id="st-gwtest" style="flex:none">${icon("pulse",13)} 测试</button></div>
-      <div class="help" id="st-gwres">演示模式不真发网：按 URL 格式校验并模拟握手延迟。</div></div>
+      <div class="help" id="st-gwres">${isLive()?"直连模式：测试按钮真发 /user/tokens/verify 握手。":"演示模式不真发网：按 URL 格式校验并模拟握手延迟。"}</div></div>
     <div class="set-row"><span class="sr-ico">${icon("gauge")}</span>
       <div class="sr-main"><b>请求预算 · 今日</b><span class="mono">${ledN} / 1200 次写请求（本机账本）</span>
         <div class="quota-track" style="height:6px;margin-top:6px"><div class="quota-fill ${ledN>1020?"hot":""}" style="width:${Math.max(Math.min(100,ledN/1200*100),1)}%"></div></div></div></div>
@@ -3706,8 +3776,20 @@ function openSettingsSheet(){
     <div class="eyebrow mb mt-l">关于</div>
     <div class="set-row"><span class="sr-ico">${icon("cloud")}</span><div class="sr-main"><b>CF-next</b><span>手机版 v${APP_VER} · 功能对齐原 App 的完整实现</span></div>
       <button class="btn sm ghost" id="st-update">${icon("refresh",12)} 检查更新</button></div>
-    <div class="set-row"><span class="sr-ico">${icon("db")}</span><div class="sr-main"><b>数据模式</b><span>内置演示数据（形状对齐 CF API，可整体替换为直连层）</span></div></div>
-    <div class="set-row"><span class="sr-ico">${icon("key")}</span><div class="sr-main"><b>本机存储</b><span>偏好落 localStorage · 凭证备份走 AES-256-GCM 保险箱</span></div></div>`);
+    <div class="eyebrow mb mt-l">数据模式</div>
+    <div class="set-row"><span class="sr-ico">${icon("db")}</span>
+      <div class="sr-main"><b>数据源</b><span>${isLive()?"直连 Cloudflare API · 真实数据与真实写操作":"内置演示数据（形状对齐 CF API，离线可用）"}</span></div>
+      <div class="seg" id="st-mode"><button data-v="demo" class="${!isLive()?"on":""}">演示</button><button data-v="live" class="${isLive()?"on":""}">直连</button></div></div>
+    ${isLive()?`
+    <div class="field mt"><label>API 令牌（Bearer · cfut_… 或 Token，可粘贴）</label>
+      <input class="inp mono mask" id="st-tok" placeholder="粘贴 Cloudflare API Token" value="${esc(prefs.get("apiToken",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/>
+      <div class="help" id="st-lres">${
+        live.error?`<span style="color:var(--red)">上次同步失败：${esc(live.error)}</span>`
+        :live.lastSync?`<span style="color:var(--green)">已同步 ${esc(live.lastSync.slice(0,16).replace("T"," "))}${live.identity&&live.identity.email?" · "+esc(live.identity.email):""} · 写操作真实发送</span>`
+        :"填入令牌后点「验证并同步」拉取真实数据。浏览器直连 api.cloudflare.com 会被 CORS 拦：请装入 APK（原生网络栈）或把上方网关指到自己的代理。"}</div>
+      <div class="row mt" style="gap:8px"><button class="btn primary sm" id="st-lsync">${icon("refresh",12)} 验证并同步</button><button class="btn sm ghost" id="st-lclear">清除令牌</button></div>
+    </div>`:""}
+    <div class="set-row"><span class="sr-ico">${icon("key")}</span><div class="sr-main"><b>本机存储</b><span>偏好落 localStorage · 凭证备份走 AES-256-GCM 保险箱${isLive()?" · 直连令牌明文存本机":""}</span></div></div>`);
   const reopen=()=>{close();render();openSettingsSheet();};
   el.querySelectorAll("#st-theme button").forEach(b=>b.onclick=()=>{state.theme=b.dataset.v;prefs.set("theme",state.theme);applyTheme();reopen();});
   el.querySelectorAll("#st-accent button").forEach(b=>b.onclick=()=>{state.accent=b.dataset.v;prefs.set("accent",state.accent);applyTheme();reopen();});
@@ -3727,11 +3809,57 @@ function openSettingsSheet(){
   });
   el.querySelector("#st-gate").onclick=()=>{state.writeGate=!state.writeGate;prefs.set("writeGate",state.writeGate);close();render();openSettingsSheet();toast(state.writeGate?"写闸门已放行":"写保护已开启",state.writeGate?"warn":"ok");};
   el.querySelector("#st-typed").onclick=()=>{const v=!prefs.get("typedDelete",false);prefs.set("typedDelete",v);close();render();openSettingsSheet();toast(v?"删除需手打对象名：已开启":"删除确认简化：点确认即执行",v?"info":"ok");};
+  el.querySelectorAll("#st-mode button").forEach(b=>b.onclick=()=>{
+    if(b.dataset.v==="demo"){
+      if(!isLive())return;
+      prefs.set("mode","demo");toast("已切回演示数据","info");reloadClean();return;
+    }
+    if(isLive())return;
+    prefs.set("mode","live");close();render();openSettingsSheet();
+    toast("直连模式：粘贴真实令牌后「验证并同步」","info");
+  });
+  const lsync=el.querySelector("#st-lsync");
+  if(lsync)lsync.onclick=async()=>{
+    const tok=(el.querySelector("#st-tok").value||"").trim();
+    if(!tok)return toast("请先粘贴 API Token","bad");
+    const gw=(el.querySelector("#st-gw").value||"").trim();
+    if(!/^(https?):\/\/[^\s]+/.test(gw))return toast("网关地址格式不对","bad");
+    prefs.set("gateway",gw);prefs.set("apiToken",tok);
+    const old=lsync.innerHTML;lsync.disabled=true;lsync.innerHTML=`${icon("refresh",12)} 同步中…`;lsync.querySelector("svg").style.animation="rot .8s linear infinite";
+    const ok=await liveSync();
+    if(el.isConnected){lsync.disabled=false;lsync.innerHTML=old;}
+    const res=el.isConnected?el.querySelector("#st-lres"):null;
+    if(ok){
+      if(res)res.innerHTML=`<span style="color:var(--green)">同步成功 · 账号 ${accounts.length} 个 / 站点 ${zones.length} 个 · ${esc((live.lastSync||"").slice(0,19).replace("T"," "))}</span>`;
+      toast("直连同步完成 · 数据来自真实 API","ok");
+      render();
+    }else{
+      if(res)res.innerHTML=`<span style="color:var(--red)">${esc(live.error||"同步失败")}</span>`;
+      toast("同步失败："+(live.error||"未知错误"),"bad");
+    }
+  };
+  const lclear=el.querySelector("#st-lclear");
+  if(lclear)lclear.onclick=()=>{prefs.set("apiToken","");live.identity=null;live.lastSync=null;live.error=null;toast("直连令牌已清除（本机）","info");reopen();};
   el.querySelector("#st-tokens").onclick=()=>{close();location.hash="#/tokens";};
   el.querySelector("#st-gwtest").onclick=()=>{
     const url=el.querySelector("#st-gw").value.trim(),res=el.querySelector("#st-gwres");
-    if(!/^https:\/\/[^\s]+\.[^\s]+/.test(url)){res.innerHTML=`<span style="color:var(--red)">URL 格式不对：需要 https:// 开头的完整网关地址</span>`;return;}
+    if(!/^(https?):\/\/[^\s]+\.[^\s]+|^https?:\/\/(127\.0\.0\.1|localhost)(:\d+)?/.test(url)){res.innerHTML=`<span style="color:var(--red)">URL 格式不对：需要 http(s):// 开头的完整网关地址</span>`;return;}
     const btn=el.querySelector("#st-gwtest");btn.disabled=true;btn.innerHTML=`${icon("refresh",13)} 握手…`;btn.querySelector("svg").style.animation="rot .8s linear infinite";
+    if(isLive()&&cfTok()){
+      const t0=Date.now();
+      cfCall("GET","/user/tokens/verify").then(v=>{
+        prefs.set("gateway",url);
+        if(!el.isConnected)return;
+        btn.disabled=false;btn.innerHTML=`${icon("pulse",13)} 测试`;
+        res.innerHTML=`<span style="color:var(--green)">真实握手 OK · ${Date.now()-t0} ms · 令牌状态 ${esc(v&&v.status||"?")} · 网关已保存</span>`;
+        toast("网关可达（真实验证 "+(Date.now()-t0)+" ms）","ok");
+      }).catch(e=>{
+        if(!el.isConnected)return;
+        btn.disabled=false;btn.innerHTML=`${icon("pulse",13)} 测试`;
+        res.innerHTML=`<span style="color:var(--red)">${e.kind==="auth"?"令牌被拒":e.kind==="rate"?"限流":e.kind==="upstream"?"上游故障":"连接失败"}：${esc(e.message)}</span>`;
+      });
+      return;
+    }
     setTimeout(()=>{
       prefs.set("gateway",url);
       const ms=Math.round(60+Math.random()*180);
@@ -3765,7 +3893,7 @@ function openSettingsSheet(){
   };
   el.querySelectorAll("[data-delacc]").forEach(b=>b.onclick=()=>{
     const a=accounts.find(x=>x.id===b.dataset.delacc);
-    confirmWrite({title:"移除账号 "+(a.alias||a.name),method:"DELETE",path:"/local/vault/accounts/"+a.id,
+    confirmWrite({title:"移除账号 "+(a.alias||a.name),method:"DELETE",path:"/local/vault/accounts/"+a.id,local:true,
       danger:true,typed:a.alias||a.name,okLabel:"移除",onOk:()=>{
         const idx=accounts.indexOf(a);accounts.splice(idx,1);
         if(state.account===a.id){state.account=accounts[0].id;prefs.set("account",state.account);}
@@ -3804,6 +3932,294 @@ function vaultExportSheet(){
 }
 function applyTheme(){document.documentElement.dataset.theme=state.theme;document.documentElement.dataset.accent=state.accent;}
 
+/* ================= 直连层（生产版：真实 Cloudflare API） =================
+   接口形状全部取自原仓库网关实测结论（app/gateway/src/catalog.ts 读侧表 + cf.ts 信封拆包）：
+   REST → {success,result,errors}；/analytics/sql → {data,statistics}；/graphql → {data,errors}。
+   浏览器直连 api.cloudflare.com 会被 CORS 拦（CF 不给跨域头）——APK 内走 CapacitorHttp
+   原生网络栈没有这层限制；浏览器侧可在网关地址指到自己的代理后继续用。 */
+const CF_DEFAULT_BASE="https://api.cloudflare.com/client/v4";
+const live={busy:false,identity:null,error:null,lastSync:null};
+function isLive(){return prefs.get("mode","demo")==="live";}
+function cfBase(){return (prefs.get("gateway",CF_DEFAULT_BASE)||CF_DEFAULT_BASE).replace(/\/+$/,"");}
+function cfTok(){return prefs.get("apiToken","");}
+async function cfCall(method,path,body){
+  const r=await fetch(cfBase()+path,{method,headers:{"Authorization":"Bearer "+cfTok(),"Content-Type":"application/json"},body:body==null?undefined:JSON.stringify(body)});
+  const txt=await r.text();let j=null;try{j=JSON.parse(txt);}catch(e){}
+  const err=j&&(j.errors&&j.errors[0]||j.error||j.message);
+  const code=err&&err.code!=null?String(err.code):null;
+  const msg=(err&&(err.message||err))||txt.slice(0,140)||("HTTP "+r.status);
+  if(!r.ok||(j&&j.success===false)){const e=new Error(String(msg).slice(0,200));e.http=r.status;e.code=code;
+    e.kind=r.status===401?"auth":(code==="10000"||code==="10001")?"permission":r.status===429?"rate":r.status>=500?"upstream":"api";throw e;}
+  if(j&&Object.prototype.hasOwnProperty.call(j,"data")&&!Object.prototype.hasOwnProperty.call(j,"success"))return {rows:j.data||[],stats:j.statistics};
+  if(!j)return txt;
+  return j.result;
+}
+/* 原始文本读取（KV 值等返回裸文本的端点：不走 result 解包） */
+async function cfRawText(method,path,init){
+  const r=await fetch(cfBase()+path,{method,headers:{"Authorization":"Bearer "+cfTok(),...(init&&init.headers||{})},body:init&&init.body});
+  const txt=await r.text();
+  if(!r.ok){const e=new Error(txt.slice(0,200)||("HTTP "+r.status));e.http=r.status;e.kind=r.status===401?"auth":r.status>=500?"upstream":"api";throw e;}
+  return txt;
+}
+async function cfGraphql(query){
+  const r=await fetch(cfBase()+"/graphql",{method:"POST",headers:{"Authorization":"Bearer "+cfTok(),"Content-Type":"application/json"},body:JSON.stringify({query})});
+  const j=await r.json().catch(()=>null);
+  if(j&&j.errors&&j.errors[0])throw new Error(String(j.errors[0].message).slice(0,200));
+  if(!j)throw new Error("GraphQL 无响应（HTTP "+r.status+"）");
+  return j.data;
+}
+async function cfPaged(path,per=50,maxPages=20){
+  const out=[];
+  for(let p=1;p<=maxPages;p++){
+    const sep=path.includes("?")?"&":"?";
+    const res=await cfCall("GET",`${path}${sep}per_page=${per}&page=${p}`);
+    const items=Array.isArray(res)?res:(res&&res.items)||[];
+    out.push(...items);
+    if(items.length<per)break;
+  }
+  return out;
+}
+function cfRange(key){
+  const days=key==="24h"?1:key==="30d"?30:7;
+  const bucket=Math.floor(Date.now()/300000)*300000;
+  const end=new Date(bucket),start=new Date(+end-days*86400000);
+  const iso=d=>d.toISOString().replace(/\.\d{3}Z$/,"Z");
+  return {days,start:iso(start),end:iso(new Date(+end+3600000)),dateGeq:start.toISOString().slice(0,10),dateLt:new Date(+end+86400000).toISOString().slice(0,10)};
+}
+/* ---- 同步：账号 → zones(+settings) → workers → pages → d1/kv/r2 → access → tokens ---- */
+async function liveSync(){
+  if(live.busy)return false;live.busy=true;live.error=null;
+  try{
+    const v=await cfCall("GET","/user/tokens/verify").catch(e=>{throw e.kind==="auth"?new Error("令牌无效或已吊销（"+e.message+"）"):e;});
+    live.identity={status:v&&v.status,verifiedAt:v&&v.verified_at};
+    const me=await cfCall("GET","/user").catch(()=>null);
+    live.identity.email=me&&me.email||"";
+    const accs=await cfPaged("/accounts");
+    if(!accs.length)throw new Error("这把令牌看不到任何账号");
+    accounts.length=0;
+    accs.forEach(a=>accounts.push({id:a.id,name:a.name,alias:"",email:me&&me.email||"",plan:"—",type:a.type==="standard"?"org":a.type||"org",created:(a.created_on||"").slice(0,10),tokenHint:"Bearer cfut_…（本机令牌）",perms:["令牌可见范围（接口不返回权限摘要）"]}));
+    if(!accounts.some(a=>a.id===state.account))state.account=accounts[0].id;
+    prefs.set("account",state.account);
+    const zs=await cfPaged("/zones",50);
+    zones.length=0;
+    for(const z of zs){
+      const rec={id:z.id,account:(z.account&&z.account.id)||accounts[0].id,name:z.name,status:z.status,plan:z.plan&&z.plan.name||"—",paused:!!z.paused,
+        created:(z.created_on||"").slice(0,10),ns:z.nameservers||[],ssl:"—",security:"—",devMode:false,tls13:"—",http3:"—",brotli:"—",records:[],_recsLoaded:false,waf:null,_wafLoaded:false};
+      const st=await cfCall("GET",`/zones/${z.id}/settings`).catch(()=>null);
+      if(Array.isArray(st)){const val=id=>{const it=st.find(x=>x.id===id);return it&&it.value;};
+        rec.ssl=val("ssl")||"—";rec.security=val("security_level")||"—";rec.http3=val("http3")||"—";rec.brotli=val("brotli")||"—";
+        rec.tls13=val("min_tls_version")==="1.3"?"on":"off";
+        const dm=val("development_mode");rec.devMode=dm==="on"||(dm&&typeof dm==="object"&&dm.value==="on");}
+      zones.push(rec);
+    }
+    workers.length=0;
+    for(const acc of accounts){
+      const list=await cfPaged(`/accounts/${acc.id}/workers/scripts`,100).catch(()=>[]);
+      list.forEach(s=>{const nm=s.id||s.script_id||s.name;
+        workers.push({id:nm,account:acc.id,name:nm,modified:s.modified_on||s.created_on||"",size:null,compat:"—",
+          usage:{requests:0,errors:0,cpuMs:0,subrequests:0},domains:[],routes:[],crons:[],vars:[],bindings:[],
+          versions:[],deployments:[],activeVersionId:null,split:null,subdomain:{enabled:false,previews:false},repo:null,_loaded:false});});
+      const doms=await cfPaged(`/accounts/${acc.id}/workers/domains`,100).catch(()=>[]);
+      doms.forEach(d=>{const w=workers.find(x=>x.account===acc.id&&x.name===d.script);if(w)w.domains.push({hostname:d.hostname,zone:d.zone_name||""});});
+    }
+    pagesProjects.length=0;
+    for(const acc of accounts){
+      const list=await cfPaged(`/accounts/${acc.id}/pages/projects`,50).catch(()=>[]);
+      list.forEach(p=>{const bc=p.build_config||{},prod=(p.deployment_configs&&p.deployment_configs.production)||{};
+        pagesProjects.push({account:acc.id,name:p.name,subdomain:p.subdomain||"",domains:[],branch:p.production_branch||"main",
+          framework:bc.build_command?"自定义":"—",created:(p.created_on||"").slice(0,10),deployments:[],
+          build:{command:bc.build_command||"—",dir:prod.build_output_dir||bc.build_output_dir||"—"},
+          env:{production:{},preview:{}},_loaded:false});});
+    }
+    d1s.length=0;kvs.length=0;r2s.length=0;
+    for(const acc of accounts){
+      (await cfPaged(`/accounts/${acc.id}/d1/database?per_page=100`,100).catch(()=>[])).forEach(d=>
+        d1s.push({account:acc.id,id:d.uuid||d.id,name:d.name,version:d.version||"—",sizeMB:d.database_size!=null?+(d.database_size/1e6).toFixed(1):null,created:(d.created_at||"").slice(0,10),tables:[],_loaded:false}));
+      (await cfPaged(`/accounts/${acc.id}/storage/kv/namespaces`,100).catch(()=>[])).forEach(n=>
+        kvs.push({account:acc.id,id:n.id,title:n.title,keys:[],_loaded:false}));
+      const bs=await cfCall("GET",`/accounts/${acc.id}/r2/bucket?per_page=100`).catch(()=>null);
+      (Array.isArray(bs)?bs:(bs&&bs.buckets)||[]).forEach(b=>
+        r2s.push({account:acc.id,name:b.name,created:(b.creation_date||"").slice(0,10),location:b.location||"—",objects:[],_loaded:false}));
+    }
+    access.apps.length=0;access.groups.length=0;access.policies.length=0;
+    for(const acc of accounts){
+      const org=await cfCall("GET",`/accounts/${acc.id}/access/organizations`).catch(()=>null);
+      if(org&&(org.auth_domain||org.result))access.orgs[acc.id]={name:org.name||"",auth_domain:org.auth_domain||"",created:org.created_at||"",is_ui_read_only:!!org.is_ui_read_only};
+      else delete access.orgs[acc.id];
+      access.seats[acc.id]={total:50};
+      const apps=await cfPaged(`/accounts/${acc.id}/access/apps`,100).catch(()=>[]);
+      apps.forEach(a=>access.apps.push({account:acc.id,id:a.id,name:a.name,domain:a.domain||"",type:a.type||"self_hosted",created:(a.created_at||"").slice(0,10),policies:0,sessions:a.session_duration||"—"}));
+      const grps=await cfPaged(`/accounts/${acc.id}/access/groups`,100).catch(()=>[]);
+      for(const g of grps){
+        const mem=await cfPaged(`/accounts/${acc.id}/access/groups/${g.id}/members`,100).catch(()=>[]);
+        access.groups.push({account:acc.id,id:g.id,name:g.name,users:mem.map(m=>m.email||m.name||"?").filter(Boolean),include:"组 · "+g.name});
+      }
+      for(const a of apps){
+        const pols=await cfPaged(`/accounts/${acc.id}/access/apps/${a.id}/policies`,50).catch(()=>[]);
+        pols.forEach(pl=>{a.policies++;
+          access.policies.push({account:acc.id,id:pl.id,name:pl.name,decision:pl.decision,app:a.name,
+            include:(pl.include||[]).map(x=>Object.values(x)[0]).flat().join(", ")||"—",require:(pl.require||[]).map(x=>Object.values(x)[0]).flat().join(", ")||"—"});});
+      }
+    }
+    apiTokens.length=0;
+    const toks=await cfCall("GET","/user/tokens").catch(e=>e.kind==="auth"?Promise.reject(e):[]);
+    (Array.isArray(toks)?toks:(toks&&toks.tokens)||[]).forEach(t=>apiTokens.push({account:accounts[0].id,id:t.id,name:t.name,
+      prefix:(t.id||"").slice(0,7),status:t.status==="active"?"active":"expired",issued:(t.created_on||"").slice(0,10),
+      expires:t.not_after?t.not_after.slice(0,10):null,lastUsed:(t.last_used&&(t.last_used.date||t.last_used))||t.created_on||"",
+      scope:t.conditions&&t.conditions.resource_scope?"指定站点":"整个账号（列表接口不返回摘要）",perms:[]}));
+    live.lastSync=new Date().toISOString();
+    Object.keys(liveAn).forEach(k=>delete liveAn[k]);
+    return true;
+  }catch(e){live.error=e.message;return false;}
+  finally{live.busy=false;}
+}
+/* ---- 懒加载：进入详情才拉明细 ---- */
+async function ensureZoneRecords(z){
+  if(!isLive()||z._recsLoaded)return false;z._recsLoaded=true;
+  const list=await cfPaged(`/zones/${z.id}/dns_records`,100).catch(()=>[]);
+  z.records=list.map(r=>({id:r.id,type:r.type,name:r.name,content:r.content,ttl:r.ttl,proxied:!!r.proxied,
+    priority:r.priority,comment:r.comment||"",created:r.created_on,modified:r.modified_on}));
+  return true;
+}
+async function liveLoadWaf(z){
+  if(!isLive()||z._wafLoaded)return false;z._wafLoaded=true;
+  const rs=await cfCall("GET",`/zones/${z.id}/rulesets/phases/cloudflare_managed_rulesets/entrypoint`).catch(()=>null);
+  z.waf=((rs&&rs.rules)||[]).map(r=>({id:r.id,name:r.description||r.ref||r.action||"规则",action:r.action==="block"?"block":(r.action==="challenge"?"challenge":"managed"),
+    expr:r.ref||(r.action&&"true")||"",on:r.enabled!==false,desc:(r.targets&&r.targets.length?r.targets.length+" 个分组":"托管规则集")}));
+  return true;
+}
+async function liveLoadWorker(w){
+  if(!isLive()||w._loaded)return false;w._loaded=true;
+  const base=`/accounts/${w.account}/workers/scripts/${encodeURIComponent(w.name)}`;
+  const st=await cfCall("GET",base+"/settings").catch(()=>null);
+  if(st){
+    w.compat=st.compatibility_date||"—";
+    w.vars=Object.entries(st.vars||{}).map(([name,v])=>({name,type:v.type==="secret"?"secret":"plain",value:v.type==="secret"?null:(v.value==null?"":String(v.value))}));
+    w.bindings=(st.bindings||[]).map(b=>({type:b.type,name:b.name,target:b.binding_id||b.bucket_name||b.script_name||b.database_name||""}));
+    w.crons=(st.cron_patterns||[]).map(c=>({cron:c.pattern,desc:c.created_on?"":" "}));
+  }
+  const [vers,deps,sub]=await Promise.all([
+    cfCall("GET",base+"/versions?per_page=25").catch(()=>null),
+    cfCall("GET",base+"/deployments?environment=production&per_page=25").catch(()=>null),
+    cfCall("GET",base+"/subdomain").catch(()=>null)]);
+  const vlist=vers&&(vers.versions||vers)||[];
+  w.versions=(Array.isArray(vlist)?vlist:[]).map((v,i)=>({id:v.id,number:(Array.isArray(vlist)?vlist:[]).length-i,created:v.created_on||"",message:v.message||v.source||"—",author:v.author||v.author_id||"—",source:v.source||"—"}));
+  const dlist=deps&&(deps.deployments||deps)||[];
+  w.deployments=(Array.isArray(dlist)?dlist:[]).map(d=>({id:d.id,created:d.created_on||"",source:d.source||"—",author:d.author||"—",strategy:d.strategy,versions:d.versions||[],message:d.message||""}));
+  const cur=w.deployments.find(d=>d.strategy==="percentage"&&d.versions&&d.versions.some(v=>v.percentage>0&&v.percentage<100));
+  if(cur&&cur.versions&&cur.versions.length>1){const [a,b]=cur.versions;w.split={newId:a.version_id,oldId:b.version_id,pct:a.percentage};}
+  else w.split=null;
+  w.activeVersionId=(dlist[0]&&dlist[0].versions&&dlist[0].versions[0]&&dlist[0].versions[0].version_id)||w.versions[0]&&w.versions[0].id||null;
+  if(sub)w.subdomain={enabled:!!sub.enabled,previews:!!sub.previews_enabled};
+  const rt=await cfPaged(`/accounts/${w.account}/workers/routes?per_page=100`,100).catch(()=>[]);
+  w.routes=rt.filter(x=>x.script===w.name).map(x=>({pattern:x.pattern,zone:x.zone_id||""}));
+  return true;
+}
+async function liveLoadPages(p){
+  if(!isLive()||p._loaded)return false;p._loaded=true;
+  const base=`/accounts/${p.account}/pages/projects/${encodeURIComponent(p.name)}`;
+  const [deps,doms,proj]=await Promise.all([
+    cfCall("GET",base+"/deployments?per_page=25").catch(()=>null),
+    cfCall("GET",base+"/domains?per_page=50").catch(()=>null),
+    cfCall("GET",base).catch(()=>null)]);
+  const dlist=deps&&(deps.deployments||deps)||[];
+  p.deployments=(Array.isArray(dlist)?dlist:[]).map((d,i)=>({id:d.id,short:(d.id||"").slice(0,7),env:d.environment||(i===0?"production":"preview"),
+    branch:d.branch||"—",commit:d.build_info&&d.build_info.deployments[0]&&d.build_info.deployments[0].commit_message||d.title||"—",
+    status:/^(success|failed|building|queued|idle)$/i.test(d.status)?d.status.toLowerCase():(d.latest_stage&&d.latest_stage.status==="active"?"success":"unknown"),
+    created:d.created_on||"",author:d.build_info&&d.build_info.deployments[0]&&d.build_info.deployments[0].author&&d.build_info.deployments[0].author.id||"—",
+    duration:d.build_time?Math.round(d.build_time/1000):0}));
+  p.domains=(Array.isArray(doms)?doms:(doms&&doms.result)||[]).map(d=>typeof d==="string"?d:d.name||"");
+  if(proj&&proj.deployment_configs){
+    for(const env of ["production","preview"]){const ev=proj.deployment_configs[env]&&proj.deployment_configs[env].environment_variable||{};
+      p.env[env]=Object.fromEntries(Object.entries(ev).map(([k,v])=>[k,{type:v.type==="secret"?"secret":"plain",value:v.type==="secret"?null:String(v.value==null?"":v.value)}]));}
+  }
+  return true;
+}
+async function liveLoadD1(db){
+  if(!isLive()||db._loaded)return false;db._loaded=true;
+  const r=await cfCall("POST",`/accounts/${db.account}/d1/database/${db.id}/query`,{sql:"SELECT name FROM sqlite_master WHERE type='table' ORDER BY name"}).catch(()=>null);
+  const set=r&&Array.isArray(r)?r[0]:r;
+  const rows=(set&&set.results)||(r&&r.results)||(Array.isArray(r)&&r)||[];
+  db.tables=rows.map(x=>({name:x.name,cols:[],rows:[],_loaded:false}));
+  return true;
+}
+async function liveLoadKv(ns){
+  if(!isLive()||ns._loaded)return false;ns._loaded=true;
+  const keys=await cfPaged(`/accounts/${ns.account}/storage/kv/namespaces/${ns.id}/keys?limit=1000`,1000).catch(()=>[]);
+  ns.keys=keys.map(k=>({name:k.name,expiration:k.expiration||null,meta:k.metadata?JSON.stringify(k.metadata):null,value:null}));
+  return true;
+}
+async function liveLoadKvValue(ns,k){
+  if(!isLive()||k.value!=null)return k.value;
+  const v=await cfRawText("GET",`/accounts/${ns.account}/storage/kv/namespaces/${ns.id}/values/${encodeURIComponent(k.name)}`).catch(()=>"（读取失败）");
+  k.value=typeof v==="string"?v:JSON.stringify(v);return true;
+}
+async function liveLoadR2(b){
+  if(!isLive()||b._loaded)return false;b._loaded=true;
+  const r=await cfCall("GET",`/accounts/${b.account}/r2/buckets/${encodeURIComponent(b.name)}/objects?per_page=100`).catch(()=>null);
+  b.objects=((r&&r.objects)||[]).map(o=>({key:o.key,size:o.size,modified:o.uploaded||o.last_modified||"",cls:o.storage_class||"Standard"}));
+  return true;
+}
+/* ---- 懒加载触发器：数据回来后若还停在原视图则重渲染 ---- */
+function liveLazy(promise,viewKey){
+  if(!isLive())return;
+  Promise.resolve(promise).then(changed=>{if(changed!==true)return;const r=parseHash();if(r.key===viewKey)render();}).catch(()=>{});
+}
+/* ---- 直连分析：GraphQL 1dGroups + adaptive + /analytics/sql（口径与原网关 traffic 模块一致） ---- */
+const liveAn={};
+function emptyAnalytics(range){
+  const n=range==="24h"?24:range==="30d"?30:7;
+  return {points:Array.from({length:n},(_,i)=>({label:range==="24h"?String(i).padStart(2,"0")+":00":(i+1)+"日",requests:0,cached:0,uncached:0,bytes:0,threats:0,visitors:0})),
+    total:0,cached:0,cacheRate:0,bytes:0,threats:0,visitors:0,status:[],countries:[],hosts:[],types:[],errCount:0,errRate:0,
+    drill:{path:[],bot:[],device:[],cache:[]},origin:{count:0,avgMs:0},httpsRate:0,deltas:{requests:0,bytes:0,visitors:0,threats:0,errors:0,cache:0},peak:0,_loading:true};
+}
+async function liveAnFetch(accId,range,key){
+  const r=cfRange(range);
+  const q=`{ viewer { accounts(filter:{accountTag:"${accId}"}) {
+    g: httpRequests1dGroups(limit:${r.days}, filter:{date_geq:"${r.dateGeq}", date_lt:"${r.dateLt}"}, orderBy:["date_ASC"]) { dimensions { date } sum { requests bytes encryptedRequests threats } }
+    v: httpRequestsAdaptiveGroups(limit:1, filter:{datetime_geq:"${r.start}", datetime_lt:"${r.end}"}) { sum { visits edgeResponseBytes } }
+    a: httpRequestsAdaptiveGroups(limit:8, filter:{datetime_geq:"${r.start}", datetime_lt:"${r.end}"}, orderBy:["count_DESC"]) { count dimensions { clientCountryName } }
+    c: httpRequestsAdaptiveGroups(limit:8, filter:{datetime_geq:"${r.start}", datetime_lt:"${r.end}"}, orderBy:["count_DESC"]) { count dimensions { cacheStatus } }
+    d: httpRequestsAdaptiveGroups(limit:8, filter:{datetime_geq:"${r.start}", datetime_lt:"${r.end}"}, orderBy:["count_DESC"]) { count dimensions { clientDeviceType } }
+  } } }`;
+  const j=await cfGraphql(q);
+  const acc=j&&j.viewer&&j.viewer.accounts&&j.viewer.accounts[0]||{};
+  const g=(acc.g||[]).map(x=>({date:x.dimensions&&x.dimensions.date,...(x.sum||{})}));
+  const visits=(acc.v&&acc.v[0]&&acc.v[0].sum&&acc.v[0].sum.visits)||0;
+  const cacheRows=acc.c||[];const totalReq=g.reduce((s,x)=>s+(x.requests||0),0);
+  const cached=cacheRows.reduce((s,x)=>s+((x.dimensions&&x.dimensions.cacheStatus==="hit")?x.count:0),0);
+  const sql=async(sql)=>{try{return (await cfCall("POST","/analytics/sql",{query:sql,time_range:{start:r.start,end:r.end},scope:{accountTag:accId}})).rows||[];}catch(e){return [];}};
+  const [stRows,orRows,hostRows,pathRows,botRows]=await Promise.all([
+    sql("SELECT edgeResponseStatus AS code, count() AS reqs FROM events.httpRequests GROUP BY code ORDER BY reqs DESC LIMIT 12"),
+    sql("SELECT originResponseStatus AS code, count() AS reqs, round(avg(originResponseDurationMs)) AS avg_ms FROM events.httpRequests WHERE originResponseStatus > 0 GROUP BY code ORDER BY reqs DESC LIMIT 12"),
+    sql("SELECT clientRequestHttpHost AS k, count() AS reqs FROM events.httpRequests GROUP BY k ORDER BY reqs DESC LIMIT 20"),
+    sql("SELECT clientRequestPath AS k, count() AS reqs FROM events.httpRequests GROUP BY k ORDER BY reqs DESC LIMIT 20"),
+    sql("SELECT verifiedBotCategory AS k, count() AS reqs FROM events.httpRequests GROUP BY k ORDER BY reqs DESC LIMIT 20")]);
+  const bytes=g.reduce((s,x)=>s+(x.bytes||0),0),threats=g.reduce((s,x)=>s+(x.threats||0),0),enc=g.reduce((s,x)=>s+(x.encryptedRequests||0),0);
+  const points=g.map(x=>({label:(x.date||"").slice(5),requests:x.requests||0,cached:totalReq?Math.round((x.requests||0)*(cached/(totalReq||1))):0,
+    uncached:0,bytes:x.bytes||0,threats:x.threats||0,visitors:Math.round((x.requests||0)*(visits/(totalReq||1)))}));
+  const status=stRows.map(x=>({code:String(x.code),count:+x.reqs}));
+  const errCount=status.filter(s=>+s.code>=500).reduce((s,x)=>s+x.count,0);
+  const half=Math.ceil(points.length/2);
+  const sum=(a,f)=>a.reduce((s,x)=>s+(x[f]||0),0);
+  const dlt=(a,b,f)=>b?+(((a-b)/b)*100).toFixed(1):0;
+  liveAn[key]={points:points.length?points:emptyAnalytics(range).points,total:totalReq,cached,cacheRate:totalReq?cached/totalReq*100:0,
+    bytes,threats,visitors:visits,status,countries:(acc.a||[]).map(x=>({code:String(x.dimensions&&x.dimensions.clientCountryName||"??"),name:countryName(x.dimensions&&x.dimensions.clientCountryName||""),flag:FLAG(x.dimensions&&x.dimensions.clientCountryName||"?"),count:x.count})),
+    hosts:hostRows.slice(0,8).map(x=>({host:x.k,count:+x.reqs})),types:[],errCount,errRate:totalReq?errCount/totalReq*100:0,
+    drill:{path:pathRows.map(x=>({k:x.k,count:+x.reqs})),bot:botRows.map(x=>({k:x.k||"人类流量",count:+x.reqs})),
+      device:(acc.d||[]).map(x=>({k:x.dimensions&&x.dimensions.clientDeviceType||"未知",count:x.count})),cache:cacheRows.map(x=>({k:x.dimensions&&x.dimensions.cacheStatus||"?",count:x.count}))},
+    origin:{count:orRows.reduce((s,x)=>s+ +x.reqs,0),avgMs:orRows.length?Math.round(orRows.reduce((s,x)=>s+(+x.avg_ms*(+x.reqs)),0)/Math.max(1,orRows.reduce((s,x)=>s+ +x.reqs,0))):0},
+    httpsRate:totalReq?enc/totalReq*100:0,
+    deltas:{requests:dlt(sum(points.slice(half),"requests"),sum(points.slice(0,half),"requests")),bytes:dlt(sum(points.slice(half),"bytes"),sum(points.slice(0,half),"bytes")),visitors:dlt(sum(points.slice(half),"visitors"),sum(points.slice(0,half),"visitors")),threats:dlt(sum(points.slice(half),"threats"),sum(points.slice(0,half),"threats")),errors:0,cache:0},
+    peak:Math.max(0,...points.map(p=>p.requests)),_live:true};
+  const rr=parseHash();if(rr.key==="overview"||rr.key==="deep")render();
+}
+function liveAnalytics(accId,range){
+  const key=accId+"|"+range;
+  if(!liveAn[key]){liveAn[key]=emptyAnalytics(range);liveAnFetch(accId,range,key).catch(e=>{liveAn[key]=emptyAnalytics(range);liveAn[key]._err=e.message;const rr=parseHash();if(rr.key==="overview"||rr.key==="deep")render();});}
+  return liveAn[key];
+}
+
 /* ================= 启动 ================= */
 applyTheme();
 document.body.insertAdjacentHTML("afterbegin",`<div class="ambient"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>`);
@@ -3815,7 +4231,69 @@ document.querySelectorAll(".m-tab").forEach(b=>{
   if(location.hash===target)render();else location.hash=target;};
 });
 if(!location.hash)location.hash="#/overview";
-render();
+/* ---- 直连启动：先清空演示数据（避免误认为真），同步成功才渲染 ---- */
+function reloadClean(){
+  // 模式切换后的重载不应再被外部注入的 ?mode/?token/?reset 覆盖：剥掉这些种子参数再刷新
+  try{
+    if(!location.search)return void location.reload();
+    const sp=new URLSearchParams(location.search);let touched=false;
+    ["reset","mode","token","notoken"].forEach(k=>{if(sp.has(k)){sp.delete(k);touched=true;}});
+    if(!touched)return void location.reload();
+    const q=sp.toString();
+    location.href=location.pathname+(q?"?"+q:"")+location.hash;
+    // 兜底：若因 file:// 同源未触发导航，强制刷新
+    setTimeout(()=>location.reload(),120);
+  }catch(e){location.reload();}
+}
+function liveWipe(){
+  accounts.length=0;zones.length=0;workers.length=0;pagesProjects.length=0;
+  d1s.length=0;kvs.length=0;r2s.length=0;apiTokens.length=0;
+  access.apps.length=0;access.groups.length=0;access.policies.length=0;
+  Object.keys(access.orgs).forEach(k=>delete access.orgs[k]);
+  state.account=null;state.aggregate=false;
+}
+function liveHold(title,sub,ic){
+  $("#appbar").innerHTML=`<span class="logo-mark">${cfMark(22)}</span>
+    <div class="ab-title"><b>CF-next</b><small>直连 LIVE · 未就绪</small></div>`;
+  document.querySelectorAll(".m-tab").forEach(b=>b.classList.toggle("on",b.dataset.key==="overview"));
+  $("#screen").innerHTML=emptyBlock(ic,title,sub);
+}
+function liveRetrySheet(kind){
+  const {el,close}=sheet(kind==="notoken"?"直连模式：还差一把令牌":"直连同步失败",`
+    <div class="note ${kind==="notoken"?"warn":"bad"} mb">${icon("alert")}<span>${
+      kind==="notoken"
+        ?"直连模式用你自己的 Cloudflare API Token 读真实数据。演示数据已从界面清空，避免和真实数据混淆。令牌在 dash.cloudflare.com → My Profile → API Tokens 创建（建议 Zone / Member / Workers / D1 / KV / R2 / Access 只读 + 编辑权限）。"
+        :"读取真实 API 失败，界面内不含演示数据。常见原因：令牌无效或权限不足 · 浏览器直连被 CORS 拦（APK 内走原生网络栈无此限制）· 网关地址写错 · 离线。"}
+      ${live.error?`<br><span class="mono" style="font-size:11px">${esc(live.error)}</span>`:""}</span></div>
+    <div class="field"><label>API 令牌（可粘贴）</label>
+      <input class="inp mono mask" id="lr-tok" placeholder="cfut_… / Token" value="${esc(prefs.get("apiToken",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/></div>
+    <div class="help mt">网关：${esc(cfBase())} —— 可在设置里改。</div>`,
+    `<button class="btn" id="lr-demo">${icon("db",13)} 切回演示</button>
+     <button class="btn ghost" id="lr-set">设置</button>
+     <button class="btn primary" id="lr-retry">${icon("refresh",13)} 重试</button>`);
+  el.querySelector("#lr-demo").onclick=()=>{prefs.set("mode","demo");reloadClean();};
+  el.querySelector("#lr-set").onclick=()=>{close();openSettingsSheet();};
+  el.querySelector("#lr-retry").onclick=async()=>{
+    const tok=(el.querySelector("#lr-tok").value||"").trim();
+    if(!tok)return toast("先填 API 令牌","bad");
+    prefs.set("apiToken",tok);
+    const btn=el.querySelector("#lr-retry");btn.disabled=true;btn.innerHTML=`${icon("refresh",13)} 同步中…`;btn.querySelector("svg").style.animation="rot .8s linear infinite";
+    liveWipe();liveHold("直连同步中…","验证令牌并拉取账号 / 站点 / 计算 / 存储 / Access","refresh");
+    const ok=await liveSync();
+    btn.disabled=false;btn.innerHTML=`${icon("refresh",13)} 重试`;
+    if(ok){close();render();toast("直连已就绪 · 账号 "+accounts.length+" 个 / 站点 "+zones.length+" 个","ok");}
+    else{liveHold("直连未就绪",live.error||"同步失败","alert");liveRetrySheet("error");}
+  };
+}
+(async function boot(){
+  if(!isLive()){render();return;}
+  liveWipe();
+  if(!cfTok()){liveHold("直连模式：需要先配置 API 令牌","演示数据已清空：直连界面只会出现真实 API 返回的内容","key");liveRetrySheet("notoken");return;}
+  liveHold("直连同步中…","验证令牌并拉取账号 / 站点 / 计算 / 存储 / Access","refresh");
+  const ok=await liveSync();
+  if(ok){render();toast("直连已就绪 · 账号 "+accounts.length+" 个 / 站点 "+zones.length+" 个","ok");}
+  else{liveHold("直连未就绪",live.error||"同步失败","alert");liveRetrySheet("error");}
+})();
 </script>
 </body>
 </html>
