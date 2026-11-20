@@ -35,8 +35,8 @@ jobs:
       - name: Sync web assets
         run: npx cap sync android
 
-      - name: Generate app icons (Cloudflare mark)
-        run: npx capacitor-assets generate --android
+      - name: Apply Cloudflare icons
+        run: cp -r native-res/mipmap-xxhdpi native-res/mipmap-xhdpi native-res/mipmap-hdpi native-res/mipmap-mdpi native-res/mipmap-xxxhdpi android/app/src/main/res/ && ls android/app/src/main/res/mipmap-xxxhdpi/
 
       - name: Stamp version
         run: |
