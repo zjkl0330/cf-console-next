@@ -765,7 +765,7 @@ const FLAG=c=>String.fromCodePoint(...[...c.toUpperCase()].map(ch=>0x1F1A5+ch.ch
 const COUNTRY_TABLE=`AD安道尔 AE阿联酋 AF阿富汗 AG安提瓜和巴布达 AI安圭拉 AL阿尔巴尼亚 AM亚美尼亚 AO安哥拉 AQ南极洲 AR阿根廷 AS美属萨摩亚 AT奥地利 AU澳大利亚 AW阿鲁巴 AX奥兰群岛 AZ阿塞拜疆 BA波黑 BB巴巴多斯 BD孟加拉国 BE比利时 BF布基纳法索 BG保加利亚 BH巴林 BI布隆迪 BJ贝宁 BL圣巴泰勒米 BM百慕大 BN文莱 BO玻利维亚 BQ荷兰加勒比区 BR巴西 BS巴哈马 BT不丹 BV布韦岛 BW博茨瓦纳 BY白俄罗斯 BZ伯利兹 CA加拿大 CC科科斯群岛 CD刚果（金） CF中非 CG刚果（布） CH瑞士 CI科特迪瓦 CK库克群岛 CL智利 CM喀麦隆 CN中国 CO哥伦比亚 CR哥斯达黎加 CU古巴 CV佛得角 CW库拉索 CX圣诞岛 CY塞浦路斯 CZ捷克 DE德国 DJ吉布提 DK丹麦 DM多米尼克 DO多米尼加 DZ阿尔及利亚 EC厄瓜多尔 EE爱沙尼亚 EG埃及 EH西撒哈拉 ER厄立特里亚 ES西班牙 ET埃塞俄比亚 FI芬兰 FJ斐济 FK福克兰群岛 FM密克罗尼西亚 FO法罗群岛 FR法国 GA加蓬 GB英国 GD格林纳达 GE格鲁吉亚 GF法属圭亚那 GG根西岛 GH加纳 GI直布罗陀 GL格陵兰 GM冈比亚 GN几内亚 GP瓜德罗普 GQ赤道几内亚 GR希腊 GS南乔治亚岛 GT危地马拉 GU关岛 GW几内亚比绍 GY圭亚那 HK中国香港 HM赫德岛 HN洪都拉斯 HR克罗地亚 HT海地 HU匈牙利 ID印度尼西亚 IE爱尔兰 IL以色列 IM马恩岛 IN印度 IO英属印度洋领地 IQ伊拉克 IR伊朗 IS冰岛 IT意大利 JE泽西岛 JM牙买加 JO约旦 JP日本 KE肯尼亚 KG吉尔吉斯斯坦 KH柬埔寨 KI基里巴斯 KM科摩罗 KN圣基茨和尼维斯 KP朝鲜 KR韩国 KW科威特 KY开曼群岛 KZ哈萨克斯坦 LA老挝 LB黎巴嫩 LC圣卢西亚 LI列支敦士登 LK斯里兰卡 LR利比里亚 LS莱索托 LT立陶宛 LU卢森堡 LV拉脱维亚 LY利比亚 MA摩洛哥 MC摩纳哥 MD摩尔多瓦 ME黑山 MF法属圣马丁 MG马达加斯加 MH马绍尔群岛 MK北马其顿 ML马里 MM缅甸 MN蒙古 MO中国澳门 MP北马里亚纳群岛 MQ马提尼克 MR毛里塔尼亚 MS蒙特塞拉特 MT马耳他 MU毛里求斯 MV马尔代夫 MW马拉维 MX墨西哥 MY马来西亚 MZ莫桑比克 NA纳米比亚 NC新喀里多尼亚 NE尼日尔 NF诺福克岛 NG尼日利亚 NI尼加拉瓜 NL荷兰 NO挪威 NP尼泊尔 NR瑙鲁 NU纽埃 NZ新西兰 OM阿曼 PA巴拿马 PE秘鲁 PF法属波利尼西亚 PG巴布亚新几内亚 PH菲律宾 PK巴基斯坦 PL波兰 PM圣皮埃尔和密克隆 PN皮特凯恩群岛 PR波多黎各 PS巴勒斯坦 PT葡萄牙 PW帕劳 PY巴拉圭 QA卡塔尔 RE留尼汪 RO罗马尼亚 RS塞尔维亚 RU俄罗斯 RW卢旺达 SA沙特阿拉伯 SB所罗门群岛 SC塞舌尔 SD苏丹 SE瑞典 SG新加坡 SH圣赫勒拿岛 SI斯洛文尼亚 SJ斯瓦尔巴 SK斯洛伐克 SL塞拉利昂 SM圣马力诺 SN塞内加尔 SO索马里 SR苏里南 SS南苏丹 ST圣多美和普林西比 SV萨尔瓦多 SX荷属圣马丁 SY叙利亚 SZ斯威士兰 TC特克斯和凯科斯群岛 TD乍得 TF法属南部领地 TG多哥 TH泰国 TJ塔吉克斯坦 TK托克劳 TL东帝汶 TM土库曼斯坦 TN突尼斯 TO汤加 TR土耳其 TT特立尼达和多巴哥 TV图瓦卢 TW中国台湾 TZ坦桑尼亚 UA乌克兰 UG乌干达 UM美国本土外小岛屿 US美国 UY乌拉圭 UZ乌兹别克斯坦 VA梵蒂冈 VC圣文森特和格林纳丁斯 VE委内瑞拉 VG英属维尔京群岛 VI美属维尔京群岛 VN越南 VU瓦努阿图 WF瓦利斯和富图纳 WS萨摩亚 YE也门 YT马约特 ZA南非 ZM赞比亚 ZW津巴布韦`;
 const CNAMES={};COUNTRY_TABLE.split(" ").forEach(t=>{CNAMES[t.slice(0,2)]=t.slice(2);});
 const countryName=c=>{const s=String(c??"").trim().toUpperCase();return s?(CNAMES[s]||s):"未知";};
-const APP_VER="1.2.2";
+const APP_VER="1.2.3";
 
 /* ---------- 账号 ---------- */
 const accounts=[
@@ -3781,12 +3781,16 @@ function openSettingsSheet(){
       <div class="sr-main"><b>数据源</b><span>${isLive()?"直连 Cloudflare API · 真实数据与真实写操作":"内置演示数据（形状对齐 CF API，离线可用）"}</span></div>
       <div class="seg" id="st-mode"><button data-v="demo" class="${!isLive()?"on":""}">演示</button><button data-v="live" class="${isLive()?"on":""}">直连</button></div></div>
     ${isLive()?`
-    <div class="field mt"><label>API 令牌（Bearer · cfut_… 或 Token，可粘贴）</label>
-      <input class="inp mono mask" id="st-tok" placeholder="粘贴 Cloudflare API Token" value="${esc(prefs.get("apiToken",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/>
+    <div class="field mt"><label>API 令牌 / Global API Key（可粘贴）</label>
+      <input class="inp mono mask" id="st-tok" placeholder="cfut_… 或 40 位 API Token；也可粘贴 37 位十六进制 Global Key" value="${esc(prefs.get("apiToken",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/>
+      <div class="help" id="st-tokkind">${isGlobalKey(prefs.get("apiToken",""))?'<span style="color:var(--amber)">识别为 Global API Key：需下方邮箱，走 X-Auth-Key 头</span>':'<span style="color:var(--muted)">识别为 API Token：走 Bearer 头</span>'}</div>
+      <div id="st-emailwrap" style="${isGlobalKey(prefs.get("apiToken",""))?"":"display:none"}"><label style="margin-top:8px">Global Key 对应账户邮箱</label>
+        <input class="inp" id="st-email" placeholder="you@example.com" value="${esc(prefs.get("cfEmail",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/></div>
       <div class="help" id="st-lres">${
-        live.error?`<span style="color:var(--red)">上次同步失败：${esc(live.error)}</span>`
+        live.error?`<span style="color:var(--red)">上次同步失败：${esc(live.error)}</span>${live.diag?`<div class="mono" style="font-size:10.5px;color:var(--muted);margin-top:3px">诊断：kind=${esc(live.diag.kind)} · http=${live.diag.http} · code=${esc(live.diag.code||"—")} · 环境=${live.diag.env.cap?("APK/"+live.diag.env.platform+(live.diag.env.http?"·CapacitorHttp✓":"·无Http")):"浏览器"}</div>`:""}`
         :live.lastSync?`<span style="color:var(--green)">已同步 ${esc(live.lastSync.slice(0,16).replace("T"," "))}${live.identity&&live.identity.email?" · "+esc(live.identity.email):""} · 写操作真实发送</span>`
-        :"填入令牌后点「验证并同步」拉取真实数据。浏览器直连 api.cloudflare.com 会被 CORS 拦：请装入 APK（原生网络栈）或把上方网关指到自己的代理。"}</div>
+        :`填入令牌后点「验证并同步」。当前环境：${liveEnv().cap?("APK 原生网络（CapacitorHttp "+(liveEnv().http?"已接管":"未接管")+"）· 可直连 CF"):"浏览器 · 直连 api.cloudflare.com 会被 CORS 拦，请装 APK 或把上方网关指到你的代理"}</div>`}
+      </div>
       <div class="row mt" style="gap:8px"><button class="btn primary sm" id="st-lsync">${icon("refresh",12)} 验证并同步</button><button class="btn sm ghost" id="st-lclear">清除令牌</button></div>
     </div>`:""}
     <div class="set-row"><span class="sr-ico">${icon("key")}</span><div class="sr-main"><b>本机存储</b><span>偏好落 localStorage · 凭证备份走 AES-256-GCM 保险箱${isLive()?" · 直连令牌明文存本机":""}</span></div></div>`);
@@ -3821,10 +3825,12 @@ function openSettingsSheet(){
   const lsync=el.querySelector("#st-lsync");
   if(lsync)lsync.onclick=async()=>{
     const tok=(el.querySelector("#st-tok").value||"").trim();
-    if(!tok)return toast("请先粘贴 API Token","bad");
+    if(!tok)return toast("请先粘贴 API Token 或 Global API Key","bad");
+    const email=(el.querySelector("#st-email")?.value||"").trim();
+    if(isGlobalKey(tok)&&!email)return toast("这是 Global API Key：请填写对应账户邮箱","bad");
     const gw=(el.querySelector("#st-gw").value||"").trim();
     if(!/^(https?):\/\/[^\s]+/.test(gw))return toast("网关地址格式不对","bad");
-    prefs.set("gateway",gw);prefs.set("apiToken",tok);
+    prefs.set("gateway",gw);prefs.set("apiToken",tok);prefs.set("cfEmail",email);
     const old=lsync.innerHTML;lsync.disabled=true;lsync.innerHTML=`${icon("refresh",12)} 同步中…`;lsync.querySelector("svg").style.animation="rot .8s linear infinite";
     const ok=await liveSync();
     if(el.isConnected){lsync.disabled=false;lsync.innerHTML=old;}
@@ -3834,12 +3840,19 @@ function openSettingsSheet(){
       toast("直连同步完成 · 数据来自真实 API","ok");
       render();
     }else{
-      if(res)res.innerHTML=`<span style="color:var(--red)">${esc(live.error||"同步失败")}</span>`;
+      if(res)res.innerHTML=`<span style="color:var(--red)">${esc(live.error||"同步失败")}</span>${live.diag?`<div class="mono" style="font-size:10.5px;color:var(--muted);margin-top:3px">诊断：kind=${esc(live.diag.kind)} · http=${live.diag.http} · code=${esc(live.diag.code||"—")} · 环境=${live.diag.env.cap?("APK/"+live.diag.env.platform+(live.diag.env.http?"·CapacitorHttp✓":"·无Http")):"浏览器"}</div>`:""}`;
       toast("同步失败："+(live.error||"未知错误"),"bad");
     }
   };
   const lclear=el.querySelector("#st-lclear");
-  if(lclear)lclear.onclick=()=>{prefs.set("apiToken","");live.identity=null;live.lastSync=null;live.error=null;toast("直连令牌已清除（本机）","info");reopen();};
+  const tokIn=el.querySelector("#st-tok");
+  if(tokIn)tokIn.addEventListener("input",()=>{
+    const gk=isGlobalKey(tokIn.value);
+    const kind=el.querySelector("#st-tokkind"),wrap=el.querySelector("#st-emailwrap");
+    if(kind)kind.innerHTML=gk?'<span style="color:var(--amber)">识别为 Global API Key：需下方邮箱，走 X-Auth-Key 头</span>':'<span style="color:var(--muted)">识别为 API Token：走 Bearer 头</span>';
+    if(wrap)wrap.style.display=gk?"":"none";
+  });
+  if(lclear)lclear.onclick=()=>{prefs.set("apiToken","");prefs.set("cfEmail","");live.identity=null;live.lastSync=null;live.error=null;live.diag=null;toast("直连令牌已清除（本机）","info");reopen();};
   el.querySelector("#st-tokens").onclick=()=>{close();location.hash="#/tokens";};
   el.querySelector("#st-gwtest").onclick=()=>{
     const url=el.querySelector("#st-gw").value.trim(),res=el.querySelector("#st-gwres");
@@ -3938,33 +3951,83 @@ function applyTheme(){document.documentElement.dataset.theme=state.theme;documen
    浏览器直连 api.cloudflare.com 会被 CORS 拦（CF 不给跨域头）——APK 内走 CapacitorHttp
    原生网络栈没有这层限制；浏览器侧可在网关地址指到自己的代理后继续用。 */
 const CF_DEFAULT_BASE="https://api.cloudflare.com/client/v4";
-const live={busy:false,identity:null,error:null,lastSync:null};
+const live={busy:false,identity:null,error:null,lastSync:null,diag:null};
 function isLive(){return prefs.get("mode","demo")==="live";}
 function cfBase(){return (prefs.get("gateway",CF_DEFAULT_BASE)||CF_DEFAULT_BASE).replace(/\/+$/,"");}
 function cfTok(){return prefs.get("apiToken","");}
+function cfEmail(){return prefs.get("cfEmail","");}
+// 鉴权方式：CF API Token 走 Bearer；Global API Key（37 位十六进制）必须走 X-Auth-Key + X-Auth-Email
+function isGlobalKey(t){return /^[0-9a-f]{37}$/i.test((t||"").trim());}
+function cfAuthHeaders(){
+  const t=cfTok().trim(),e=cfEmail().trim();
+  if(isGlobalKey(t)){
+    if(!e)throw new Error("检测到这是 Global API Key：请同时填写该 Key 对应的账户邮箱");
+    return {"X-Auth-Key":t,"X-Auth-Email":e};
+  }
+  if(!t)throw new Error("尚未填写 API 令牌");
+  return {"Authorization":"Bearer "+t};
+}
+function classifyErr(status,code){
+  if(status===401||status===403)return "auth";
+  if(status===400&&(code==="6003"||code==="6111"||code==="10000"||code==="10001"))return "auth";
+  if(code==="10000"||code==="10001")return "permission";
+  if(status===429)return "rate";
+  if(status>=500)return "upstream";
+  return "api";
+}
+// 把错误翻成人话，并尽量带上 HTTP 状态与 CF code，便于 APK 里一眼定位
+function liveErrText(e){
+  if(!e)return "未知错误";
+  const k=e.kind||"api";
+  const tail=e.http?` · HTTP ${e.http}${e.code?`/CF ${e.code}`:""}`:"";
+  const base={
+    auth:"鉴权失败：令牌无效、已吊销或格式不对",
+    permission:"权限不足：这把令牌看不到对应资源",
+    rate:"被 CF 限流（429），稍后再试",
+    upstream:"Cloudflare 上游异常（5xx）",
+    network:"网络不可达：请求没能发出（多为 CORS/网关/无网络）",
+    api:"接口返回错误"
+  }[k]||"接口返回错误";
+  return base+"："+(e.message||"").replace(/^鉴权失败[：:].*?（/,"").slice(0,120)+tail;
+}
+// 运行环境探测：APK 里 Capacitor 原生桥存在且 fetch 被 CapacitorHttp 接管
+function liveEnv(){
+  const cap=!!(window.Capacitor&&window.Capacitor.isNativePlatform&&window.Capacitor.isNativePlatform());
+  const http=cap&&!!(window.Capacitor&&window.Capacitor.Plugins&&window.Capacitor.Plugins.CapacitorHttp);
+  return {cap,http,platform:cap?(window.Capacitor&&window.Capacitor.getPlatform?window.Capacitor.getPlatform():"native"):"browser"};
+}
 async function cfCall(method,path,body){
-  const r=await fetch(cfBase()+path,{method,headers:{"Authorization":"Bearer "+cfTok(),"Content-Type":"application/json"},body:body==null?undefined:JSON.stringify(body)});
+  let hdr;try{hdr=cfAuthHeaders();}catch(e){e.kind="auth";e.http=0;throw e;}
+  let r;
+  try{r=await fetch(cfBase()+path,{method,headers:Object.assign({"Content-Type":"application/json"},hdr),body:body==null?undefined:JSON.stringify(body)});}
+  catch(netErr){const e=new Error("网络请求未能发出："+(netErr.message||netErr)+"（APK 应经 CapacitorHttp 原生网络，若浏览器直连会被 CORS 拦）");e.kind="network";e.http=0;throw e;}
   const txt=await r.text();let j=null;try{j=JSON.parse(txt);}catch(e){}
   const err=j&&(j.errors&&j.errors[0]||j.error||j.message);
   const code=err&&err.code!=null?String(err.code):null;
-  const msg=(err&&(err.message||err))||txt.slice(0,140)||("HTTP "+r.status);
-  if(!r.ok||(j&&j.success===false)){const e=new Error(String(msg).slice(0,200));e.http=r.status;e.code=code;
-    e.kind=r.status===401?"auth":(code==="10000"||code==="10001")?"permission":r.status===429?"rate":r.status>=500?"upstream":"api";throw e;}
+  let msg=(err&&(err.message||err))||txt.slice(0,140)||("HTTP "+r.status);
+  if(code)msg+="（CF code "+code+"）";
+  if(!r.ok||(j&&j.success===false)){const e=new Error(String(msg).slice(0,220));e.http=r.status;e.code=code;e.kind=classifyErr(r.status,code);throw e;}
   if(j&&Object.prototype.hasOwnProperty.call(j,"data")&&!Object.prototype.hasOwnProperty.call(j,"success"))return {rows:j.data||[],stats:j.statistics};
   if(!j)return txt;
   return j.result;
 }
 /* 原始文本读取（KV 值等返回裸文本的端点：不走 result 解包） */
 async function cfRawText(method,path,init){
-  const r=await fetch(cfBase()+path,{method,headers:{"Authorization":"Bearer "+cfTok(),...(init&&init.headers||{})},body:init&&init.body});
+  let hdr;try{hdr=cfAuthHeaders();}catch(e){e.kind="auth";throw e;}
+  let r;
+  try{r=await fetch(cfBase()+path,{method,headers:Object.assign({"Content-Type":"application/json"},hdr,init&&init.headers||{}),body:init&&init.body});}
+  catch(netErr){const e=new Error("网络请求未能发出："+(netErr.message||netErr));e.kind="network";throw e;}
   const txt=await r.text();
-  if(!r.ok){const e=new Error(txt.slice(0,200)||("HTTP "+r.status));e.http=r.status;e.kind=r.status===401?"auth":r.status>=500?"upstream":"api";throw e;}
+  if(!r.ok){const e=new Error(txt.slice(0,200)||("HTTP "+r.status));e.http=r.status;e.kind=classifyErr(r.status,null);throw e;}
   return txt;
 }
 async function cfGraphql(query){
-  const r=await fetch(cfBase()+"/graphql",{method:"POST",headers:{"Authorization":"Bearer "+cfTok(),"Content-Type":"application/json"},body:JSON.stringify({query})});
+  let hdr;try{hdr=cfAuthHeaders();}catch(e){e.kind="auth";throw e;}
+  let r;
+  try{r=await fetch(cfBase()+"/graphql",{method:"POST",headers:Object.assign({"Content-Type":"application/json"},hdr),body:JSON.stringify({query})});}
+  catch(netErr){const e=new Error("网络请求未能发出："+(netErr.message||netErr));e.kind="network";throw e;}
   const j=await r.json().catch(()=>null);
-  if(j&&j.errors&&j.errors[0])throw new Error(String(j.errors[0].message).slice(0,200));
+  if(!r.ok||(j&&j.errors&&j.errors[0])){const ce=j&&j.errors&&j.errors[0];const e=new Error((ce&&ce.message||("HTTP "+r.status)).slice(0,200));e.http=r.status;e.kind=classifyErr(r.status,ce&&ce.extensions&&ce.extensions.code?String(ce.extensions.code):null);throw e;}
   if(!j)throw new Error("GraphQL 无响应（HTTP "+r.status+"）");
   return j.data;
 }
@@ -3990,8 +4053,11 @@ function cfRange(key){
 async function liveSync(){
   if(live.busy)return false;live.busy=true;live.error=null;
   try{
-    const v=await cfCall("GET","/user/tokens/verify").catch(e=>{throw e.kind==="auth"?new Error("令牌无效或已吊销（"+e.message+"）"):e;});
-    live.identity={status:v&&v.status,verifiedAt:v&&v.verified_at};
+    // Global API Key 不是 token，/user/tokens/verify 会拒；改用 /user 确认身份。API Token 才走 verify。
+    let v=null;
+    if(isGlobalKey(cfTok())){const u0=await cfCall("GET","/user");v={status:"active",verified_at:u0&&u0.created_on};live.identity={status:"active",email:u0&&u0.email,keymode:"global"};}
+    else{v=await cfCall("GET","/user/tokens/verify");}
+    live.identity=Object.assign(live.identity||{},{status:v&&v.status,verifiedAt:v&&v.verified_at});
     const me=await cfCall("GET","/user").catch(()=>null);
     live.identity.email=me&&me.email||"";
     const accs=await cfPaged("/accounts");
@@ -4070,7 +4136,7 @@ async function liveSync(){
     live.lastSync=new Date().toISOString();
     Object.keys(liveAn).forEach(k=>delete liveAn[k]);
     return true;
-  }catch(e){live.error=e.message;return false;}
+  }catch(e){live.error=liveErrText(e);live.diag={kind:e.kind||"api",http:e.http||0,code:e.code||null,env:liveEnv()};return false;}
   finally{live.busy=false;}
 }
 /* ---- 懒加载：进入详情才拉明细 ---- */
@@ -4264,19 +4330,25 @@ function liveRetrySheet(kind){
       kind==="notoken"
         ?"直连模式用你自己的 Cloudflare API Token 读真实数据。演示数据已从界面清空，避免和真实数据混淆。令牌在 dash.cloudflare.com → My Profile → API Tokens 创建（建议 Zone / Member / Workers / D1 / KV / R2 / Access 只读 + 编辑权限）。"
         :"读取真实 API 失败，界面内不含演示数据。常见原因：令牌无效或权限不足 · 浏览器直连被 CORS 拦（APK 内走原生网络栈无此限制）· 网关地址写错 · 离线。"}
-      ${live.error?`<br><span class="mono" style="font-size:11px">${esc(live.error)}</span>`:""}</span></div>
-    <div class="field"><label>API 令牌（可粘贴）</label>
-      <input class="inp mono mask" id="lr-tok" placeholder="cfut_… / Token" value="${esc(prefs.get("apiToken",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/></div>
-    <div class="help mt">网关：${esc(cfBase())} —— 可在设置里改。</div>`,
+      ${live.error?`<br><span class="mono" style="font-size:11px">${esc(live.error)}</span>`:""}${live.diag?`<br><span class="mono" style="font-size:10.5px;color:var(--muted)">诊断 kind=${esc(live.diag.kind)} · http=${live.diag.http} · code=${esc(live.diag.code||"—")} · 环境=${live.diag.env.cap?("APK/"+live.diag.env.platform+(live.diag.env.http?"·CapacitorHttp✓":"·无Http")):"浏览器"}</span>`:""}</span></div>
+    <div class="field"><label>API 令牌 / Global API Key（可粘贴）</label>
+      <input class="inp mono mask" id="lr-tok" placeholder="cfut_… / Token，或 37 位 Global Key" value="${esc(prefs.get("apiToken",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/></div>
+    <div class="field" id="lr-emailwrap" style="${isGlobalKey(prefs.get("apiToken",""))?"":"display:none"}"><label>Global Key 账户邮箱</label>
+      <input class="inp" id="lr-email" placeholder="you@example.com" value="${esc(prefs.get("cfEmail",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/></div>
+    <div class="help mt">网关：${esc(cfBase())} —— 可在设置里改。环境：${liveEnv().cap?("APK 原生网络（CapacitorHttp "+(liveEnv().http?"已接管":"未接管")+"）"):"浏览器"}</div>`,
     `<button class="btn" id="lr-demo">${icon("db",13)} 切回演示</button>
      <button class="btn ghost" id="lr-set">设置</button>
      <button class="btn primary" id="lr-retry">${icon("refresh",13)} 重试</button>`);
   el.querySelector("#lr-demo").onclick=()=>{prefs.set("mode","demo");reloadClean();};
   el.querySelector("#lr-set").onclick=()=>{close();openSettingsSheet();};
+  const lrt=el.querySelector("#lr-tok");
+  if(lrt)lrt.addEventListener("input",()=>{el.querySelector("#lr-emailwrap").style.display=isGlobalKey(lrt.value)?"":"none";});
   el.querySelector("#lr-retry").onclick=async()=>{
     const tok=(el.querySelector("#lr-tok").value||"").trim();
-    if(!tok)return toast("先填 API 令牌","bad");
-    prefs.set("apiToken",tok);
+    if(!tok)return toast("先填 API 令牌或 Global Key","bad");
+    const email=(el.querySelector("#lr-email")?.value||"").trim();
+    if(isGlobalKey(tok)&&!email)return toast("这是 Global Key：请填写账户邮箱","bad");
+    prefs.set("apiToken",tok);prefs.set("cfEmail",email);
     const btn=el.querySelector("#lr-retry");btn.disabled=true;btn.innerHTML=`${icon("refresh",13)} 同步中…`;btn.querySelector("svg").style.animation="rot .8s linear infinite";
     liveWipe();liveHold("直连同步中…","验证令牌并拉取账号 / 站点 / 计算 / 存储 / Access","refresh");
     const ok=await liveSync();
