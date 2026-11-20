@@ -521,30 +521,30 @@ body{overscroll-behavior-y:none}
 .ab-gate.open{color:var(--green);border-color:color-mix(in srgb,var(--green) 40%,transparent);background:color-mix(in srgb,var(--green) 10%,transparent)}
 
 /* ---- 屏体与推入动画 ---- */
-.screen{flex:1;padding:16px 14px calc(86px + env(safe-area-inset-bottom,0px));min-width:0}
+.screen{flex:1;padding:16px 14px calc(100px + env(safe-area-inset-bottom,0px));min-width:0}
 .screen.scr-push{animation:pushIn .32s cubic-bezier(.2,.9,.25,1) both}
 .screen.scr-pop{animation:popIn .28s cubic-bezier(.2,.9,.25,1) both}
 @keyframes pushIn{from{opacity:0;transform:translateX(34px)}to{opacity:1;transform:none}}
 @keyframes popIn{from{opacity:0;transform:translateX(-26px)}to{opacity:1;transform:none}}
 
-/* ---- 底部标签栏：高透液态玻璃（上缘渐变融化） ---- */
-.m-tabbar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;z-index:45;
-  display:grid;grid-template-columns:repeat(5,1fr);
-  height:calc(64px + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px);
-  border-top:0;background:none;text-shadow:var(--glass-shd)}
-.m-tabbar::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+/* ---- 底部标签栏：悬浮大圆胶囊（液态玻璃），排布仍为五格 ---- */
+.m-tabbar{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);
+  width:calc(100% - 24px);max-width:456px;z-index:45;
+  display:grid;grid-template-columns:repeat(5,1fr);height:68px;
+  border:1px solid rgba(255,255,255,.16);border-radius:999px;background:none;
+  box-shadow:0 16px 38px -12px rgba(4,10,26,.55);text-shadow:var(--glass-shd)}
+.m-tabbar::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
   background:var(--glass-tint);
-  -webkit-backdrop-filter:blur(12px) saturate(1.5);backdrop-filter:blur(12px) saturate(1.5);
-  -webkit-mask-image:linear-gradient(to top,#000 0%,#000 58%,rgba(0,0,0,.55) 84%,transparent 100%);
-  mask-image:linear-gradient(to top,#000 0%,#000 58%,rgba(0,0,0,.55) 84%,transparent 100%)}
+  -webkit-backdrop-filter:blur(14px) saturate(1.5);backdrop-filter:blur(14px) saturate(1.5)}
 .m-tabbar svg{filter:var(--glass-icon)}
 .m-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;background:none;
-  color:var(--mut);font:inherit;font-size:10.5px;cursor:pointer;position:relative;transition:color .18s}
+  color:var(--mut);font:inherit;font-size:10.5px;cursor:pointer;position:relative;transition:color .18s;border-radius:999px}
 .m-tab svg{width:21px;height:21px;transition:transform .2s}
 .m-tab.on{color:var(--brand-ink)}
 .m-tab.on svg{transform:translateY(-1px)}
-.m-tab.on::before{content:"";position:absolute;top:0;left:27%;right:27%;height:3px;border-radius:0 0 4px 4px;background:var(--grad-brand);box-shadow:var(--glow)}
-.m-tab .bdg{position:absolute;top:8px;right:calc(50% - 18px);min-width:15px;height:15px;border-radius:99px;background:var(--hot);color:#fff;font-size:9px;font-weight:700;display:grid;place-items:center;padding:0 4px}
+.m-tab.on::before{content:"";position:absolute;top:7px;bottom:7px;left:13%;right:13%;z-index:-1;border-radius:999px;
+  background:color-mix(in srgb,var(--brand) 16%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--brand) 30%,transparent)}
+.m-tab .bdg{position:absolute;top:10px;right:calc(50% - 18px);min-width:15px;height:15px;border-radius:99px;background:var(--hot);color:#fff;font-size:9px;font-weight:700;display:grid;place-items:center;padding:0 4px}
 
 /* ---- 底部弹层（原生 sheet 感） ---- */
 .m-sheet{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;z-index:61;
@@ -612,7 +612,7 @@ body{overscroll-behavior-y:none}
 .sql-quick button{flex:none;font-family:var(--mono);font-size:10.5px;border:1px solid var(--line);background:var(--inset);color:var(--blue);border-radius:7px;padding:4px 9px;cursor:pointer}
 
 /* ---- 提示 toast 位置（ tabbar 之上，不挡下方控件点击） ---- */
-.toasts{bottom:calc(80px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);right:auto;width:min(430px,calc(100vw - 24px));pointer-events:none}
+.toasts{bottom:calc(96px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);right:auto;width:min(430px,calc(100vw - 24px));pointer-events:none}
 .toasts .toast{pointer-events:none}
 .toasts .toast .undo{pointer-events:auto}
 
@@ -731,23 +731,9 @@ body{overscroll-behavior-y:none}
 .logo-mark{background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.25);display:grid;place-items:center}
 .logo-mark svg{display:block}
 
-/* ---- 演示登录门 ---- */
-.lg-root{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:24px;
-  background:color-mix(in srgb,var(--bg0) 62%,transparent);backdrop-filter:blur(18px) saturate(1.3);
-  transition:opacity .35s,visibility .35s}
-.lg-root.gone{opacity:0;visibility:hidden}
-.lg-card{width:min(340px,100%);border-radius:var(--r-lg);border:1px solid var(--line2);
-  background:color-mix(in srgb,var(--panel-solid,#101a33) 88%,transparent);backdrop-filter:blur(14px);
-  box-shadow:var(--shadow);padding:26px 22px;text-align:center}
-.lg-card.shake{animation:lgShake .4s}
-@keyframes lgShake{0%,100%{transform:none}20%{transform:translateX(-8px)}40%{transform:translateX(7px)}60%{transform:translateX(-5px)}80%{transform:translateX(4px)}}
-.lg-logo{display:inline-grid;place-items:center;width:88px;height:88px;border-radius:24px;background:#fff;
-  box-shadow:0 6px 24px rgba(246,130,31,.35);margin-bottom:14px}
-.lg-card h1{font-size:22px;margin:0 0 4px;letter-spacing:.02em}
-.lg-sub{font-size:11.5px;color:var(--mut);margin:0 0 18px;display:flex;align-items:center;justify-content:center}
-.lg-card .field{text-align:left}
-.lg-note{font-size:10.5px;line-height:1.7;color:var(--mut);margin:16px 0 0;text-align:left}
-.lg-note b{color:var(--ink2)}
+/* ---- 令牌/密钥输入：普通键盘可粘贴，视觉仍打码 ---- */
+.inp.mask{-webkit-text-security:disc;text-security:disc}
+.inp.mask::placeholder{-webkit-text-security:none}
 
 </style>
 </head>
@@ -779,7 +765,7 @@ const FLAG=c=>String.fromCodePoint(...[...c.toUpperCase()].map(ch=>0x1F1A5+ch.ch
 const COUNTRY_TABLE=`AD安道尔 AE阿联酋 AF阿富汗 AG安提瓜和巴布达 AI安圭拉 AL阿尔巴尼亚 AM亚美尼亚 AO安哥拉 AQ南极洲 AR阿根廷 AS美属萨摩亚 AT奥地利 AU澳大利亚 AW阿鲁巴 AX奥兰群岛 AZ阿塞拜疆 BA波黑 BB巴巴多斯 BD孟加拉国 BE比利时 BF布基纳法索 BG保加利亚 BH巴林 BI布隆迪 BJ贝宁 BL圣巴泰勒米 BM百慕大 BN文莱 BO玻利维亚 BQ荷兰加勒比区 BR巴西 BS巴哈马 BT不丹 BV布韦岛 BW博茨瓦纳 BY白俄罗斯 BZ伯利兹 CA加拿大 CC科科斯群岛 CD刚果（金） CF中非 CG刚果（布） CH瑞士 CI科特迪瓦 CK库克群岛 CL智利 CM喀麦隆 CN中国 CO哥伦比亚 CR哥斯达黎加 CU古巴 CV佛得角 CW库拉索 CX圣诞岛 CY塞浦路斯 CZ捷克 DE德国 DJ吉布提 DK丹麦 DM多米尼克 DO多米尼加 DZ阿尔及利亚 EC厄瓜多尔 EE爱沙尼亚 EG埃及 EH西撒哈拉 ER厄立特里亚 ES西班牙 ET埃塞俄比亚 FI芬兰 FJ斐济 FK福克兰群岛 FM密克罗尼西亚 FO法罗群岛 FR法国 GA加蓬 GB英国 GD格林纳达 GE格鲁吉亚 GF法属圭亚那 GG根西岛 GH加纳 GI直布罗陀 GL格陵兰 GM冈比亚 GN几内亚 GP瓜德罗普 GQ赤道几内亚 GR希腊 GS南乔治亚岛 GT危地马拉 GU关岛 GW几内亚比绍 GY圭亚那 HK中国香港 HM赫德岛 HN洪都拉斯 HR克罗地亚 HT海地 HU匈牙利 ID印度尼西亚 IE爱尔兰 IL以色列 IM马恩岛 IN印度 IO英属印度洋领地 IQ伊拉克 IR伊朗 IS冰岛 IT意大利 JE泽西岛 JM牙买加 JO约旦 JP日本 KE肯尼亚 KG吉尔吉斯斯坦 KH柬埔寨 KI基里巴斯 KM科摩罗 KN圣基茨和尼维斯 KP朝鲜 KR韩国 KW科威特 KY开曼群岛 KZ哈萨克斯坦 LA老挝 LB黎巴嫩 LC圣卢西亚 LI列支敦士登 LK斯里兰卡 LR利比里亚 LS莱索托 LT立陶宛 LU卢森堡 LV拉脱维亚 LY利比亚 MA摩洛哥 MC摩纳哥 MD摩尔多瓦 ME黑山 MF法属圣马丁 MG马达加斯加 MH马绍尔群岛 MK北马其顿 ML马里 MM缅甸 MN蒙古 MO中国澳门 MP北马里亚纳群岛 MQ马提尼克 MR毛里塔尼亚 MS蒙特塞拉特 MT马耳他 MU毛里求斯 MV马尔代夫 MW马拉维 MX墨西哥 MY马来西亚 MZ莫桑比克 NA纳米比亚 NC新喀里多尼亚 NE尼日尔 NF诺福克岛 NG尼日利亚 NI尼加拉瓜 NL荷兰 NO挪威 NP尼泊尔 NR瑙鲁 NU纽埃 NZ新西兰 OM阿曼 PA巴拿马 PE秘鲁 PF法属波利尼西亚 PG巴布亚新几内亚 PH菲律宾 PK巴基斯坦 PL波兰 PM圣皮埃尔和密克隆 PN皮特凯恩群岛 PR波多黎各 PS巴勒斯坦 PT葡萄牙 PW帕劳 PY巴拉圭 QA卡塔尔 RE留尼汪 RO罗马尼亚 RS塞尔维亚 RU俄罗斯 RW卢旺达 SA沙特阿拉伯 SB所罗门群岛 SC塞舌尔 SD苏丹 SE瑞典 SG新加坡 SH圣赫勒拿岛 SI斯洛文尼亚 SJ斯瓦尔巴 SK斯洛伐克 SL塞拉利昂 SM圣马力诺 SN塞内加尔 SO索马里 SR苏里南 SS南苏丹 ST圣多美和普林西比 SV萨尔瓦多 SX荷属圣马丁 SY叙利亚 SZ斯威士兰 TC特克斯和凯科斯群岛 TD乍得 TF法属南部领地 TG多哥 TH泰国 TJ塔吉克斯坦 TK托克劳 TL东帝汶 TM土库曼斯坦 TN突尼斯 TO汤加 TR土耳其 TT特立尼达和多巴哥 TV图瓦卢 TW中国台湾 TZ坦桑尼亚 UA乌克兰 UG乌干达 UM美国本土外小岛屿 US美国 UY乌拉圭 UZ乌兹别克斯坦 VA梵蒂冈 VC圣文森特和格林纳丁斯 VE委内瑞拉 VG英属维尔京群岛 VI美属维尔京群岛 VN越南 VU瓦努阿图 WF瓦利斯和富图纳 WS萨摩亚 YE也门 YT马约特 ZA南非 ZM赞比亚 ZW津巴布韦`;
 const CNAMES={};COUNTRY_TABLE.split(" ").forEach(t=>{CNAMES[t.slice(0,2)]=t.slice(2);});
 const countryName=c=>{const s=String(c??"").trim().toUpperCase();return s?(CNAMES[s]||s):"未知";};
-const APP_VER="1.2.0";
+const APP_VER="1.2.1";
 
 /* ---------- 账号 ---------- */
 const accounts=[
@@ -1113,7 +1099,7 @@ const prefs={
 const state={
   account:prefs.get("account",accounts[0].id),
   aggregate:false,
-  theme:prefs.get("theme","dark"),
+  theme:prefs.get("theme","light"),   // 默认浅色（晨光）
   accent:prefs.get("accent","orange"),
   writeGate:prefs.get("writeGate",false),   // 与原应用一致：写闸门默认关
   range:prefs.get("range","7d"),
@@ -1566,21 +1552,22 @@ function gateGuard(){
 }
 function confirmWrite({title,method,path,body,danger=false,typed=null,okLabel="确认执行",onOk}){
   if(!gateGuard())return;
+  const needTyped=!!typed&&prefs.get("typedDelete",false);
   const echo=`<span class="m">${method}</span> <span class="p">${esc(path)}</span>`+(body?`\n${esc(JSON.stringify(body,null,2))}`:"");
   const m=h(`<div class="modal-wrap"><div class="modal">
     <div class="modal-h">${icon(danger?"alert":"rocket",18)}<h3>${esc(title)}</h3></div>
     <div class="modal-b">
-      <div class="muted" style="font-size:12px">发出前请核对完整回显${typed?"；删除类操作需手打对象名确认":""}：</div>
+      <div class="muted" style="font-size:12px">发出前请核对完整回显${needTyped?"；删除类操作需手打对象名确认":""}：</div>
       <div class="echo">${echo}</div>
-      ${typed?`<div class="field"><label>输入「${esc(typed)}」以确认</label><input class="inp typed" placeholder="${esc(typed)}" spellcheck="false" autocomplete="off"/></div>`:""}
+      ${needTyped?`<div class="field"><label>输入「${esc(typed)}」以确认</label><input class="inp typed" placeholder="${esc(typed)}" spellcheck="false" autocomplete="off"/></div>`:""}
       ${danger?`<div class="note warn" style="margin-top:10px">${icon("alert")}<span>此操作立即生效${typed?"，删除后可在提示条内撤销":""}。</span></div>`:""}
     </div>
-    <div class="modal-f"><button class="btn cancel">取消</button><button class="btn ${danger?"danger":"primary"} ok" ${typed?"disabled":""}>${esc(okLabel)}</button></div>
+    <div class="modal-f"><button class="btn cancel">取消</button><button class="btn ${danger?"danger":"primary"} ok" ${needTyped?"disabled":""}>${esc(okLabel)}</button></div>
   </div></div>`);
   const close=openLayer(m);
   m.querySelector(".cancel").onclick=close;
   const okBtn=m.querySelector(".ok");
-  if(typed){
+  if(needTyped){
     const inp=m.querySelector(".typed");
     inp.addEventListener("input",()=>{okBtn.disabled=inp.value.trim()!==typed;});
     setTimeout(()=>inp.focus(),350);
@@ -2552,7 +2539,7 @@ function wConfig(w){
     const {el,close}=sheet("新增 / 更新机密",`
       <div class="note warn mb">${icon("lock")}<span>Secret 只写不读：保存后任何界面都拿不到值，脚本里以绑定名读取。</span></div>
       <div class="field mb"><label>名称</label><input class="inp mono" id="sc-name" placeholder="SIGN_KEY" spellcheck="false"/></div>
-      <div class="field"><label>值</label><input class="inp mono" id="sc-val" type="password" placeholder="不接受空值；要清空请用删除" spellcheck="false"/>
+      <div class="field"><label>值</label><input class="inp mono mask" id="sc-val" placeholder="不接受空值；要清空请用删除" spellcheck="false" autocomplete="off"/>
         <div class="err" id="sc-err" style="display:none"></div></div>`,
       `<button class="btn" id="sc-cancel">取消</button><button class="btn primary" id="sc-ok">${icon("check",14)} 保存</button>`);
     el.querySelector("#sc-cancel").onclick=close;
@@ -3620,7 +3607,7 @@ function addTokenSheet(){
   const {el,close}=sheet("添加账号 · API Token",`
     <div class="note info mb">${icon("key")}<span>令牌是唯一凭证：应用会拿它请求 <span class="mono">/accounts</span> 验证并自动发现账号。<b>不要用 Global API Key。</b>建议最小权限：Account:Read + 各资源 Read，要改 DNS 再加 DNS:Edit。</span></div>
     <div class="field mb"><label>Cloudflare API Token</label>
-      <input class="inp mono" id="tk-inp" type="password" placeholder="40 位以上令牌字符串" spellcheck="false" autocomplete="off"/>
+      <input class="inp mono mask" id="tk-inp" placeholder="40 位以上令牌字符串（可粘贴，显示为圆点）" spellcheck="false" autocomplete="off"/>
       <div class="err" id="tk-err" style="display:none"></div></div>
     <div class="field"><label>本机显示名（可选）</label><input class="inp" id="tk-alias" placeholder="例：备用账号"/></div>`,
     `<button class="btn" id="tk-cancel">取消</button><button class="btn primary" id="tk-ok">${icon("check",14)} 验证并添加</button>`);
@@ -3681,7 +3668,10 @@ function openSettingsSheet(){
     <div class="set-row"><span class="sr-ico">${icon("lock")}</span>
       <div class="sr-main"><b>写闸门</b><span>关闭时变更在本机拦截，不发请求</span></div>
       <div class="switch ${state.writeGate?"on":""}" id="st-gate" role="switch" aria-checked="${state.writeGate}"></div></div>
-    <div class="note warn mt">${icon("lock")}<span>写契约：每个写动作先完整回显（方法 / 路径 / 请求体），确认才执行；删除类必须点名对象，可撤销。</span></div>
+    <div class="set-row"><span class="sr-ico">${icon("edit")}</span>
+      <div class="sr-main"><b>删除需手打对象名</b><span>开启后删除确认必须重新输入名称；关闭时点确认即执行</span></div>
+      <div class="switch ${prefs.get("typedDelete",false)?"on":""}" id="st-typed" role="switch" aria-checked="${prefs.get("typedDelete",false)}"></div></div>
+    <div class="note warn mt">${icon("lock")}<span>写契约：每个写动作先完整回显（方法 / 路径 / 请求体），确认才执行；删除类点名对象${prefs.get("typedDelete",false)?"并手打确认":""}，可撤销。</span></div>
     <div class="set-row mt"><span class="sr-ico">${icon("key")}</span>
       <div class="sr-main"><b>API 令牌</b><span>创建 / 轮换 / 吊销 · ${scoped(DB.apiTokens).length} 把在管</span></div>
       <button class="btn sm ghost" id="st-tokens">管理 ${icon("chevR",11)}</button></div>
@@ -3700,8 +3690,8 @@ function openSettingsSheet(){
     <div class="set-row" style="align-items:flex-start"><span class="sr-ico">${icon("git")}</span>
       <div class="sr-main"><b>Git 令牌（Pages / Workers 构建）</b>
         <div class="field mt" style="gap:7px">
-          <input class="inp mono" id="st-gh" type="password" placeholder="GitHub PAT（ghp_…）" value="${esc(git.github)}" spellcheck="false" style="font-size:11.5px"/>
-          <input class="inp mono" id="st-gl" type="password" placeholder="GitLab PAT（glpat-…）" value="${esc(git.gitlab)}" spellcheck="false" style="font-size:11.5px"/>
+          <input class="inp mono mask" id="st-gh" placeholder="GitHub PAT（ghp_…，可粘贴）" value="${esc(git.github)}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/>
+          <input class="inp mono mask" id="st-gl" placeholder="GitLab PAT（glpat-…，可粘贴）" value="${esc(git.gitlab)}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/>
           <div class="row" style="gap:8px"><button class="btn sm" id="st-gitsave">${icon("check",12)} 保存</button><button class="btn sm ghost" id="st-gitclear">清空</button></div>
         </div></div></div>
     <div class="set-row"><span class="sr-ico">${icon("db")}</span>
@@ -3716,16 +3706,9 @@ function openSettingsSheet(){
     <div class="eyebrow mb mt-l">关于</div>
     <div class="set-row"><span class="sr-ico">${icon("cloud")}</span><div class="sr-main"><b>CF-next</b><span>手机版 v${APP_VER} · 功能对齐原 App 的完整实现</span></div>
       <button class="btn sm ghost" id="st-update">${icon("refresh",12)} 检查更新</button></div>
-    <div class="set-row"><span class="sr-ico">${icon("lock")}</span><div class="sr-main"><b>演示登录门</b><span>当前会话 ${prefs.get("login",null)?("已通过 · "+String(prefs.get("login","")).slice(0,16)):"未登录"}</span></div>
-      <button class="btn sm ghost" id="st-logout">${icon("exit",12)} 退出</button></div>
     <div class="set-row"><span class="sr-ico">${icon("db")}</span><div class="sr-main"><b>数据模式</b><span>内置演示数据（形状对齐 CF API，可整体替换为直连层）</span></div></div>
     <div class="set-row"><span class="sr-ico">${icon("key")}</span><div class="sr-main"><b>本机存储</b><span>偏好落 localStorage · 凭证备份走 AES-256-GCM 保险箱</span></div></div>`);
   const reopen=()=>{close();render();openSettingsSheet();};
-  el.querySelector("#st-logout").onclick=()=>{
-    confirmWrite({title:"退出演示登录门",method:"POST",path:"/logout",body:{cookie:"clear"},okLabel:"退出",onOk:()=>{
-      prefs.set("login",null);close();location.reload();
-    }});
-  };
   el.querySelectorAll("#st-theme button").forEach(b=>b.onclick=()=>{state.theme=b.dataset.v;prefs.set("theme",state.theme);applyTheme();reopen();});
   el.querySelectorAll("#st-accent button").forEach(b=>b.onclick=()=>{state.accent=b.dataset.v;prefs.set("accent",state.accent);applyTheme();reopen();});
   el.querySelectorAll("#st-count button").forEach(b=>b.onclick=()=>{
@@ -3743,6 +3726,7 @@ function openSettingsSheet(){
     prefs.set("hiddenTiles",hid);
   });
   el.querySelector("#st-gate").onclick=()=>{state.writeGate=!state.writeGate;prefs.set("writeGate",state.writeGate);close();render();openSettingsSheet();toast(state.writeGate?"写闸门已放行":"写保护已开启",state.writeGate?"warn":"ok");};
+  el.querySelector("#st-typed").onclick=()=>{const v=!prefs.get("typedDelete",false);prefs.set("typedDelete",v);close();render();openSettingsSheet();toast(v?"删除需手打对象名：已开启":"删除确认简化：点确认即执行",v?"info":"ok");};
   el.querySelector("#st-tokens").onclick=()=>{close();location.hash="#/tokens";};
   el.querySelector("#st-gwtest").onclick=()=>{
     const url=el.querySelector("#st-gw").value.trim(),res=el.querySelector("#st-gwres");
@@ -3820,51 +3804,18 @@ function vaultExportSheet(){
 }
 function applyTheme(){document.documentElement.dataset.theme=state.theme;document.documentElement.dataset.accent=state.accent;}
 
-/* ================= 演示登录门（docs/14 §9：网关报 demo:true 才出现） ================= */
-const DEMO_PASS="cf-demo";
-function loginGate(){
-  const root=document.createElement("div");
-  root.className="lg-root";root.id="lg-root";
-  root.innerHTML=`<div class="lg-card">
-    <div class="lg-logo">${cfMark(56)}</div>
-    <h1>CF-next</h1>
-    <p class="lg-sub">演示部署 · 免配置出数<span class="chip ok" style="margin-left:8px">demo: true</span></p>
-    <div class="field mb"><label>访问口令（DEMO_PASS）</label>
-      <input class="inp mono" id="lg-pw" type="password" placeholder="演示密码" autocomplete="off" spellcheck="false"/>
-      <div class="err" id="lg-err" style="display:none"></div></div>
-    <button class="btn primary block" id="lg-ok">${icon("unlock",14)} 进入控制台</button>
-    <button class="btn ghost block mt" id="lg-hint">忘了密码？点我填演示密码</button>
-    <p class="lg-note">通过后发 HttpOnly cookie（SHA-256 摘要，不落明文密码）。数据出口是网关兜底 <b>CF_API_TOKEN</b>，访客无需自带令牌。</p></div>`;
-  document.body.appendChild(root);
-  const err=root.querySelector("#lg-err");
-  const fail=m=>{err.textContent=m;err.style.display="block";root.querySelector(".lg-card").classList.remove("shake");void 0;root.querySelector(".lg-card").classList.add("shake");};
-  const enter=()=>{
-    const v=root.querySelector("#lg-pw").value;
-    if(v!==DEMO_PASS)return fail("口令不对（演示密码见下方按钮）");
-    const stamp=new Date().toISOString();
-    prefs.set("login",stamp);
-    root.classList.add("gone");
-    setTimeout(()=>root.remove(),380);
-    toast("登录门已通过 · cookie 已下发（模拟）","ok");
-  };
-  root.querySelector("#lg-ok").onclick=enter;
-  root.querySelector("#lg-pw").onkeydown=e=>{if(e.key==="Enter")enter();};
-  root.querySelector("#lg-hint").onclick=()=>{root.querySelector("#lg-pw").value=DEMO_PASS;root.querySelector("#lg-pw").focus();};
-}
-
 /* ================= 启动 ================= */
 applyTheme();
 document.body.insertAdjacentHTML("afterbegin",`<div class="ambient"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div>`);
 $("#m-shell").innerHTML=`<header class="appbar" id="appbar"></header><main class="screen" id="screen"></main>
   <nav class="m-tabbar" aria-label="主导航">${TABS.map(t=>`<button class="m-tab" data-key="${t.key}">${icon(t.icon,21)}<span>${t.label}</span></button>`).join("")}</nav>`;
 document.querySelectorAll(".m-tab").forEach(b=>{
-  b.onclick=()=>{if(!prefs.get("login")){loginGate();return;}
+  b.onclick=()=>{
   const target="#/"+b.dataset.key;
   if(location.hash===target)render();else location.hash=target;};
 });
 if(!location.hash)location.hash="#/overview";
 render();
-if(!prefs.get("login"))loginGate();
 </script>
 </body>
 </html>
