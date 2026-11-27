@@ -1,6 +1,6 @@
 {
   "name": "cf-console-next",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "private": true,
   "description": "Cloudflare 边缘控制台 Next —— 单文件移动端 UI 的 Capacitor 封装",
   "scripts": {

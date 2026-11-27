@@ -20,13 +20,13 @@
   --line:rgba(148,170,235,.14); --line2:rgba(148,170,235,.26);
   --ink:#eaf0ff; --ink2:#a7b3d6; --mut:#6b78a3;
   --brand:#f6821f; --brand2:#fbad41; --brand-ink:#ffb066;
-  --hot:#ff4f9a; --blue:#3fb6ff; --green:#2fe6a7; --red:#ff5468;
-  --violet:#a78bfa; --amber:#ffc53d; --cyan:#22d3ee;
+  --hot:#e879a6; --blue:#5b8fd6; --green:#37c98f; --red:#ef6072;
+  --violet:#8f83c9; --amber:#e0a93f; --cyan:#4fb8cf;
   --ok:var(--green); --warn:var(--amber); --bad:var(--red); --info:var(--blue);
-  --grad-brand:linear-gradient(120deg,#f6821f 0%,#fbad41 55%,#ff4f9a 130%);
-  --grad-cool:linear-gradient(120deg,#3fb6ff,#a78bfa);
-  --glow:0 0 24px rgba(246,130,31,.28);
-  --shadow:0 18px 50px -18px rgba(0,0,0,.65);
+  --grad-brand:linear-gradient(120deg,#f6821f 0%,#fbad41 60%,#f6821f 130%);
+  --grad-cool:linear-gradient(120deg,#5b8fd6,#8f83c9);
+  --glow:0 0 0 rgba(0,0,0,0);
+  --shadow:0 12px 34px -20px rgba(0,0,0,.45);
   --r:14px; --r-sm:9px; --r-lg:20px;
   --glass-tint:rgba(255,255,255,.10); --glass-shd:0 1px 2px rgba(0,0,0,.45);
   --glass-icon:drop-shadow(0 1px 1.5px rgba(0,0,0,.4));
@@ -42,18 +42,18 @@
   --line:rgba(24,40,96,.13); --line2:rgba(24,40,96,.26);
   --ink:#131b33; --ink2:#42507a; --mut:#7c88ad;
   --brand:#e06a00; --brand2:#f59e0b; --brand-ink:#c05a00;
-  --hot:#e0257c; --blue:#0284d8; --green:#0ca678; --red:#e0314b;
-  --violet:#7c5cf0; --amber:#c77800; --cyan:#0891b2;
-  --glow:0 0 22px rgba(224,106,0,.18);
-  --shadow:0 16px 40px -18px rgba(30,45,110,.25);
+  --hot:#cf5b86; --blue:#3f78b5; --green:#1f9e72; --red:#d9536a;
+  --violet:#6f66b8; --amber:#b5781f; --cyan:#3f93a6;
+  --glow:0 0 0 rgba(0,0,0,0);
+  --shadow:0 12px 30px -20px rgba(30,45,110,.22);
   --glass-tint:rgba(255,255,255,.14); --glass-shd:0 1px 2px rgba(255,255,255,.85);
   --glass-icon:drop-shadow(0 1px 1.5px rgba(255,255,255,.75));
   color-scheme:light;
 }
-[data-accent="blue"]{ --brand:#3fb6ff; --brand2:#7dd3fc; --brand-ink:#7cc9ff; --grad-brand:linear-gradient(120deg,#0ea5e9,#3fb6ff 55%,#a78bfa 130%); --glow:0 0 24px rgba(63,182,255,.3); }
-[data-accent="violet"]{ --brand:#a78bfa; --brand2:#c4b5fd; --brand-ink:#c0aaff; --grad-brand:linear-gradient(120deg,#8b5cf6,#a78bfa 55%,#ff4f9a 130%); --glow:0 0 24px rgba(167,139,250,.3); }
-[data-theme="light"][data-accent="blue"]{ --brand:#0284d8; --brand2:#0ea5e9; --brand-ink:#0369a1; }
-[data-theme="light"][data-accent="violet"]{ --brand:#7c5cf0; --brand2:#8b5cf6; --brand-ink:#6d28d9; }
+[data-accent="blue"]{ --brand:#3f8fd6; --brand2:#5b9fd8; --brand-ink:#6aa8dd; --grad-brand:linear-gradient(120deg,#3f8fd6,#5b9fd8 60%,#3f8fd6 130%); --glow:0 0 0 rgba(0,0,0,0); }
+[data-accent="violet"]{ --brand:#8f83c9; --brand2:#a99fd6; --brand-ink:#b0a6dd; --grad-brand:linear-gradient(120deg,#8f83c9,#a99fd6 60%,#8f83c9 130%); --glow:0 0 0 rgba(0,0,0,0); }
+[data-theme="light"][data-accent="blue"]{ --brand:#2f6fae; --brand2:#3f8fd6; --brand-ink:#285e93; }
+[data-theme="light"][data-accent="violet"]{ --brand:#6f66b8; --brand2:#8f83c9; --brand-ink:#5a5199; }
 
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
@@ -62,39 +62,22 @@ body{
   font-size:14px; line-height:1.55; overflow-x:hidden;
   min-height:100vh;
 }
-/* ---- 自定义滚动条：走本体系配色 ---- */
-*{scrollbar-width:thin;scrollbar-color:rgba(246,130,31,.45) transparent}
+/* ---- 自定义滚动条：中性克制 ---- */
+*{scrollbar-width:thin;scrollbar-color:rgba(120,135,175,.35) transparent}
 ::-webkit-scrollbar{width:9px;height:9px}
 ::-webkit-scrollbar-track{background:transparent}
-::-webkit-scrollbar-thumb{background:linear-gradient(180deg,rgba(246,130,31,.55),rgba(255,79,154,.45));border-radius:99px;border:2px solid transparent;background-clip:padding-box}
-::-webkit-scrollbar-thumb:hover{background:linear-gradient(180deg,rgba(246,130,31,.9),rgba(255,79,154,.8));background-clip:padding-box;border:2px solid transparent}
+::-webkit-scrollbar-thumb{background:rgba(120,135,175,.32);border-radius:99px;border:2px solid transparent;background-clip:padding-box}
+::-webkit-scrollbar-thumb:hover{background:rgba(120,135,175,.5);background-clip:padding-box}
 ::-webkit-scrollbar-corner{background:transparent}
 
-/* ---- 环境背景：极光 + 网格 + 噪点 ---- */
+/* ---- 环境背景：纯净单色渐变 + 一层极淡品牌光晕 ---- */
 .ambient{position:fixed;inset:0;z-index:-1;overflow:hidden;background:
-  radial-gradient(1100px 600px at 8% -10%, rgba(246,130,31,.14), transparent 60%),
-  radial-gradient(900px 620px at 100% 12%, rgba(167,139,250,.12), transparent 60%),
-  radial-gradient(1000px 700px at 55% 115%, rgba(63,182,255,.10), transparent 60%),
+  radial-gradient(1200px 720px at 50% -18%, rgba(246,130,31,.05), transparent 62%),
   linear-gradient(180deg,var(--bg0),var(--bg1));}
 [data-theme="light"] .ambient{background:
-  radial-gradient(1100px 600px at 8% -10%, rgba(246,130,31,.12), transparent 60%),
-  radial-gradient(900px 620px at 100% 12%, rgba(124,92,240,.10), transparent 60%),
-  radial-gradient(1000px 700px at 55% 115%, rgba(2,132,216,.08), transparent 60%),
+  radial-gradient(1200px 720px at 50% -18%, rgba(246,130,31,.045), transparent 62%),
   linear-gradient(180deg,var(--bg0),var(--bg1));}
-.ambient::before{content:"";position:absolute;inset:-50%;
-  background-image:linear-gradient(rgba(148,170,235,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(148,170,235,.05) 1px,transparent 1px);
-  background-size:44px 44px;
-  mask-image:radial-gradient(70% 60% at 50% 30%,#000 30%,transparent 100%);
-  animation:gridDrift 60s linear infinite;}
-[data-theme="light"] .ambient::before{background-image:linear-gradient(rgba(24,40,96,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(24,40,96,.055) 1px,transparent 1px)}
-.ambient::after{content:"";position:absolute;inset:0;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .04 0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");}
-@keyframes gridDrift{to{transform:translate3d(44px,44px,0)}}
-.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:orbFloat 26s ease-in-out infinite alternate}
-.orb.o1{width:420px;height:420px;left:-120px;top:-90px;background:radial-gradient(circle,#f6821f55,transparent 70%)}
-.orb.o2{width:520px;height:520px;right:-160px;top:22%;background:radial-gradient(circle,#ff4f9a33,transparent 70%);animation-delay:-9s}
-.orb.o3{width:460px;height:460px;left:32%;bottom:-200px;background:radial-gradient(circle,#3fb6ff33,transparent 70%);animation-delay:-17s}
-@keyframes orbFloat{from{transform:translate3d(0,0,0) scale(1)}to{transform:translate3d(50px,-40px,0) scale(1.12)}}
+.orb{display:none}
 
 /* ================= 壳层 ================= */
 .app{display:grid;grid-template-columns:var(--side-w) minmax(0,1fr);min-height:100vh}
@@ -186,7 +169,7 @@ body{
 }
 
 /* ================= 通用组件 ================= */
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);backdrop-filter:blur(10px);position:relative}
+.panel{background:color-mix(in srgb,var(--panel-solid) 72%,transparent);border:1px solid var(--line);border-radius:var(--r);backdrop-filter:blur(6px);position:relative;box-shadow:var(--shadow)}
 .panel-pad{padding:18px}
 .panel-h{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line)}
 .panel-h h3{font-size:13px;font-weight:650;letter-spacing:.02em}
@@ -297,7 +280,7 @@ table.tbl{width:100%;border-collapse:collapse;font-size:12.5px}
 .kpi .k-delta.inv-up{color:var(--red)} .kpi .k-delta.inv-down{color:var(--green)}
 .kpi .spark{margin:8px -4px -4px;height:34px}
 .kpi.hero{grid-column:span 2;background:
-  linear-gradient(135deg,rgba(246,130,31,.14),rgba(255,79,154,.06) 55%,rgba(148,170,255,.04));border-color:color-mix(in srgb,var(--brand) 32%,transparent)}
+  linear-gradient(160deg,color-mix(in srgb,var(--brand) 7%,var(--panel-solid)),var(--panel-solid));border-color:color-mix(in srgb,var(--brand) 20%,transparent)}
 .kpi.hero .k-val{font-size:40px}
 .kpi.hero .spark{height:52px}
 @media (max-width:640px){.kpi.hero{grid-column:span 2}.kpi .k-val{font-size:21px}.kpi.hero .k-val{font-size:31px}}
@@ -531,19 +514,19 @@ body{overscroll-behavior-y:none}
 .m-tabbar{position:fixed;bottom:calc(10px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);
   width:calc(100% - 24px);max-width:456px;z-index:45;
   display:grid;grid-template-columns:repeat(5,1fr);height:68px;
-  border:1px solid rgba(255,255,255,.16);border-radius:999px;background:none;
-  box-shadow:0 16px 38px -12px rgba(4,10,26,.55);text-shadow:var(--glass-shd)}
+  border:1px solid var(--line);border-radius:999px;background:none;
+  box-shadow:0 14px 34px -16px rgba(4,10,26,.4)}
 .m-tabbar::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;border-radius:inherit;
-  background:var(--glass-tint);
-  -webkit-backdrop-filter:blur(14px) saturate(1.5);backdrop-filter:blur(14px) saturate(1.5)}
-.m-tabbar svg{filter:var(--glass-icon)}
+  background:color-mix(in srgb,var(--panel-solid) 88%,transparent);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.m-tabbar svg{filter:none}
 .m-tab{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;border:0;background:none;
   color:var(--mut);font:inherit;font-size:10.5px;cursor:pointer;position:relative;transition:color .18s;border-radius:999px}
 .m-tab svg{width:21px;height:21px;transition:transform .2s}
 .m-tab.on{color:var(--brand-ink)}
 .m-tab.on svg{transform:translateY(-1px)}
 .m-tab.on::before{content:"";position:absolute;top:7px;bottom:7px;left:13%;right:13%;z-index:-1;border-radius:999px;
-  background:color-mix(in srgb,var(--brand) 16%,transparent);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--brand) 30%,transparent)}
+  background:color-mix(in srgb,var(--brand) 12%,transparent)}
 .m-tab .bdg{position:absolute;top:10px;right:calc(50% - 18px);min-width:15px;height:15px;border-radius:99px;background:var(--hot);color:#fff;font-size:9px;font-weight:700;display:grid;place-items:center;padding:0 4px}
 
 /* ---- 底部弹层（原生 sheet 感） ---- */
@@ -765,7 +748,7 @@ const FLAG=c=>String.fromCodePoint(...[...c.toUpperCase()].map(ch=>0x1F1A5+ch.ch
 const COUNTRY_TABLE=`AD安道尔 AE阿联酋 AF阿富汗 AG安提瓜和巴布达 AI安圭拉 AL阿尔巴尼亚 AM亚美尼亚 AO安哥拉 AQ南极洲 AR阿根廷 AS美属萨摩亚 AT奥地利 AU澳大利亚 AW阿鲁巴 AX奥兰群岛 AZ阿塞拜疆 BA波黑 BB巴巴多斯 BD孟加拉国 BE比利时 BF布基纳法索 BG保加利亚 BH巴林 BI布隆迪 BJ贝宁 BL圣巴泰勒米 BM百慕大 BN文莱 BO玻利维亚 BQ荷兰加勒比区 BR巴西 BS巴哈马 BT不丹 BV布韦岛 BW博茨瓦纳 BY白俄罗斯 BZ伯利兹 CA加拿大 CC科科斯群岛 CD刚果（金） CF中非 CG刚果（布） CH瑞士 CI科特迪瓦 CK库克群岛 CL智利 CM喀麦隆 CN中国 CO哥伦比亚 CR哥斯达黎加 CU古巴 CV佛得角 CW库拉索 CX圣诞岛 CY塞浦路斯 CZ捷克 DE德国 DJ吉布提 DK丹麦 DM多米尼克 DO多米尼加 DZ阿尔及利亚 EC厄瓜多尔 EE爱沙尼亚 EG埃及 EH西撒哈拉 ER厄立特里亚 ES西班牙 ET埃塞俄比亚 FI芬兰 FJ斐济 FK福克兰群岛 FM密克罗尼西亚 FO法罗群岛 FR法国 GA加蓬 GB英国 GD格林纳达 GE格鲁吉亚 GF法属圭亚那 GG根西岛 GH加纳 GI直布罗陀 GL格陵兰 GM冈比亚 GN几内亚 GP瓜德罗普 GQ赤道几内亚 GR希腊 GS南乔治亚岛 GT危地马拉 GU关岛 GW几内亚比绍 GY圭亚那 HK中国香港 HM赫德岛 HN洪都拉斯 HR克罗地亚 HT海地 HU匈牙利 ID印度尼西亚 IE爱尔兰 IL以色列 IM马恩岛 IN印度 IO英属印度洋领地 IQ伊拉克 IR伊朗 IS冰岛 IT意大利 JE泽西岛 JM牙买加 JO约旦 JP日本 KE肯尼亚 KG吉尔吉斯斯坦 KH柬埔寨 KI基里巴斯 KM科摩罗 KN圣基茨和尼维斯 KP朝鲜 KR韩国 KW科威特 KY开曼群岛 KZ哈萨克斯坦 LA老挝 LB黎巴嫩 LC圣卢西亚 LI列支敦士登 LK斯里兰卡 LR利比里亚 LS莱索托 LT立陶宛 LU卢森堡 LV拉脱维亚 LY利比亚 MA摩洛哥 MC摩纳哥 MD摩尔多瓦 ME黑山 MF法属圣马丁 MG马达加斯加 MH马绍尔群岛 MK北马其顿 ML马里 MM缅甸 MN蒙古 MO中国澳门 MP北马里亚纳群岛 MQ马提尼克 MR毛里塔尼亚 MS蒙特塞拉特 MT马耳他 MU毛里求斯 MV马尔代夫 MW马拉维 MX墨西哥 MY马来西亚 MZ莫桑比克 NA纳米比亚 NC新喀里多尼亚 NE尼日尔 NF诺福克岛 NG尼日利亚 NI尼加拉瓜 NL荷兰 NO挪威 NP尼泊尔 NR瑙鲁 NU纽埃 NZ新西兰 OM阿曼 PA巴拿马 PE秘鲁 PF法属波利尼西亚 PG巴布亚新几内亚 PH菲律宾 PK巴基斯坦 PL波兰 PM圣皮埃尔和密克隆 PN皮特凯恩群岛 PR波多黎各 PS巴勒斯坦 PT葡萄牙 PW帕劳 PY巴拉圭 QA卡塔尔 RE留尼汪 RO罗马尼亚 RS塞尔维亚 RU俄罗斯 RW卢旺达 SA沙特阿拉伯 SB所罗门群岛 SC塞舌尔 SD苏丹 SE瑞典 SG新加坡 SH圣赫勒拿岛 SI斯洛文尼亚 SJ斯瓦尔巴 SK斯洛伐克 SL塞拉利昂 SM圣马力诺 SN塞内加尔 SO索马里 SR苏里南 SS南苏丹 ST圣多美和普林西比 SV萨尔瓦多 SX荷属圣马丁 SY叙利亚 SZ斯威士兰 TC特克斯和凯科斯群岛 TD乍得 TF法属南部领地 TG多哥 TH泰国 TJ塔吉克斯坦 TK托克劳 TL东帝汶 TM土库曼斯坦 TN突尼斯 TO汤加 TR土耳其 TT特立尼达和多巴哥 TV图瓦卢 TW中国台湾 TZ坦桑尼亚 UA乌克兰 UG乌干达 UM美国本土外小岛屿 US美国 UY乌拉圭 UZ乌兹别克斯坦 VA梵蒂冈 VC圣文森特和格林纳丁斯 VE委内瑞拉 VG英属维尔京群岛 VI美属维尔京群岛 VN越南 VU瓦努阿图 WF瓦利斯和富图纳 WS萨摩亚 YE也门 YT马约特 ZA南非 ZM赞比亚 ZW津巴布韦`;
 const CNAMES={};COUNTRY_TABLE.split(" ").forEach(t=>{CNAMES[t.slice(0,2)]=t.slice(2);});
 const countryName=c=>{const s=String(c??"").trim().toUpperCase();return s?(CNAMES[s]||s):"未知";};
-const APP_VER="1.2.3";
+const APP_VER="1.2.4";
 
 /* ---------- 账号 ---------- */
 const accounts=[
@@ -1197,13 +1180,27 @@ function icon(name,size=16,cls=""){
   return `<svg class="${cls}" viewBox="0 0 24 24" width="${size}" height="${size}" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[name]||IC.info}</svg>`;
 }
 
+/* ---------- 平滑曲线路径（Catmull-Rom → 三次贝塞尔） ---------- */
+function smoothPath(pts){
+  if(!pts.length)return"";
+  if(pts.length<3)return"M"+pts.map(p=>p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" L");
+  let d="M"+pts[0][0].toFixed(1)+" "+pts[0][1].toFixed(1);
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||p2;
+    const c1x=p1[0]+(p2[0]-p0[0])/6,c1y=p1[1]+(p2[1]-p0[1])/6;
+    const c2x=p2[0]-(p3[0]-p1[0])/6,c2y=p2[1]-(p3[1]-p1[1])/6;
+    d+=" C"+c1x.toFixed(1)+" "+c1y.toFixed(1)+" "+c2x.toFixed(1)+" "+c2y.toFixed(1)+" "+p2[0].toFixed(1)+" "+p2[1].toFixed(1);
+  }
+  return d;
+}
+
 /* ---------- 迷你火花线 ---------- */
 function sparkline(vals,{w=160,h=36,color="var(--brand)",fill=true,id=""}={}){
   if(!vals.length)return"";
   const max=Math.max(...vals,1),min=Math.min(...vals,0);
   const px=i=>i/(vals.length-1)*w;
   const py=v=>h-3-(v-min)/(max-min||1)*(h-8);
-  let d="M"+vals.map((v,i)=>px(i).toFixed(1)+" "+py(v).toFixed(1)).join(" L");
+  let d=smoothPath(vals.map((v,i)=>[px(i),py(v)]));
   const gid="sg"+(id||Math.random().toString(36).slice(2,8));
   return `<svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="width:100%;height:100%">
     ${fill?`<defs><linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
@@ -1243,10 +1240,10 @@ function areaChart(el,{points,series,height=260,fmt=fmtN,yFmt=fmtN}){
   series.forEach((s,si)=>{
     const gid=uid+"g"+si;
     defs+=`<linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="${s.color}" stop-opacity="${s.fillFrom??.30}"/><stop offset="1" stop-color="${s.color}" stop-opacity="0"/></linearGradient>`;
-    const d="M"+points.map((p,i)=>px(i).toFixed(1)+" "+py(p[s.key]).toFixed(1)).join(" L");
+      <stop offset="0" stop-color="${s.color}" stop-opacity="${s.fillFrom??.20}"/><stop offset="1" stop-color="${s.color}" stop-opacity="0"/></linearGradient>`;
+    const d=smoothPath(points.map((p,i)=>[px(i),py(p[s.key])]));
     if(s.fill!==false)paths+=`<path d="${d} L ${px(points.length-1)} ${PT+ih} L ${PL} ${PT+ih} Z" fill="url(#${gid})"/>`;
-    paths+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="2.2" stroke-linejoin="round" class="draw-line" pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:1;animation:lineDraw 1.1s ${.1+si*.15}s cubic-bezier(.4,0,.2,1) forwards"/>`;
+    paths+=`<path d="${d}" fill="none" stroke="${s.color}" stroke-width="1.8" stroke-linejoin="round" class="draw-line" pathLength="1" style="stroke-dasharray:1;stroke-dashoffset:1;animation:lineDraw 1.1s ${.1+si*.15}s cubic-bezier(.4,0,.2,1) forwards"/>`;
   });
   el.innerHTML=`<div class="chart-box" style="height:${H}px">
     <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
