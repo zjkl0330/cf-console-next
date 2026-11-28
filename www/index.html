@@ -748,7 +748,7 @@ const FLAG=c=>String.fromCodePoint(...[...c.toUpperCase()].map(ch=>0x1F1A5+ch.ch
 const COUNTRY_TABLE=`AD安道尔 AE阿联酋 AF阿富汗 AG安提瓜和巴布达 AI安圭拉 AL阿尔巴尼亚 AM亚美尼亚 AO安哥拉 AQ南极洲 AR阿根廷 AS美属萨摩亚 AT奥地利 AU澳大利亚 AW阿鲁巴 AX奥兰群岛 AZ阿塞拜疆 BA波黑 BB巴巴多斯 BD孟加拉国 BE比利时 BF布基纳法索 BG保加利亚 BH巴林 BI布隆迪 BJ贝宁 BL圣巴泰勒米 BM百慕大 BN文莱 BO玻利维亚 BQ荷兰加勒比区 BR巴西 BS巴哈马 BT不丹 BV布韦岛 BW博茨瓦纳 BY白俄罗斯 BZ伯利兹 CA加拿大 CC科科斯群岛 CD刚果（金） CF中非 CG刚果（布） CH瑞士 CI科特迪瓦 CK库克群岛 CL智利 CM喀麦隆 CN中国 CO哥伦比亚 CR哥斯达黎加 CU古巴 CV佛得角 CW库拉索 CX圣诞岛 CY塞浦路斯 CZ捷克 DE德国 DJ吉布提 DK丹麦 DM多米尼克 DO多米尼加 DZ阿尔及利亚 EC厄瓜多尔 EE爱沙尼亚 EG埃及 EH西撒哈拉 ER厄立特里亚 ES西班牙 ET埃塞俄比亚 FI芬兰 FJ斐济 FK福克兰群岛 FM密克罗尼西亚 FO法罗群岛 FR法国 GA加蓬 GB英国 GD格林纳达 GE格鲁吉亚 GF法属圭亚那 GG根西岛 GH加纳 GI直布罗陀 GL格陵兰 GM冈比亚 GN几内亚 GP瓜德罗普 GQ赤道几内亚 GR希腊 GS南乔治亚岛 GT危地马拉 GU关岛 GW几内亚比绍 GY圭亚那 HK中国香港 HM赫德岛 HN洪都拉斯 HR克罗地亚 HT海地 HU匈牙利 ID印度尼西亚 IE爱尔兰 IL以色列 IM马恩岛 IN印度 IO英属印度洋领地 IQ伊拉克 IR伊朗 IS冰岛 IT意大利 JE泽西岛 JM牙买加 JO约旦 JP日本 KE肯尼亚 KG吉尔吉斯斯坦 KH柬埔寨 KI基里巴斯 KM科摩罗 KN圣基茨和尼维斯 KP朝鲜 KR韩国 KW科威特 KY开曼群岛 KZ哈萨克斯坦 LA老挝 LB黎巴嫩 LC圣卢西亚 LI列支敦士登 LK斯里兰卡 LR利比里亚 LS莱索托 LT立陶宛 LU卢森堡 LV拉脱维亚 LY利比亚 MA摩洛哥 MC摩纳哥 MD摩尔多瓦 ME黑山 MF法属圣马丁 MG马达加斯加 MH马绍尔群岛 MK北马其顿 ML马里 MM缅甸 MN蒙古 MO中国澳门 MP北马里亚纳群岛 MQ马提尼克 MR毛里塔尼亚 MS蒙特塞拉特 MT马耳他 MU毛里求斯 MV马尔代夫 MW马拉维 MX墨西哥 MY马来西亚 MZ莫桑比克 NA纳米比亚 NC新喀里多尼亚 NE尼日尔 NF诺福克岛 NG尼日利亚 NI尼加拉瓜 NL荷兰 NO挪威 NP尼泊尔 NR瑙鲁 NU纽埃 NZ新西兰 OM阿曼 PA巴拿马 PE秘鲁 PF法属波利尼西亚 PG巴布亚新几内亚 PH菲律宾 PK巴基斯坦 PL波兰 PM圣皮埃尔和密克隆 PN皮特凯恩群岛 PR波多黎各 PS巴勒斯坦 PT葡萄牙 PW帕劳 PY巴拉圭 QA卡塔尔 RE留尼汪 RO罗马尼亚 RS塞尔维亚 RU俄罗斯 RW卢旺达 SA沙特阿拉伯 SB所罗门群岛 SC塞舌尔 SD苏丹 SE瑞典 SG新加坡 SH圣赫勒拿岛 SI斯洛文尼亚 SJ斯瓦尔巴 SK斯洛伐克 SL塞拉利昂 SM圣马力诺 SN塞内加尔 SO索马里 SR苏里南 SS南苏丹 ST圣多美和普林西比 SV萨尔瓦多 SX荷属圣马丁 SY叙利亚 SZ斯威士兰 TC特克斯和凯科斯群岛 TD乍得 TF法属南部领地 TG多哥 TH泰国 TJ塔吉克斯坦 TK托克劳 TL东帝汶 TM土库曼斯坦 TN突尼斯 TO汤加 TR土耳其 TT特立尼达和多巴哥 TV图瓦卢 TW中国台湾 TZ坦桑尼亚 UA乌克兰 UG乌干达 UM美国本土外小岛屿 US美国 UY乌拉圭 UZ乌兹别克斯坦 VA梵蒂冈 VC圣文森特和格林纳丁斯 VE委内瑞拉 VG英属维尔京群岛 VI美属维尔京群岛 VN越南 VU瓦努阿图 WF瓦利斯和富图纳 WS萨摩亚 YE也门 YT马约特 ZA南非 ZM赞比亚 ZW津巴布韦`;
 const CNAMES={};COUNTRY_TABLE.split(" ").forEach(t=>{CNAMES[t.slice(0,2)]=t.slice(2);});
 const countryName=c=>{const s=String(c??"").trim().toUpperCase();return s?(CNAMES[s]||s):"未知";};
-const APP_VER="1.2.4";
+const APP_VER="1.2.5";
 
 /* ---------- 账号 ---------- */
 const accounts=[
@@ -3781,6 +3781,7 @@ function openSettingsSheet(){
     <div class="field mt"><label>API 令牌 / Global API Key（可粘贴）</label>
       <input class="inp mono mask" id="st-tok" placeholder="cfut_… 或 40 位 API Token；也可粘贴 37 位十六进制 Global Key" value="${esc(prefs.get("apiToken",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/>
       <div class="help" id="st-tokkind">${isGlobalKey(prefs.get("apiToken",""))?'<span style="color:var(--amber)">识别为 Global API Key：需下方邮箱，走 X-Auth-Key 头</span>':'<span style="color:var(--muted)">识别为 API Token：走 Bearer 头</span>'}</div>
+      <div class="help mono" id="st-tokdiag" style="font-size:10.5px;color:var(--muted);margin-top:2px"></div>
       <div id="st-emailwrap" style="${isGlobalKey(prefs.get("apiToken",""))?"":"display:none"}"><label style="margin-top:8px">Global Key 对应账户邮箱</label>
         <input class="inp" id="st-email" placeholder="you@example.com" value="${esc(prefs.get("cfEmail",""))}" spellcheck="false" autocomplete="off" style="font-size:11.5px"/></div>
       <div class="help" id="st-lres">${
@@ -3821,12 +3822,15 @@ function openSettingsSheet(){
   });
   const lsync=el.querySelector("#st-lsync");
   if(lsync)lsync.onclick=async()=>{
-    const tok=(el.querySelector("#st-tok").value||"").trim();
+    const raw=(el.querySelector("#st-tok").value||"");
+    const tok=normTok(raw);
     if(!tok)return toast("请先粘贴 API Token 或 Global API Key","bad");
+    if(/\s/.test(tok))return toast("令牌里含空格/换行，疑似粘贴不完整——请只粘贴令牌本体","bad");
     const email=(el.querySelector("#st-email")?.value||"").trim();
     if(isGlobalKey(tok)&&!email)return toast("这是 Global API Key：请填写对应账户邮箱","bad");
     const gw=(el.querySelector("#st-gw").value||"").trim();
     if(!/^(https?):\/\/[^\s]+/.test(gw))return toast("网关地址格式不对","bad");
+    if(tok!==raw)el.querySelector("#st-tok").value=tok; // 回填清洗结果
     prefs.set("gateway",gw);prefs.set("apiToken",tok);prefs.set("cfEmail",email);
     const old=lsync.innerHTML;lsync.disabled=true;lsync.innerHTML=`${icon("refresh",12)} 同步中…`;lsync.querySelector("svg").style.animation="rot .8s linear infinite";
     const ok=await liveSync();
@@ -3843,12 +3847,21 @@ function openSettingsSheet(){
   };
   const lclear=el.querySelector("#st-lclear");
   const tokIn=el.querySelector("#st-tok");
-  if(tokIn)tokIn.addEventListener("input",()=>{
-    const gk=isGlobalKey(tokIn.value);
-    const kind=el.querySelector("#st-tokkind"),wrap=el.querySelector("#st-emailwrap");
-    if(kind)kind.innerHTML=gk?'<span style="color:var(--amber)">识别为 Global API Key：需下方邮箱，走 X-Auth-Key 头</span>':'<span style="color:var(--muted)">识别为 API Token：走 Bearer 头</span>';
-    if(wrap)wrap.style.display=gk?"":"none";
-  });
+  const fillDiag=()=>{
+    if(!tokIn)return;
+    const d=tokDiag(tokIn.value);
+    const kind=el.querySelector("#st-tokkind"),wrap=el.querySelector("#st-emailwrap"),diag=el.querySelector("#st-tokdiag");
+    if(kind)kind.innerHTML=d.gk?'<span style="color:var(--amber)">识别为 Global API Key：需下方邮箱，走 X-Auth-Key 头</span>':'<span style="color:var(--muted)">识别为 API Token：走 Bearer 头</span>';
+    if(wrap)wrap.style.display=d.gk?"":"none";
+    if(diag){
+      if(!d.t){diag.textContent="";return;}
+      const send=d.gk?"X-Auth-Key":"Bearer";
+      const warn=d.hints.length?' <span style="color:var(--red)">'+esc(d.hints.join(" · "))+'</span>':'';
+      diag.innerHTML='本机将发送：<b>'+send+' '+esc(d.sample)+'</b>（长度 '+d.len+'）'+warn;
+    }
+  };
+  if(tokIn)tokIn.addEventListener("input",fillDiag);
+  fillDiag();
   if(lclear)lclear.onclick=()=>{prefs.set("apiToken","");prefs.set("cfEmail","");live.identity=null;live.lastSync=null;live.error=null;live.diag=null;toast("直连令牌已清除（本机）","info");reopen();};
   el.querySelector("#st-tokens").onclick=()=>{close();location.hash="#/tokens";};
   el.querySelector("#st-gwtest").onclick=()=>{
@@ -3953,10 +3966,32 @@ function isLive(){return prefs.get("mode","demo")==="live";}
 function cfBase(){return (prefs.get("gateway",CF_DEFAULT_BASE)||CF_DEFAULT_BASE).replace(/\/+$/,"");}
 function cfTok(){return prefs.get("apiToken","");}
 function cfEmail(){return prefs.get("cfEmail","");}
+// 粘贴清洗：去掉常见误粘的 "Bearer " 前缀、包裹引号/反引号、首尾空白；内部空白保留以便提示
+function normTok(s){
+  let t=String(s==null?"":s).replace(/^﻿/,"").trim();
+  t=t.replace(/^Bearer\s+/i,"");           // 误粘 "Bearer xxx"
+  t=t.replace(/^["'`]+|["'`]+$/g,"");       // 误粘包裹引号
+  return t.trim();
+}
+// 自检：给出长度、掩码样本、类型判定与可疑项
+function tokDiag(raw){
+  const t=normTok(raw);
+  const len=t.length;
+  const sample=len>10?t.slice(0,4)+"…"+t.slice(-4):t?"…":"（空）";
+  const internalWs=/\s/.test(t);
+  const gk=isGlobalKey(t);
+  const hints=[];
+  if(!t)hints.push("空");
+  if(/^Bearer\s/i.test(String(raw||"")))hints.push("已去掉 Bearer 前缀");
+  if(/^["'`]|["'`]$/.test(String(raw||"").trim()))hints.push("已去掉引号");
+  if(internalWs)hints.push("⚠含空格/换行(疑似粘错)");
+  if(!gk&&len>0&&len<20)hints.push("⚠长度偏短");
+  return {t,len,sample,gk,internalWs,hints};
+}
 // 鉴权方式：CF API Token 走 Bearer；Global API Key（37 位十六进制）必须走 X-Auth-Key + X-Auth-Email
 function isGlobalKey(t){return /^[0-9a-f]{37}$/i.test((t||"").trim());}
 function cfAuthHeaders(){
-  const t=cfTok().trim(),e=cfEmail().trim();
+  const t=normTok(cfTok()),e=cfEmail().trim();
   if(isGlobalKey(t)){
     if(!e)throw new Error("检测到这是 Global API Key：请同时填写该 Key 对应的账户邮箱");
     return {"X-Auth-Key":t,"X-Auth-Email":e};
@@ -3985,6 +4020,7 @@ function liveErrText(e){
     network:"网络不可达：请求没能发出（多为 CORS/网关/无网络）",
     api:"接口返回错误"
   }[k]||"接口返回错误";
+  if(k==="auth"&&e.code==="1000")base="鉴权失败：CF 判定该令牌无效（code 1000）——多为令牌已过期/被吊销，或粘贴不完整。请新建一枚含所需权限、未过期的 API Token，或确认下方自检显示的令牌与你粘贴的一致";
   return base+"："+(e.message||"").replace(/^鉴权失败[：:].*?（/,"").slice(0,120)+tail;
 }
 // 运行环境探测：APK 里 Capacitor 原生桥存在且 fetch 被 CapacitorHttp 接管
